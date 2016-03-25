@@ -1,0 +1,180 @@
+!TeX-Menue vom 5.7.91. Rckfragen bitte auch an Martin Lercher (M003A).
+
+:F1-TeX  F2-MF  F5-Ref  F9-Del  F10-DOS >
+
+1ga
+2gb
+9mc
+0e
+5mR
+
+mR
+r1 x1
+tRefresh
+{
+t - TeX
+m - MF
+d - dvi
+|
+terefresh -f*.TeX a:\tex
+merefresh -f*.mf  a:\mf
+derefresh -f*.dvi a:\dvi
+\iq
+}
+
+mC
+r1
+x1
+tAufr„umen
+{
+l - del *.log
+a - del *.aux
+b - del *.bak
+d - del *.dlg
+A - alles
+F - Font $x l”schen.
+|
+Aedel *.log
+A>del *.aux
+A>del *.bak
+A>del *.dlg
+ledel *.log
+aedel *.aux
+bedel *.bak
+dedel *.dlg
+Fedel \newfonts\pixel.lj\pxl1500\$x.pk
+F>del \newfonts\pixel.lj\pxl1643\$x.pk
+F>del \newfonts\pixel.lj\pxl1800\$x.pk
+F>del \newfonts\pixel.lj\pxl2160\$x.pk
+F>del \newfonts\pixel.lj\pxl2592\$x.pk
+F>del \newfonts\pixel.lj\pxl3110\$x.pk
+F>del \newfonts\pixel.lj\pxl3732\$x.pk
+F>del \newfonts\tfm\$x.tfm
+\iq
+}
+
+mD
+tMSDOS
+y19
+{
+d   - dir *.TeX /w
+D   - dir *.* /w
+RET - Dos-Kommando
+|
+dEdir *.tex /w /p
+DEdir /w /p
+\rpDMSDOS: 
+\rE$d
+\iq
+}
+
+
+ma
+tTeX
+{
+W - Workfile $b.TeX
+M - Mainfile $a.TeX
+F - Format   $f
+O - DrOption $o
+-------------------------
+e - edit     t - TeX
+v - view     D - Drucken
+E - Edit ... Q - Beenden.
+|
+E*
+Ey5
+Ev2
+E!Verzeichnis:
+E>dir /w/p
+EpEEdit: 
+Eeue $E
+
+eeue $b.TeX $a.log
+
+tetex $f $a
+
+veview $a /+
+
+Dedrtex $a $o
+
+W*
+Wy5
+Wv2
+W!Verzeichnis der TeX-Dateien: 
+W>dir *.tex /w
+WpbWorkfile ohne Extension:
+
+M*
+My5
+Mv2
+M!Verzeichnis der TeX-Dateien: 
+M>dir *.tex /w
+MpaMainfile ohne Extension:
+M$b$a
+
+F%Fø$Fø&plainø&lplainø&glplainø&rztex3ø&rztexø
+FpFTeX-Format (mit &) eingeben:
+
+O?oDruck Optionen: 
+
+QS
+Qq
+}
+
+mB
+tMetafont
+{
+W - Workfile $w.mf
+J - Jobfile  $j.mfj
+M - MF-file  $x.mf
+B - Base     $y
+-------------------------
+e - edit     m - Metafont
+j - MFJob
+E - Edit ... Q - Beenden.
+|
+eeue $w.mf $x.log \newfonts\log\$x.log
+jemfjob $j
+memf $y \mag:=0.3; screenstrokes; input $x.mf;
+
+E*
+Ey5
+Ev2
+E!Verzeichnis:
+E>dir /w/p
+EpEEdit: 
+Eeue $E
+
+W*
+Wy5
+Wv2
+W!Verzeichnis der MF-Dateien: 
+W>dir *.mf /w
+WpwWorkfile ohne Extension:
+
+M*
+My5
+Mv2
+M!Verzeichnis der MF-Dateien: 
+M>dir *.mf /w
+MpxMF-file ohne Extension:
+M$x$w
+
+J*
+Jy5
+Jv2
+J!Verzeichnis der MFJ-Dateien: 
+J>dir *.mfj /w
+JpjJobfile ohne Extension:
+
+B%yø$yø&plainø&cmø
+BpyMF-Format (mit &) eingeben:
+
+QS
+Qq
+
+\aemode co80
+}
+
+$y&plain
+$f&plain

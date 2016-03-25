@@ -1,0 +1,104 @@
+!Das ist das Menue-Programm vom 11.6.91
+!Autor: Martin Lercher.
+:Bitte wÑhlen Sie aus: $A
+
+$AHallo.
+$BNoch was?
+
+mA
+t$A
+{
+Datum: $F
+Das ist das Hauptmenue.
+WÑhle aus:
+(d)ir (m)apmem (1)Konfig
+(x)Exit (RET) Dos
+(D)Datum feststellen
+(L)load on demand.
+(2-5) Char class
+|
+dedir
+mEmapmem
+1mB
+xS
+xq
+llDas ist ein L
+\r?CDOS:
+\rE$C
+DsFschmarrn.men,xxxvom
+LDtex&mf.men
+\(23\45\
+!hallo
+!du
+\)
+\a!alternativ
+}
+
+mB
+y4
+tAnderes Menue
+{
+$$B = $B
+Lade $$A,  Lade $$B
+q - zurÅck. 2 - print
+ESC $$A = abcdef
+|
+a?aWas ist $$A:
+bpbWas ist $$B:
+qq
+\e=Aabcdef
+2mC
+}
+
+0mX
+1edir *.c
+
+# Das exit Menue
+mX
+v3 x2
+#~14
+y20 {
+Exit (mit sichern) (J/N/S)
+|
+jQ
+nq
+sS
+sQ
+}
+
+mc
+{
+q - quit
+a - a ausgeben
+b - b ausgeben
+c - c ausgeben
+0 - lîschen
+w - Warnung
+|
+qq
+0*
+0r
+ax1
+ay4
+a!a ist $a
+bv3
+bh14
+b!b ist $b
+ch2
+c*
+c!----------
+c!c ist $c
+c!----------
+ct
+cr
+wh2
+w*
+wv1
+wx30
+wy12
+w!Keine Experimente!
+wt
+wh0
+w*
+wr
+}

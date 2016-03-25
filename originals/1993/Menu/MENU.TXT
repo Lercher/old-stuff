@@ -1,0 +1,18 @@
+menu = Eine einfache Programmiersprache fÅr Menus mit Variablen und Picklisten.
+menu.exe Version 1.1 vom 8.7.1991
+
+NÑheres steht in dem LaTeX-Dokument menu.tex, bzw. in menu.dvi (view menu).
+
+Ich selbst benutze dieses Programm, um mit TeX und Metafont zu arbeiten.
+Am wertvollsten ist es jedoch nicht fÅr sich selbst, sondern um anderen
+seine eigene Software schmackhaft zu machen. Z. B. fÅr:
+  - Installations Disketten.
+  - simple Hilfesysteme. (Von der Art Hypertext, wenn auch nur mit 26 Seiten.)
+  - einfache Verwaltung vieler verschiedener Programme.
+
+Dieses Programm und seine mitgelieferte Quelle in C ist 20DM-Shareware.
+Autor:  Martin Lercher, Schlî·lgartenweg 40, 8415 Nittenau.
+e-Mail: c3524@rrzc1.rz.uni-regensburg.de
+
+						Martin Lercher.
+

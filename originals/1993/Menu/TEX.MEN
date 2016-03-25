@@ -1,0 +1,61 @@
+!TeX-Menue vom 13.6.91. Rckfragen bitte auch an Martin Lercher (M003A).
+ma
+tHauptmenue
+y5
+{
+Fr $n
+Datei ist: $a
+Format: $F
+----------------------------------
+e - edit      = - Datei festlegen
+t - TeX       d - dir *.tex
+v - view      P - Pfad Wechseln
+D - Drucken   F - setze TeX-Format
+B - BEENDEN   RET - MSDOS
+|
+eeedwin $a.log $a.TeX
+tetex $f $a
+veview $a
+Dedrtex $a
+=*
+=y5
+=v2
+=!Verzeichnis der TeX-Dateien:
+=>dir *.tex /w
+=paTeX-Datei ohne Extension:
+F%Fø$Fø&plainø&lplainø&amsplainø
+FpFTeX-Format (mit &) eingeben:
+PmP
+\rpdMSDOS:
+\rE$d
+dEdir *.tex /w
+BS
+Bq
+}
+
+mP
+tWechseln
+y17
+{
+ESC - ENDE
+j - J„nich
+J - J„nich, AUFG
+k - Knorr
+n - Neukirch
+s - Szcs
+|
+\eecd \$N
+\eq
+\iS
+j=NJ„nich
+J=NJ„nich\Aufg
+k=NKnorr
+n=NNeukirch
+s=NSzcs
+\iecd \$N
+\iL
+\iq
+}
+
+$n(???)
+$f&amsplain

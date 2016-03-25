@@ -1,0 +1,322 @@
+!TeX&MF-Menue vom 13.02.92   Rckfragen bitte an Martin Lercher (M115).
+#used Vars:   abcdefghjlmnopruvwxy
+#scratch Var: z
+#used Menus:  bdgmnptruwz
+#used FNs:    12345890
+#used sels:   0
+
+:F1-TeX  F2-MF  F5-Ref  F8-Dok  F9-Del  F10-DOS >
+
+1gT
+2gM
+5mR
+8mB
+9mD
+0e
+
+
+mB
+r1 x1
+tDokumentation
+{
+e - uEmacs
+s - shell
+r - refresh
+d - dipl style
+D - diagram style
+g - german style
+m - makeindex
+t - emtex->tex
+L - emtex->local
+l - LaTeX kurz
+p - preview kurz
+P - preview lang
+c - Chess
+z - Zeichens„tze
+|
+ceview chess
+eeview emacs
+seview menu
+review refresh
+deview dipl
+Deview diagr
+geview germdoc
+meview makeindx
+teview emtex
+Leview local
+leview lkurz
+Peview dvidrv
+peview emview
+zeview fonts
+\iq
+}
+
+
+mR
+r1 x1
+tRefresh
+{
+L - Laufwerk w„hlen.
+R - Dateien in: $d
+--------------------------
+l - LaTeX -> $L\latex
+t - TeX   -> $L\tex
+m - MF    -> $L\mf
+d - dvi   -> $L\dvi
+r - spez  -> $L\latex
+e - $0{uEmacs|Edwin} $d
+|
+lerefresh -c -f*.TeX $L\latex
+terefresh -c -f*.TeX $L\tex
+merefresh -c -f*.mf  $L\mf
+derefresh -c -f*.dvi $L\dvi
+rerefresh -c -F$d $L\latex
+ee$0{ue|edwin} $d
+RpdRefreshdatei eingeben: 
+RS
+RgR
+\(L
+?LPfad eingeben (z.B. a:) 
+S
+gR
+\)
+\iq
+}
+$Lb:
+$drefresh
+
+mD
+r1
+x1
+tAufr„umen
+{
+l - del *.log
+b - del *.bak
+d - del *.dlg
+A - alles von oben.
+F - Font $x l”schen.
+|
+\(A
+edel *.log
+>del *.bak
+>del *.dlg
+\)
+ledel *.log
+bedel *.bak
+dedel *.dlg
+Fedel g:\texpixel\tfm\$x.tfm
+\iq
+}
+
+
+
+mT
+tTeX
+{
+W - Workfile $b.TeX
+M - Mainfile $a.TeX
+O - DrOption $o
+V - ViewOpt  $v
+-----------------------------
+el- $0{uEmacs|Edwin }   t - TeX $f
+v - view     D - Drucken
+N - New ...  m - Mehr TeX ...
+E - Edit ... Q - zurck.
+|
+ee$0{ue @$c.cmd $b.TeX $a.log|edwin $b.TeX}
+le$0{ue @$c.cmd $a.log $b.TeX|edwin $a.log $b.TeX}
+tetex $f $a
+veview $a $v
+Dedrtex $a $o
+
+mDmehr
+mmp
+
+\(W
+edir *.tex /w
+y5
+v2
+! Die TeX-Dateien: 
+pbWorkfile ohne Extension:
+S
+\)
+
+\(N
+?aNeue LaTeX-Datei erzeugen ohne Extension: 
+estdtex $a
+\)
+
+\(M
+edir *.tex /w
+y5
+v2
+! Die TeX-Dateien: 
+paMainfile ohne Extension:
+\)
+
+\(MN
+$b$a
+$o
+$v
+so$a.tex,%%drtex=
+sv$a.tex,%%view=
+sf$a.tex,%%format=
+sc$a.tex,%%command=
+sh$a.tex,%%metric=
+S
+\)
+
+\(E
+edir /w/p
+y5
+v2
+! Alle Dateien:
+pEEdit: 
+S
+e$0{ue|edwin} $E
+\)
+
+OpoDruck Optionen: 
+OS
+
+VpvView Optionen:
+VS
+
+Qgz
+Qq
+}
+
+
+
+
+
+mM
+tMetafont
+{
+W - Workfile $w.mf
+M - MF-file  $x.mf
+B - Base     $y
+\ - Mag      $m
+? - mode     $n
+-------------------------
+e - $0{uEmacs|Edwin}   m - Metafont
+h - MF-Hilfsprogramme ...
+E - Edit ... Q - zurck.
+|
+ee$0{ue @mf.cmd $w.mf $x.log|edwin $w.mf}
+le$0{ue @mf.cmd $x.log $w.mf|edwin $x.log $w.mf}
+memf.exe $y \mag:=$m;mode=$n;screenstrokes;input $x.mf;
+?pnMode = 
+\\pmMag = 
+hgW
+
+\(E
+edir /w/p
+y5
+v2
+! alle Dateien:
+pEEdit: 
+S
+e$0{ue|edwin} $E
+\)
+
+\(W
+edir *.mf /w
+y5
+v2
+! Die METAFONT-Dateien: 
+pwWorkfile ohne Extension:
+S
+\)
+
+\(M
+edir *.mf /w
+y5
+v2
+! Die METAFONT-Dateien: 
+pxMF-file ohne Extension:
+$w$x
+$r
+sy$x.mf,%%format=
+sm$x.mf,%%mag=
+S
+\)
+
+B%yø$yø&plainø&cmø
+BpyMF-Format (mit &) eingeben:
+BS
+
+Qgz
+Qq
+
+\aemode co80
+}
+
+
+mW
+tMFware
+{
+J - Jobfile  $j.mfj
+G - GFfile   $x.$r
+Z - PK-Ziel  $g
+-------------------------
+p - GFtoPK   j - mfjob
+d - GftoVIEW m - mft&view
+t - GFtype   s - stdjob   
+             Q - zurck.
+|
+\(J
+edir *.mfj /w
+y5
+v2
+! Die MFJOB-Dateien: 
+pjJobfile ohne Extension:
+S
+\)
+
+\(G
+edir $x.* /w
+y5
+v2
+! Die aktuellen $x.*GF Dateien: 
+prDie Aufl”sung eingeben $x.
+S
+\)
+
+ZpgZieldatei(pfad) fr GFtoPK $x.$r:
+ZS
+
+tEgftype $x.$r
+sestdjob $x $x
+pegftopk $x.$r $g
+jemfjob $j
+
+\(d
+egftodvi $x.$r/ grayfont graylj slantfont slantlj /
+eview /o2 $x
+*
+!$x.dvi erzuegt.
+\)
+
+\(m
+emft $x nul z:\emtex\mf\mfinput\plain mftput
+eecho \end>>mftput.tex
+etex mftput
+eview mftput
+*
+!mftput.TeX & mftput.dvi erzeugt.
+\)
+
+Qgm
+}
+
+$y&plain
+$f&glplain
+$m0.07
+%mø0.07ø0.1ø0.2ø0.5ø1.0ø1.2ø1.44ø
+$nproof
+%nøprooføsmokeøhplaserø
+$cLaTeX
+%cøLaTeXøTeXø
+$h100
+$00

@@ -1,0 +1,675 @@
+%%   format=glplain
+
+\documentstyle[12pt, german, twocolumn]{article} 
+% Specify your document style here
+%
+% LaTeX source.
+%
+%  Note: you should define (or \input) your macros and preamble 
+%  declarations here before the \begin{document} statement.
+%      
+%
+%  Define (or \input) your macros and preamble declarations here...
+%
+%
+\parindent = 0pt
+\parskip = 3pt plus 1pt
+\hfuzz=3pt
+
+\addtolength\topmargin{-27pt}
+\addtolength\textheight{68pt}
+
+\title{Menu - Kurzbeschreibung}
+\author{Dipl.{} Math.{} Martin Lercher}
+\date{Version 1.5 vom M"arz 1993\\gesetzt \today}
+\begin{document}
+%
+% The <start-text> tag separates the macro definitions
+% from the body of the document.  You must have exactly one
+% occurrence of this tag in your document (if you need to move it,
+% you can use the File--Options... panel to disable Context rules,
+% then cut and paste the tag, and finally re-enable Context rules).
+%
+\def\<#1>{{\verb|<|\it #1\/\verb|>|}}
+
+\onecolumn
+\maketitle{}
+
+%
+% Enter the body of your document from here down.
+%
+% Your file should consist of valid LaTeX input; furthermore,
+% you can use the Create menu (off the File button) to insert
+% Publisher tables, equations, and graphics into your document.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Allgemeine Beschreibung des Mini-Menu-Systems.}
+
+Das Mini-Menu-System ist ein Programm f\"ur PC-kompatible Rechner,
+um durch {\it Kommandos\/} in einer {\it Menu-Datei\/}
+frei konfigurierbare, hierarchische Menus anzuzeigen.
+
+Die Hauptaufgabe des Systems
+besteht darin, einen unerfahrenen Benutzer vor der
+rauhen MSDOS-Welt (allgemein oder vor speziellen Programmen) 
+zu besch\"utzen. Es l\"a\ss t ihn mittels einzelner
+wohl\-er\-kl\"ar\-ter Tastendr\"ucke 
+f\"ur ihn unsichtbare DOS-Kommandos
+ausf\"uhren. Na\-t\"ur\-lich geht das nicht von alleine, er
+braucht schon jemanden, der dieses Menu-System programmiert.
+
+Das System ist ausgelegt f\"ur 26 verschiedene Menus mit Namen 
+{\tt A-Z}, es verwaltet 26
+Variable, denen sogenannte Picklisten (das ist eine Liste der 
+letzten Eingaben der Variable) zugeordnet werden k\"onnen.
+Ferner gibt es zehn Selektoren mit Namen {\tt 0-9}, denen Werte von Null
+bis 20 zugewiesen werden k"onnen.
+$$
+   \hbox{Aufruf: {\tt menu $[$-k$]$}[\<Menu-name.ext>]}
+$$
+Falls keine Menu-Datei \<Menu-name.ext> angegeben wird,
+wird die Datei
+{\tt menu} daf\"ur benutzt. Die angegebene Datei wird zuerst
+im aktuellen Directory und dann bei Nichterfolg in dem Directory
+gesucht, in dem sich das Programm {\tt menu.exe} befindet.
+Ist die Option {\tt -k} (key) gesetzt, so startet das Programm nur,
+wenn w"arenddessen eine Taste gedr"uckt wurde (z.B. in einer Batchdatei).
+Diese Taste wird dem ersten Menu durchgereicht.
+
+Danach wird noch eine eventuell vorhandene Datei
+$$\hbox{{\it Menu-name}{\tt .sav}}$$
+aus dem aktuellen Directory geladen.
+Als n\"achstes erfolgt der Aufruf des
+Menus~{\tt A}, was den Start der Hauptschleife bedeutet. Wird dieses
+Menu beendet, so endet auch das Mini-Menu-System.
+Ein Menu besteht aus einem Text, der angezeigt wird, und einer Liste
+von Tastencodes, denen Befehle zugeordnet sind. Beim Aufruf eines 
+Menus wird der Text umrahmt ausgegebeben, in der untersten Zeile
+die Eingabeauf{}forderung und rechts unten Datum und Uhrzeit.
+Anschlie\ss end wird auf einen Tastendruck gewartet, der den/die 
+zugeordneten {\it Befehle} in der Reihenfolge der Liste zur 
+Ausf\"uhrung bringt. (Vgl. 3) Unabh\"angig davon k\"onnen die
+zehn Funktionstasten {\tt F1-F10} mit je einem Befehl belegt
+werden, der von jedem Menu aus durch die entsprechende Funktionstaste
+aufgerufen werden kann.
+
+\section{Beschreibung der Kommandos.}
+
+Kommandos werden in der Menu-Datei angegeben und werden aus einem 
+{\it Kommandonamen\/} bestehend aus einem Zeichen und optionalen 
+{\it Parametern\/} zusammengesetzt, die 
+ohne Abstand an den {\it Kommandonamen\/} 
+anschlie\ss en. Ein Variablenname $V$ ist ein Buchstabe zwischen
+{\tt A} und {\tt Z}. Eine {\it Pickliste\/}
+ ist eine durch~$^\circ$ getrennte
+Liste von Zeichenfolgen. Der Begriff {\it Befehl\/}
+ wird im n\"achsten
+Abschnitt erl\"autert, ist im Prinzip aber nur eine Zeichenfolge.
+
+
+
+Hier die Liste der Kommandos:
+
+\def\ii#1(#2){{\verb|#1|\global\def\p{\<#2>}\p}&}
+\def\io#1[#2]{{\verb|#1|\global\def\p{\<#2>}\rm[\p]}&}
+\def\iii#1#2(#3){{\verb|#1|$#2$\global\def\p{\<#3>}\p}&}
+\def\iko#1#2[#3]{{\verb|#1|$#2$\global\def\p{\<#3>}\rm[\p]}&}
+\def\ik#1#2{{\verb|#1|$#2$}&}
+\def\i#1{{\verb|#1|}&}
+
+\begin{tabular}{lp{10,5true cm}}
+\tolerance=9900
+\ii !(Text)Zeige den \p\ w\"ahrend des Einlesens der Menu-Datei an.\\
+\ii :(prompt)Definiere die Eingabeauf{}forderung in der letzten Zeile
+  durch \p. Voreingestellt ist ``{\tt Bitte w\"ahlen:}''. 
+  Es erfolgt Variablenersetzung bei der Anzeige.\\
+
+\iii \$V(Inhalt)Lade die Variable $V$ mit \p\ als Inhalt.\\
+\iii \%V(Liste)Ordne der Variablen $V$ die Pickliste \p\ zu.\\
+\ii \#(Kommentar)Die gesamte Zeile wird ignoriert.\\
+\ii {\rm[\tt 0\rm-\tt9\rm]}(Befehl)Lege die Befehle f\"ur
+  die Funktionstasten {\tt F1-F(1)0} fest. Davon mittels \verb|m|$M$
+  aufgerufene Menus sollten jedoch stets mit \verb|\iq| als Befehl enden.
+  \\
+\i {m$M$}Definiere Menu $M$.\\
+\i {g$M$}Starte mit Menu $M$. Default ist \verb|A|.
+\end{tabular}
+
+Das Definieren von Menus erfolgt so:
+
+\def\opt#1(#2){{\rm[}#1\<#2>{\rm]}}%
+{\obeylines\tt
+m$M$
+\opt x(x-Koordinate)
+\opt y(y-Koordinate)
+\opt v(Vordergrundfarbe)
+\opt h(Hintergrundfarbe)
+\opt t(Titel)
+\opt r(Rahmentyp)
+\{
+\<Text-Zeilen>
+$|$
+\<Befehls-Zeilen>
+\}
+}
+
+
+Dabei sind {\<x-Koordinate>} und  {\<y-Koordinate>} Zahlen in den 
+Bereichen 0 bis 78 bzw.{} 0 bis 22 und geben die Position der linken
+oberen Ecke des Rahmens an (Eine Null hei\ss t dabei zentrieren
+bez\"uglich des Bildschirms), der die {\<Text-Zeilen>} umschlie\ss t.
+{\<Vordergrundfarbe>} und {\<Hintergrundfarbe>} sind Zahlen in
+dem Bereich von 0 bis 15 bzw. von 0 bis 7 und bedeuten:
+$$\begin{tabular}{rp{3cm}rp{3cm}}
+0& black      &8& darkgray \\
+1& blue       &9& lightblue \\
+2& green     &10& lightgreen \\
+3& cyan      &11& lightcyan \\ 
+4& red       &12& lightred \\
+5& magenta   &13& lightmagenta \\
+6& brown     &14& yellow \\
+7& lightgray &15& white \\
+\end{tabular}
+$$
+
+\medskip
+
+{\<Titel>} ist eine Zeichenfolge, die zentriert in die Oberkante des
+Rahmens geschrieben wird. \<Rahmentyp> ist 0, 1 oder 2 f\"ur die Anzahl
+der Striche des Rahmens, voreingestellt ist 2. Den {\<Befehls-Zeilen>} 
+ist der n\"achste Abschnitt gewidmet.
+
+\section{Beschreibung der Befehle.}
+
+Ein Befehl ist eine Zeichenfolge bestehend aus dem Zeichen {\it 
+Tastencode}, dem Zeichen {\it Befehlscode} und optionalen {\it 
+Parametern}. Er tritt nur in der Definition eines Menus oder einer
+Funktionstaste auf.
+
+Als {\it Tastencode} sind im Prinzip alle Zeichen des
+ASCII-Codes $>4$ zugelassen, man sollte sich aber auf die druckbaren
+beschr\"anken, zumal es f\"ur die wichtigsten anderen sogenannte
+Ersatzdarstellungen gibt. N\"amlich
+\def\x#1{{$\tt\backslash$}#1 &}%
+$$
+\begin{tabular}{llll}
+\x e f\"ur Escape & \x r f\"ur Return \\
+\x n f\"ur Newline & \x b f\"ur Backspace \\
+\x t f\"ur Tab & \x{$\tt\backslash$} f\"ur den Backslash selbst \\
+\end{tabular}
+$$
+und zwei sogenannte unechte Tastencodes,
+$$
+\begin{tabular}{ll}
+\x i f\"ur jede Nichtfunktionstaste (immer) und \\
+\x a falls noch keine echte Taste ausgef\"uhrt wurde. (alternativ). \\
+\end{tabular}
+$$
+
+Bei Parametern werden grunds\"atzlich die Zeichen \verb|$|$V$ gegen 
+den Inhalt der Variablen $V$ ersetzt. Die Zeichenfolge \verb|$$| wird
+jedoch gegen das einzelne Zeichen \verb|$| ersetzt. Ersetzung erfolgt
+immer nur eine Stufe weit.
+
+Selektoren werden so benutzt, im Beispiel ist es der Selektor Nummer 4:
+  \[
+	\hbox{\tt \$4\{{\it Text f"ur 0}|{\it Text f"ur 1}|\ldots|{\it
+Text f"ur n}\}}.
+  \]
+Dabei d"urfen die Texte Variable enthalten, aber keine Selektoren.
+
+
+Hier nun die unterst\"utzten {\it Befehlscode\/}s:
+
+\begin{tabular}{lp{9,85 true cm}}
+\tolerance=9900
+\io Q[errorlevel](Quit immediate) Sofortiges Beenden des Programms mit
+  Returncode \p.\\
+\i q(quit) Entferne das oberste Menu.\\
+\i {m$M$}Rufe das Menu $M$ auf. Hierarchisch, rekursiv. Vorsicht
+  bei Funktionstasten.\\
+\i {g$M$}(goto) Entferne das oberste Menu und rufe dann das Menu 
+  $M$ auf.\\
+\io S[filename]Sichere Variable und deren Picklisten nach \p.
+  Voreinstellung f\"ur \p\ ist der 
+  {\it Menu-name} mit Extension {\tt .sav}. Das Sichern hat explizit zu
+  erfolgen, dieses wird nicht automatisch beim Programmende ausgef"uhrt.\\
+\io L[filename]Laden von Variablen, Menus, etc. Vgl.{} auch 
+  {\tt S}.\\
+\ii e(DOS-Kommando)Ausf\"uhren des \p\ mit clear.\\
+\ii E(DOS-Kommando)Clear. Ausf\"uhrung. Warten auf Taste.\\
+\ii >(DOS-Kommando)Ausf\"uhrung an der eingestellten 
+  Cursorposition. Ohne clear.\\
+\iii ?V(prompt)Variable $V$ mit Prompt \p\ einlesen.\\
+\iii pV(prompt)Variable $V$ mit Eingabeauf{}forderung \p\ und 
+  Pickliste einlesen.\\
+\ii !(Text)(print) Den \p\ an die festgelegte Cursorposition
+  mit festgelegten Farben schreiben.\\
+\i c (clear) Bildschirm mit der Hintergrundfarbe l\"oschen.\\
+\i r (redraw) Ein Neuzeichenen der Menus ausl\"osen. (ohne clear)\\
+\i R (Redraw) Ein Neuzeichenen der Menus ausl\"osen. (mit clear)\\
+\i t (Taste) Auf Tastendruck warten.\\
+\end{tabular}
+
+\begin{tabular}{lp{9,85 true cm}}
+\tolerance=9900
+\ii x(x-Koordinate)Die \p\ f"ur \verb|!| und \verb|>| festlegen.\\
+\ii y(y-Koordinate)Die \p\ f"ur \verb|!| und \verb|>| festlegen.\\
+\ii v(Vordergrundfarbe)Die \p\ f"ur \verb|!| festlegen.\\
+\ii h(Hintergrundfarbe)Die \p\ f"ur \verb|!| festlegen.\\
+\iii \%V(Pickliste)Die Pickliste der Variablen $V$ auf den Wert
+  \p\ setzen.\\
+\iii \$V(Text)Den Wert der Variablen $V$ auf \p\ setzen.\\
+\iii \$N(Wert)Den Wert des Selektors $N$ auf \p\ setzen.\\
+\ik iN (invert) Wahrheitswert des Selektors $N$ negieren.\\
+\iko +N[number] (increment) Den Selektor $N$ inkrementieren (bis h"ochstens
+\p. Ist \p\ negativ so wird bei "Uberschreitung von $-$\p\ auf 0 zur"uckgestellt).\\
+\iko -N[number] (decrement) Den Selektor $N$ dekrementieren (bis
+h"ochstens \p. Ist \p\ negativ so wird bei Unterschreitung von 0 auf
+$-$\p\ zur"uckgestellt).\\
+\iii TN(Argumente) Das Programm {\tt test.exe} mit \p\ als Argumente
+aufrufen, und dessen Ergebnis (errorlevel) an den Selektor $N$ binden.\\
+\end{tabular}
+
+Ist die Environmentvariable {\tt TESTPRG} gesetzt, so wird statt des
+Programms {\tt test.exe} das dort bezeichnete Programm benutzt.
+Dieses Programm ist in der Lage, logische Verkn"upfungen und elementare
+Rechenoperationen auszuf"uhren, die dann als Errorlevel zur"uckgegeben
+werden. Dies ist aber in dessen Beschreibung erk"l"art.
+
+
+
+
+\section{"Anderungen.}
+\subsection{Version 1.4}
+
+Selektoren implementiert. Das sind Variable mit den Ziffern {\tt
+0}--{\tt 9} als Namen. Diese arbeiten intensiv mit dem Programm {\tt
+test.exe} zusammen.
+
+\subsection{Version 1.5}
+
+Selektoren haben jetzt einstellbare obere Schranken. ``This product
+uses the SPAWNO routines by Ralf Brown to minimize memory use while
+shelling to DOS and running other programs.'' Das Menuprogramm wird also
+ins XMS verlagert, wenn der Platz knapp ist.
+
+
+
+\section{Shareware.}
+
+Shareware ist ein f\"ur den Autor einfaches Vertriebssystem und auch
+f\"ur den Anwender ein vorteilhaftes Konzept. Er kann die Software
+beliebig lange testen und an $x$-beliebige Personen weitergeben, solange
+das ganze Paket beisammen bleibt. Das Paket darf jedoch nicht f\"ur Geld
+verkauft werden, da sich der Autor sein Copyright vorbeh"alt.
+Falls sich der Anwender entschlie"st, das Programm regelm"a"sig zu
+nutzen so wird ein geringer Geldbetrag f"allig, der als Honorar f"ur
+die geleistete Entwicklungsarbeit anzusehen ist und einen Anreiz
+darstellt, weitere Programme zu schreiben.
+
+Dieses Paket "`Menu"', bestehend aus {\tt menu.exe}, {\tt menu.c}, 
+{\tt menu.TeX}, {\tt menu.dvi} und den Beispielen {\bf ist} Shareware.
+Bei regelm"a"siger Benutzung schicken Sie daher bitte 20DM an den Autor
+unter folgender Adresse:
+
+\medskip
+\centerline{\vbox{\hbox{Martin Lercher}\hbox{Schl\"o\ss lgartenweg 40}%
+\hbox{D-8415 Nittenau}}}
+\smallskip
+
+email: {\tt rrzc1.rz.uni-regensburg.de!c3524}
+
+\medskip
+
+{\bf Haftungsausschlu"s:}
+Wie "ublich "ubernehme ich keine Haftung f"ur irgenwelche mittelbar oder
+unmittelbar durch das Paket entstandene Sch"aden. Au"serdem garantiere
+ich nicht f"ur die universelle Verwendbarkeit des Programms. Ich garantiere
+aber, da"s ich es nach bestem Wissen und Gewissen getestet und f"ur
+fehlerfrei befunden habe. Kurz und gut: Alles, was Sie mit dem Programm
+anstellen geschieht auf Ihre eigene Gefahr.
+
+Sollten Sie also eine unersetzliche 20MB Datei mit Namen {\tt menu.sav}
+in Ihrem aktuellen Verzeichnis haben und starten dann {\tt menu.exe},
+dann wundern Sie sich nicht, wenn diese aufgrund eines Savebefehls
+\verb|S| hinterher nur noch 65 Bytes lang ist\dots
+
+\newpage
+
+\twocolumn\section{Beispiele.}
+\baselineskip = 14.4pt plus 5pt minus 1pt
+
+\subsection{Ein simples \TeX-Menu}
+
+\begin{verbatim}
+!TeX-Menu vom 13.6.91.
+!Fragen bitte an M. Lercher.
+ma
+tHauptmenue
+y5
+{
+Fuer $n
+Datei ist: $a
+Format: $F
+-------------------------------
+e - edit    = - Datei festlegen
+t - TeX     d - dir *.tex
+v - view    P - Pfad Wechseln
+D - Drucken F - TeX-Format
+B - BEENDEN RET - MSDOS
+|
+eeedwin $a.log $a.TeX
+tetex $f $a
+veview $a
+Dedrtex $a
+=c
+=y5
+=v2
+=!Verzeichnis der TeX-Dateien:
+=>dir *.tex /w
+=paTeX-Datei ohne Extension:
+FpFTeX-Format (mit &) eingeben:
+PmP
+\rpdMSDOS:
+\rE$d
+dEdir *.tex /w
+BS
+Bq
+}
+\end{verbatim}
+
+\begin{verbatim}
+mP
+tWechseln
+y17
+{
+ESC - ENDE
+j - Janich
+J - Janich, AUFG
+k - Knorr
+n - Neukirch
+|
+\eecd \$N
+\eq
+\iS
+j$NJanich
+J$NJanich\Aufg
+k$NKnorr
+n$NNeukirch
+\iecd \$N
+\iL
+\iq
+}
+\end{verbatim}
+
+\begin{verbatim}
+$n(???)
+$f&amsplain
+\end{verbatim}
+
+
+
+
+
+\subsection{Ein besseres \TeX\ und Metafont-Menu}
+\begin{verbatim}
+!TeX-Menue vom 5.7.91. 
+!Fragen an Martin Lercher.
+
+:F1-TeX F2-MF F9-Del F10-DOS>
+
+1ga
+2gb
+9mc
+0mD
+
+mC
+r1
+x1
+tAufraeumen
+{
+l - del *.log
+a - del *.aux
+b - del *.bak
+d - del *.dlg
+A - alles
+|
+Aedel *.log
+A>del *.aux
+A>del *.bak
+A>del *.dlg
+ledel *.log
+aedel *.aux
+bedel *.bak
+dedel *.dlg
+\iq
+}
+\end{verbatim}
+
+\begin{verbatim}
+mD
+tMSDOS
+y19
+{
+d   - dir *.TeX /w
+D   - dir *.* /w
+RET - Dos-Kommando
+|
+dEdir *.tex /w /p
+DEdir /w /p
+\rpDMSDOS: 
+\rE$d
+\iq
+}
+\end{verbatim}
+
+\begin{verbatim}
+ma
+tTeX
+{
+W - Workfile $b.TeX
+M - Mainfile $a.TeX
+F - Format   $f
+O - DrOption $o
+-------------------------
+e - edit     t - TeX
+v - view     D - Drucken
+E - Edit ... Q - Beenden.
+|
+Ec
+Ey5
+Ev2
+E!Verzeichnis:
+E>dir /w/p
+EpEEdit: 
+Eeue $E
+eeue $b.TeX $a.log
+tetex $f $a
+veview $a /+
+Dedrtex $a $o
+Wc
+Wy5
+Wv2
+W!Verzeichnis der TeX-Dateien: 
+W>dir *.tex /w
+WpbWorkfile ohne Extension:
+Mc
+My5
+Mv2
+M!Verzeichnis der TeX-Dateien: 
+M>dir *.tex /w
+MpaMainfile ohne Extension:
+F%F&plain
+FpFTeX-Format (mit &) eingeben:
+O?oDruck Optionen: 
+QS
+Qq
+}
+\end{verbatim}
+
+\begin{verbatim}
+mB
+tMetafont
+{
+W - Workfile $w.mf
+J - Jobfile  $j.mfj
+M - MF-file  $x.mf
+B - Base     $y
+-------------------------
+e - edit     m - Metafont
+j - MFJob
+E - Edit ... Q - Beenden.
+|
+eeue $w.mf $x.log
+jemfjob $j
+memf $y $x.mf
+Ec
+Ey5
+Ev2
+E!Verzeichnis:
+E>dir /w/p
+EpEEdit: 
+Eeue $E
+Wc
+Wy5
+Wv2
+W!Verzeichnis der MF-Dateien: 
+W>dir *.mf /w
+WpwWorkfile ohne Extension:
+Mc
+My5
+Mv2
+M!Verzeichnis der MF-Dateien: 
+M>dir *.mf /w
+MpxMF-file ohne Extension:
+Jc
+Jy5
+Jv2
+J!Verzeichnis der MFJ-Dateien: 
+J>dir *.mfj /w
+JpjJobfile ohne Extension:
+B%y&plain
+BpyMF-Format (mit &) eingeben:
+QS
+Qq
+\aemode co80
+}
+\end{verbatim}
+
+\begin{verbatim}
+$y&plain
+$f&plain
+\end{verbatim}
+
+
+
+
+\subsection{Ein Schmarrnmenue.}
+\begin{verbatim}
+!Ein Menue-Programm vom 11.6.91
+!Autor: Martin Lercher.
+:Bitte waehlen Sie aus:
+
+$AHallo.
+$BNoch was?
+
+mA
+t$A
+{
+Das ist das Hauptmenue.
+Waehle aus:
+(d)ir (m)apmem (1)Konfig
+(x)Exit (RET) Dos
+|
+dedir
+mEmapmem
+1mB
+xS
+xq
+llDas ist ein Fehler.
+\r?CDOS:
+\rE$C
+}
+\end{verbatim}
+
+\begin{verbatim}
+mB
+y4
+tAnderes Menue
+{
+$$B = $B
+Lade $$A,  Lade $$B
+q - zurueck. 2 - print
+ESC $$A = abcdef
+|
+a?aWas ist $$A:
+bpbWas ist $$B:
+qq
+\e$Aabcdef
+2mC
+}
+\end{verbatim}
+
+\begin{verbatim}
+0mX
+1edir *.c
+\end{verbatim}
+
+\begin{verbatim}
+# Das exit Menu
+mX
+v3 x2 r1
+y20 {
+Exit (mit sichern) (J/N/S)
+|
+jQ
+nq
+sS
+sQ
+}
+\end{verbatim}
+
+\begin{verbatim}
+mc
+{
+q - quit
+a - a ausgeben
+b - b ausgeben
+c - c ausgeben
+0 - loeschen
+w - Warnung
+|
+qq
+0R
+ax1
+ay4
+a!a ist $a
+bv3
+bh14
+b!b ist $b
+ch2
+cc
+c!----------
+c!c ist $c
+c!----------
+ct
+cr
+wh2
+wc
+wv1
+wx30
+wy12
+w!Keine Experimente!
+wt
+wh0
+wc
+wr
+}
+\end{verbatim}
+
+\centerline{-- FIN --}
+
+
+\end{document}

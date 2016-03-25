@@ -1,0 +1,71 @@
+:F1 Hilfe. Bitte w„hlen Sie: 
+
+1mH
+
+mH
+tHilfe 1/2
+v2
+{
+Das ist die 1. Hilfeseite
+
+(Esc-Ende Taste-weiter)
+|
+\eq
+\igI
+}
+
+mI
+tHilfe 2/2
+v3
+{
+Das ist 
+die letzte 
+Hilfeseite.
+
+(Taste)
+|
+\iq
+}
+
+
+mA
+tHauptmen
+r1
+{
+1   - Untermen 1
+2   - Untermen 2
+a   - Variable $$a abfragen.
+      $$a = $a
+b   - Variable $$b picken.
+      $$b = $b
+ESC - Ende
+|
+a?aVariable A:
+bpbVariable B:
+1mB
+2mC
+\eS
+\eq
+}
+
+mB
+tMen 1
+x1 h2 v9
+{
+d - Dir *.*
+D - Dir *.men
+|
+dEdir *.*
+DEdir *.men
+\iq
+}
+
+mC
+tMen 2
+x1 h4 v13
+{
+Das ist nur ein Text.
+|
+\iq
+}
+

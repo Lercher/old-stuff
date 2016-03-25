@@ -1,0 +1,32 @@
+mP
+tTeX-II
+x1 r1
+{
+F - Format   $f
+E - Editor $0{uEmacs|Edwin}
+$0{C - Command  $c.cmd}
+A - Anzahl Pfeile: $h
+--------------------------
+m - metric $a $h
+p - pixel (Pfeile machen)
+i - makeindex
+|
+Ei0
+
+F%Fø$Fø&glplainø&plainø&rztex3ø&lplainø&eplainø&erztex3ø
+FpFTeX-Format (mit &) eingeben:
+FS
+
+CpcuEmacs Commandfile (ohne .cmd):
+CS
+
+AphAnzahl Pfeile:
+AS
+AgP
+
+iemakeindx $a.idx
+memetric $a $h
+pepixel
+
+\iq
+}

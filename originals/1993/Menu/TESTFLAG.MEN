@@ -1,0 +1,32 @@
+ma
+tFlag-test
+{
+Flag 0 ist $0{aus $a|ein $b|2|3|4|5} text
+t - invert selector 0
++ - incr sel0  . - with wrap   # + <= 20
+- - decr sel0  , - with wrap
+1 - sel0 ein
+0 - sel0 aus
+T - Call test.exe $t
+a - set arg for test.exe
+s - save
+q - quit
+|
+qq
+++05
+--05
+,-0-5
+.+0-5
+#+0
+ti0
+1=01
+0=00
+TT0$t
+aptArg for test.exe:
+sS
+}
+
+$a(Vara)
+$b(Varb)
+
+0e
