@@ -1,0 +1,303 @@
+% -*-LaTeX-*-
+% Converted automatically from troff to LaTeX by tr2tex on Wed Sep 15 16:49:32 1993
+% tr2tex was written by Kamal Al-Yahya at Stanford University
+% (Kamal%Hanauma@SU-SCORE.ARPA)
+
+
+\documentstyle[troffman]{article}
+\begin{document}
+%
+% input file: xconq.man
+%
+\phead{XCONQ}{6}{Utah}
+
+\shead{NAME}
+xconq - X-based strategy game
+\shead{SYNOPSIS}
+\bf
+xconq
+[ options ] ...
+\shead{DESCRIPTION}
+%
+\it Xconq \rm%
+is a multi-player strategic wargame.
+Your goal is to save the world from the evil empires attempting to
+take over.  You get cities, armies, airplanes, and ships with which to
+accomplish your task.  Success is achieved by the neutralization or
+defeat of the other sides, by any means available.  First you have to
+find them!
+\par
+Although the game can get complicated, to start you need only
+know about the help command '?', which is valid at any time.
+You start with only one city, which makes things even simpler.
+The city will automatically produce a military unit, which you
+will be prompted to move around.  Eventually, you will get more and
+can attempt to take over other cities.
+The game keeps going
+until only one side is left in action;
+this player is then declared the winner.
+\par
+By default, %
+\it xconq \rm%
+starts up with one human (on the display in \$DISPLAY) and one
+machine, playing on a randomly generated 60x30 world.  Options are
+available to set numbers and kinds of players, as well as the
+kind of map used.  In addition, %
+\it xconq \rm%
+has extensive and
+elaborate facilities for building maps, scenarios, and historical
+periods, resulting in a wide variety of games.
+\shead{OPTIONS}
+\begin{TPlist}{{\it host:display}}
+\item[{{\it host:display}}]
+adds a human player to the game and assigns to the given host and display.
+Players get created in the same order as they appear on the command line,
+interleaved with the players created via %
+\bf -e \rm%
+and %
+\bf -A\rm%
+.
+All of the player adding options may be used any number of times in any order.
+\item[{{\bf --A} %
+\it host:display\rm%
+}]
+attaches a machine player to the given display.  Ideal for those who like
+to watch.
+\item[{{\bf --C}}]
+allows the machine player to play in cheat mode.  It will get a
+complete update of the screen every turn.
+\item[{{\bf --e} %
+\it number\rm%
+}]
+sets the number of machine players not attached to displays.
+Non-displayed machine players form alliance blocks of 5-9 countries.
+\item[{{\bf --m} %
+\it name\rm%
+}]
+reads the map named %
+\it name \rm%
+and starts up a game on it.
+\item[{{\bf --M} %
+\it width height\rm%
+}]
+generates a random map of the given size.  The size must be at least 5x5,
+although some periods will impose additional constraints on the lower bound.
+In theory, there is no upper bound (but 200x100 is huge).
+\item[{{\bf --p} %
+\it name\rm%
+}]
+reads the historical period specified by %
+\it name\rm%
+, and sets everything
+up for that period.
+\item[{{\bf --r}}]
+resets the list of players on the command line.  It is most useful when
+placed before other player specifications, to clear out the default
+players.
+\item[{{\bf --s} %
+\it name\rm%
+}]
+reads a scenario with the name %
+\it name\rm%
+.  A scenario sets up a particular
+situation; it has a fixed number of sides that can participate.
+\item[{{\bf --t} %
+\it number\rm%
+}]
+toggles a chess-clock-like feature that limits the total time of play for
+each side.  The amount is %
+\it number \rm%
+minutes per side.  Time is only counted
+while actually waiting for input.
+\item[{{\bf --v}}]
+make the entire world seen by all players at the outset.
+This is useful if exploration
+is deemed to be time-consuming, or if the map is already known to everybody.
+Some maps already have this enabled.
+% .TP 5
+% .B \-x
+% allows scenarios, maps, periods, and players to be set up interactively
+% via menus.  The menus should be self-explanatory.
+\end{TPlist}\par\noindent
+In addition, %
+\bf -B \rm%
+and %
+\bf -D \rm%
+are recognized;
+see the customization document for more details.
+\shead{EXAMPLES}
+\begin{TPlist}{\bf}
+\item[{\bf}]
+xconq
+One human on local display, one machine, 60x30 random map
+\item[{\bf}]
+xconq -m crater
+One human vs one machine, on the "crater lake" map
+\item[{\bf}]
+xconq -e 0 blitzen:0 kzin.eel:0
+Three humans.  One on the local display, one on blitzen:0 in the same
+network, and another: kzin.eel:0 in another network.  60x30 random map
+\item[{\bf}]
+xconq -e 2 -M 90 40 -A shark:0
+One human, three machines (one on display shark:0), 90x40 random map
+\item[{\bf}]
+xconq -r -e 3 -m 1987 wind:0 surfer:0 -A springs:0
+Six players (4 machine, 1 on springs:0; 2 human, on wind:0 and surfer:0),
+all playing on a 360x122 map of the earth with present-day cities.  Major!
+\end{TPlist}\shead{X DEFAULTS}
+\begin{TPlist}{{\bf Class} / name}
+\item[{{\bf Class} / name}]
+You may specify these resources in your .Xres (or .Xdefaults) using a
+spec of the form
+\par\vspace{1.0\baselineskip}
+    XConq.Class: value
+\par\vspace{1.0\baselineskip}
+or
+\par\vspace{1.0\baselineskip}
+    XConq.name: value
+\par\vspace{1.0\baselineskip}
+and you can mix classes and names in the spec.  This is just standard X
+resource stuff.
+\end{TPlist}\par
+The following resources have a prefix of
+{\bf XConq.Map.Period} / xconq.map.\%s
+
+\begin{TPlist}{{\bf HexDisplayMode} / hexDisplayMode}
+\item[{{\bf HexDisplayMode} / hexDisplayMode}]
+This is how %
+\it xconq \rm%
+will display the terrain hexes.  Possible values
+are %
+\bf FullHex\rm%
+, %
+\bf BorderHex\rm%
+, %
+\bf TerrIcons\rm%
+, and %
+\bf BothIcons\rm%
+.
+\item[{{\bf Background} / ownColor}]
+The color for your own units.
+\item[{{\bf Background} / alternateColor}]
+I forgot
+\item[{{\bf Background} / differentColor}]
+Reminders would be appreciated
+\item[{{\bf Foreground} / borderColor}]
+It shouldn't be hard to figure out anyway
+\item[{{\bf Foreground} / grayColor}]
+but my boss is looking over my shoulder
+\item[{{\bf Foreground} / enemyColor}]
+The color of enemy units
+\item[{{\bf Foreground} / neutralColor}]
+The color of neutral units
+\item[{{\bf Foreground} / goodColor}]
+The color of allied units
+\item[{{\bf Foreground} / badColor}]
+And I really shouldn't play this game until I've finished the project
+\item[{{\bf Font} / textFont}]
+Font for all text.
+\item[{{\bf Font} / iconFont}]
+Font for miscellaneous pictures.
+\item[{{\bf Font/} helpFont}]
+Font for the help pages.
+\end{TPlist}\shead{AUTHORS}
+Stan Shebs (shebs@cs.utah.edu)
+\par\vspace{1.0\baselineskip}
+Version 5.4 by Greg Fisher (fisher@cs.rutgers.edu)
+\par\vspace{1.0\baselineskip}
+Version 5.5 by Robert Forsman (thoth@lightning.cis.ufl.edu)
+\par\vspace{1.0\baselineskip}
+Version 6.0 in the works.  It doesn't work too well yet, Stan's still
+fixing things.
+\shead{FILES}
+%
+\it save.xconq \rm%
+saved game
+\nwl
+%
+\it emergency.save.xconq \rm%
+game saved after program crash
+\nwl
+%
+\it stats.xconq \rm%
+performance statistics for a game
+\nwl
+%
+\it cmds.xconq \rm%
+listing of commands
+\nwl
+%
+\it parms.xconq \rm%
+listing of units and their characteristics
+\nwl
+%
+\it view.xconq \rm%
+printable version of the map display
+\nwl
+%
+\it /local/lib/x11r4/xconq/*.map \rm%
+ predefined maps
+\nwl
+%
+\it /local/lib/x11r4/xconq/*.scn \rm%
+ predefined scenarios
+\nwl
+%
+\it /local/lib/x11r4/xconq/*.per \rm%
+ predefined historical periods
+\nwl
+%
+\it /local/lib/x11r4/xconq/*.onx \rm%
+ X10 fonts
+\nwl
+%
+\it /local/lib/x11r4/xconq/*.bdf \rm%
+ X11 uncompiled fonts
+\nwl
+%
+\it /local/lib/x11r4/xconq/*.snf \rm%
+ X11 compiled fonts
+\nwl
+%
+\it /local/lib/x11r4/xconq/xconq.news \rm%
+ news about features/additions
+\shead{SEE ALSO}
+\nwl
+{\it Liberating\ the\ World\ (Made\ Simple)}
+\nwl
+{\it Customizing\ Xconq\ (Made\ Somewhat\ Simple)}
+\shead{DIAGNOSTICS}
+If a given display cannot be opened due to a missing %
+\it xhost(1) \rm%
+command,
+%
+\it xconq \rm%
+will quit with a message "Error opening display host:0".
+\par
+If the icon fonts cannot be found or opened, text will be substituted.
+This is usually pretty yucky.
+\par
+If the map is too small for the desired number of players, %
+\it xconq \rm%
+will
+complain about not being able to place units.
+\par
+There are some panic messages which usually precede a core dump by a few
+milliseconds.
+\par
+Incorrect combinations of periods, maps, and scenarios
+can generate a host of different error messages.
+\shead{BUGS}
+\par
+Since some periods/maps/scenarios are interdependent, they must be specified
+in a particular order on the command line (period first usually).
+\par
+Does not cope gracefully (it doesn't really cope at all) with
+insufficient memory.
+\par
+Some annoying behaviors are actually features.
+\par
+Feel free to report bugs to xconq@uunet.uu.net.  There are people
+there willing (if not able) to help you.  If you wish to listen in on
+the list you may join by sending mail to xconq-request@uunet.uu.net.
+\end{document}

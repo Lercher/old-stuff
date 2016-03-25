@@ -1,0 +1,207 @@
+CC = gcc
+LINK = gcc
+PERIOD=standard
+INSTALL=m:\math\pub\m
+VESAMODE=259
+
+OPT = -O2 -fomit-frame-pointer -finline-functions
+# Uncomment the second CFLAGS entry here to debug.
+CFLAGS = -O2 -fomit-frame-pointer -finline-functions -DMSDOS -DUNIX -DSTACK
+#CFLAGS = -g -O2 -finline-functions -DMSDOS -DUNIX -DSTACK
+
+MAINOBJS = xconq.o init.o command.o mplay.o mutil.o mproduce.o mvars.o \
+	sergeant.o move.o minit.o attack.o phases.o map.o mkmap.o \
+	side.o unit.o order.o util.o input.o help.o period.o \
+        ginit.o draw.o output.o standard.o
+
+MAINSRCS = xconq.c init.c command.c mplay.c mutil.c mproduce.c mvars.c \
+	sergeant.c move.c minit.c attack.c phases.c map.c mkmap.c \
+	side.c unit.c order.c util.c input.c help.c period.c \
+        ginit.c draw.c output.c standard.c
+
+## Xconq objects
+OBJS1=$(MAINOBJS)
+SRCS1=$(MAINSRCS)
+
+OBJS = $(OBJS1) vga.o
+SRCS = $(SRCS1) vga.c
+
+.c.o :
+	$(CC) $(CFLAGS) -c $<
+
+mconq.exe: $(OBJS1) mvga.o vconq.lnk
+	$(LINK) -o mconq mvga.o @vconq.lnk
+	emxbind -q mconq -acim
+	if exist mconq.exe del mconq.
+
+mvga.o : sconq.c
+	$(CC) $(OPT) -Wall -g -c -o mvga.o sconq.c -DMASTER=1 -DSTACK
+	
+sconq.exe : sconq.c
+	$(CC) $(OPT) -Wall -g -o sconq sconq.c vesa/libgraph.a vesa/libvesa.a -DMASTER=0
+	emxbind sconq -acim
+	if exist sconq.exe del sconq
+	
+all: vconq.exe lib/iconfont lib/textfont lib/helpfont lib/standard lib/pixmaps
+	echo > all
+
+net: mconq.exe sconq.exe lib/iconfont lib/textfont lib/helpfont lib/standard lib/pixmaps
+	copy sconq.exe $(INSTALL)
+	copy mconq.exe $(INSTALL)
+	copy sconq.c $(INSTALL)
+	
+nnet: sconq.exe mconq.exe lib/iconfont lib/textfont lib/helpfont lib/standard lib/pixmaps
+	emxbind -s mconq.exe
+	emxbind -s sconq.exe
+	mkdir $(INSTALL)
+	mkdir $(INSTALL)\lib
+	copy mconq.exe $(INSTALL)
+	copy sconq.exe $(INSTALL)
+	copy lib\*.* $(INSTALL)\lib
+	echo @echo off >$(INSTALL)\run.bat
+	echo if not x%VESAMODE%==x goto start >>$(INSTALL)\run.bat
+	echo vvesa >>$(INSTALL)\run.bat
+	echo set VESAMODE=$(VESAMODE) >>$(INSTALL)\run.bat
+	echo set XCONQLIB=$(INSTALL)/lib >>$(INSTALL)\run.bat
+	echo :start >>$(INSTALL)\run.bat
+	echo echo Type mconq for master sconq for slave. >>$(INSTALL)\run.bat
+	echo Installed to $(INSTALL). Type run to start Vconq 5.5.
+	
+install: all
+	emxbind -s vconq.exe
+	mkdir $(INSTALL)
+	mkdir $(INSTALL)\lib
+	copy vconq.exe $(INSTALL)
+	copy lib\*.* $(INSTALL)\lib
+	echo @echo off >$(INSTALL)\run.bat
+	echo if not x%VESAMODE%==x goto start >>$(INSTALL)\run.bat
+	echo vvesa >>$(INSTALL)\run.bat
+	echo set VESAMODE=$(VESAMODE) >>$(INSTALL)\run.bat
+	echo set XCONQLIB=$(INSTALL)/lib >>$(INSTALL)\run.bat
+	echo :start >>$(INSTALL)\run.bat
+	echo vconq %1 %2 %3 %4 %5 %6 %7 %8 %9 >>$(INSTALL)\run.bat
+	echo pause >>$(INSTALL)\run.bat
+	echo mode co80 >>$(INSTALL)\run.bat
+	echo Installed to $(INSTALL). Type run to start Vconq 5.5.
+
+clean :
+	del all
+	del *.o
+	del vconq.lnk
+	del standard.c
+	del vconq
+	del vconq.exe
+	del *.xco
+	del lib\\iconfont
+	del lib\\texfont
+	del lib\\helpfont
+	del lib\\standard
+	del lib\\pixmaps
+	del utils\\per2c
+	del utils\\bitmap
+	del utils\\vgafont
+	del utils\\mkfont
+	
+utils/per2c: utils/per2c.c period.o
+	$(CC) -o utils/per2c utils/per2c.c period.o -lm
+
+vconq.exe: $(OBJS) vconq.lnk
+	$(LINK) -o vconq vga.o @vconq.lnk
+	emxbind -q vconq -acim
+	if exist vconq.exe del vconq.
+
+standard.c: utils/per2c lib/$(PERIOD).per
+	emx utils/per2c < lib\\$(PERIOD).per > standard.c
+
+vconq.lnk: makefile
+	if exist vconq.lnk del vconq.lnk
+	echo xconq.o>>vconq.lnk
+	echo init.o>>vconq.lnk
+	echo command.o>>vconq.lnk
+	echo mplay.o>>vconq.lnk
+	echo mutil.o>>vconq.lnk
+	echo mproduce.o>>vconq.lnk
+	echo mvars.o>>vconq.lnk
+	echo sergeant.o>>vconq.lnk
+	echo move.o>>vconq.lnk
+	echo minit.o>>vconq.lnk
+	echo attack.o>>vconq.lnk
+	echo phases.o>>vconq.lnk
+	echo map.o>>vconq.lnk
+	echo mkmap.o>>vconq.lnk
+	echo side.o>>vconq.lnk
+	echo unit.o>>vconq.lnk
+	echo order.o>>vconq.lnk
+	echo util.o>>vconq.lnk
+	echo input.o>>vconq.lnk
+	echo help.o>>vconq.lnk
+	echo period.o>>vconq.lnk
+	echo ginit.o>>vconq.lnk
+	echo draw.o>>vconq.lnk
+	echo output.o>>vconq.lnk
+	echo standard.o>>vconq.lnk
+	echo vesa/libgraph.a>>vconq.lnk
+	echo vesa/libvesa.a>>vconq.lnk
+	echo -lm>>vconq.lnk
+
+utils/mkfont : utils/mkfont.c
+	$(CC) -o utils/mkfont utils/mkfont.c
+
+utils/vgafont : utils/vgafont.c
+	$(CC) -o utils/vgafont utils/vgafont.c vesa/libgraph.a vesa/libvesa.a
+
+utils/bitmap : utils/bitmap.c
+	$(CC) -o utils/bitmap utils/bitmap.c
+	
+lib/standard : bdf/standard.bdf utils/mkfont
+	emx utils/mkfont bdf/standard.bdf lib/standard
+	
+lib/iconfont : bdf/xconq.bdf utils/mkfont
+	emx utils/mkfont bdf/xconq.bdf lib/iconfont
+
+lib/textfont : utils/vgafont
+	emx -acim utils/vgafont 259 8 14 lib/textfont
+
+lib/helpfont : utils/vgafont
+	emx -acim utils/vgafont 19 8 8 lib/helpfont
+
+lib/pixmaps : utils/bitmap utils/mkpixmap.bat
+	if exist lib/pixmaps del lib/pixmaps
+	utils\\mkpixmap
+
+
+# automaticly created dependencies:
+vga.o : vga.c vesa/graph.h config.h misc.h period.h global.h side.h map.h 
+attack.o : attack.c config.h misc.h period.h side.h unit.h map.h global.h 
+bsd.o : bsd.c 
+command.o : command.c config.h misc.h dir.h period.h side.h unit.h map.h global.h \
+  mplay.h 
+draw.o : draw.c config.h misc.h period.h side.h unit.h map.h 
+help.o : help.c config.h misc.h period.h side.h unit.h map.h 
+init.o : init.c config.h misc.h dir.h period.h side.h unit.h map.h global.h 
+input.o : input.c config.h misc.h dir.h period.h side.h unit.h global.h map.h 
+map.o : map.c config.h misc.h dir.h period.h side.h unit.h map.h global.h 
+minit.o : minit.c config.h misc.h dir.h period.h side.h unit.h map.h global.h \
+  mplay.h 
+mkmap.o : mkmap.c config.h misc.h period.h dir.h map.h 
+move.o : move.c config.h misc.h dir.h period.h side.h unit.h map.h global.h 
+mplay.o : mplay.c config.h misc.h dir.h period.h side.h unit.h map.h global.h \
+  mplay.h 
+mproduce.o : mproduce.c config.h misc.h dir.h period.h side.h unit.h map.h global.h \
+  mplay.h 
+mutil.o : mutil.c config.h misc.h dir.h period.h side.h unit.h map.h global.h \
+  mplay.h 
+mvars.o : mvars.c config.h misc.h dir.h unit.h side.h mplay.h 
+order.o : order.c config.h misc.h dir.h period.h side.h unit.h 
+output.o : output.c config.h misc.h period.h side.h unit.h map.h global.h 
+utils/per2c.o : utils/per2c.c config.h misc.h period.h 
+standard.o : standard.c config.h period.h 
+period.o : period.c config.h misc.h period.h side.h unit.h 
+phases.o : phases.c config.h misc.h dir.h period.h side.h unit.h map.h global.h 
+sergeant.o : sergeant.c config.h misc.h dir.h period.h side.h unit.h map.h 
+side.o : side.c config.h misc.h dir.h period.h side.h unit.h map.h global.h 
+unit.o : unit.c config.h misc.h period.h side.h unit.h map.h global.h 
+util.o : util.c config.h misc.h dir.h map.h 
+xconq.o : xconq.c config.h misc.h period.h side.h unit.h map.h global.h version.h 
+ginit.o : ginit.c config.h misc.h dir.h period.h side.h unit.h map.h global.h 
+

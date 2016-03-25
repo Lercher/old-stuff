@@ -1,0 +1,701 @@
+This period is named "WW II ca 1945".
+
+It includes 13 unit types, 2 resource types, and 9 terrain types.
+First unit type is city, first product type is infantry.
+
+Countries are 3 hexes across, between 16 and 48 hexes apart.
+Known area is 0 hexes across.
+
+Defender always gets a counter-attack.
+Neutral units add -50% to defense, hit over 50 is a nuke.
+
+Terrain:  .  sea (sky blue)
+Terrain:  ,  shallows (cyan)
+Terrain:  =  swamp (yellowgreen)
+Terrain:  ~  desert (yellow)
+Terrain:  +  plains (green)
+Terrain:  %  forest (forest green)
+Terrain:  ^  mountains (sienna)
+Terrain:  _  ice (white)
+Terrain:  :  vacuum (black)
+
+Resource:    fuel (basic motive power)
+Resource:    ammo (generic hitting capability)
+
+Unit:     i  infantry (marches around and captures things)
+Unit:     a  armor (faster than infantry, limited to open terrain)
+Unit:     f  fighter (interceptor to get those nasty bombers)
+Unit:     b  bomber (long range aircraft, carries infantry and bombs)
+Unit:     d  destroyer (fast, cheap, and sinks subs)
+Unit:     s  submarine (sneaks around and sinks ships)
+Unit:     t  troop transport (carries infantry and armor across the pond)
+Unit:     C  carrier (carries fighters and bombers around)
+Unit:     B  battleship (the most powerful ship)
+Unit:     N  atomic bomb (leveler of cities (and anything else))
+Unit:     /  base (airstrip plus port)
+Unit:     *  town (smaller than a city)
+Unit:     @  city (capital of a side)
+
+--------------------------------------------------
+
+     'i' infantry      (territory value 0)
+            marches around and captures things
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 1 hexes/turn.
+1 HP, crippled at 0 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 1, volume of hold is 0.
+ Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -       1     6     1     1   -     -   
+      ammo:   -     -       6   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:   -     -     -     -     -     -     -   
+  shallows:   -     -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:     0   -     -     -     -     -     -   
+    plains:     0   -     -     -     100   -     -   
+    forest:     0   -     -     -     100   -     -   
+ mountains:     0   -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    50     1   -     -     -     -     -     -     -     -     -     -   
+a:    40     1   -     -     -     -     -     -     -     -     -     -   
+f:    20     1   -     -     -     -     -     -     -     -     -     -   
+b:    15     1   -     -     -     -     -     -     -     -     -     -   
+d:    20     1   -     -     -     -     -     -     -     -     -     -   
+s:    20     1   -     -     -     -     -     -     -     -     -     -   
+t:    30     1   -     -     -     -     -     -     -     -     -     -   
+C:    20     1   -     -     -     -     -     -     -     -     -     -   
+B:     9     1   -     -     -     -     -     -     -     -     -     -   
+N:    40     1   -     -     -     -     -     -     -     -     -     -   
+/:    80     1    70   -      15   -     -     -     -     -       3     1 
+*:    60     1    50   -       5   -     -     -     -     -     -      10 
+@:    40     1    30   -       5   -     -     -     -     -     -      10 
+
+
+--------------------------------------------------
+
+     'a' armor      (territory value 0)
+            faster than infantry, limited to open terrain
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 2 hexes/turn.
+1 HP, crippled at 0 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 1, volume of hold is 0.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -       2    10   -       1   -     -   
+      ammo:   -     -       4   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:   -     -     -     -     -     -     -   
+  shallows:   -     -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:     0   -     -     -     -     -     -   
+    plains:     0   -     -     -     100   -     -   
+    forest:   -     -     -     -     -     -     -   
+ mountains:   -     -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    60     1   -     -     -     -     -     -     -     -     -     -   
+a:    50     1   -     -     -     -     -     -     -     -     -     -   
+f:    30     1   -     -     -     -     -     -     -     -     -     -   
+b:    30     1   -     -     -     -     -     -     -     -     -     -   
+d:    30     1   -     -     -     -     -     -     -     -     -     -   
+s:    20     1   -     -     -     -     -     -     -     -     -     -   
+t:    30     1   -     -     -     -     -     -     -     -     -     -   
+C:    20     1   -     -     -     -     -     -     -     -     -     -   
+B:    20     1   -     -     -     -     -     -     -     -     -     -   
+N:    50     1   -     -     -     -     -     -     -     -     -     -   
+/:    90     2    90   -      25   -       0   -     -     -       5   -   
+*:    70     2    70   -      10   -       0   -     -     -     -     -   
+@:    50     2    50   -      10   -       0   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     'f' fighter      (territory value 0)
+            interceptor to get those nasty bombers
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 9 hexes/turn.
+1 HP, crippled at 0 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 1, volume of hold is 0.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -      18     3     1   -     -   
+      ammo:   -     -       3   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     0   -     -     -     -     -     -   
+     swamp:     0   -     -     -     -     -     -   
+    desert:     0   -     -     -     -     -     -   
+    plains:     0   -     -     -     -     -     -   
+    forest:     0   -     -     -     -     -     -   
+ mountains:     0   -     -     -     -     -     -   
+       ice:     0   -     -     -     -     -     -   
+    vacuum:     0   -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    15     1   -     -     -     -       9   -     -     -     -     -   
+a:    25     1   -     -     -     -       9   -     -     -     -     -   
+f:    60     1   -     -     -     -       9   -     -     -     -     -   
+b:    70     1   -     -     -     -       9   -     -     -     -     -   
+d:    20     1   -     -     -     -       9   -     -     -     -     -   
+s:    30     1   -     -     -     -       9   -     -     -     -     -   
+t:    20     1   -     -     -     -       9   -     -     -     -     -   
+C:    50     1   -     -     -     -       9   -     -     -     -     -   
+B:    40     1   -     -     -     -       9   -     -     -     -     -   
+N:    80     1   -     -     -     -       9   -     -     -     -     -   
+/:   100     1   -     -     -     -       9   -     -     -     -     -   
+*:   100     1   -     -     -     -       9   -     -     -     -     -   
+@:   100     1   -     -     -     -       9   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     'b' bomber      (territory value 0)
+            long range aircraft, carries infantry and bombs
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 6 hexes/turn.
+2 HP, crippled at 1 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 2, volume of hold is 1.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -      36     2     1   -     -   
+      ammo:   -     -       3   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     0   -     -     -     -     -     -   
+     swamp:     0   -     -     -     -     -     -   
+    desert:     0   -     -     -     -     -     -   
+    plains:     0   -     -     -     -     -     -   
+    forest:     0   -     -     -     -     -     -   
+ mountains:     0   -     -     -     -     -     -   
+       ice:     0   -     -     -     -     -     -   
+    vacuum:     0   -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    20     1   -     -     -       1     6   -     -     -     -     -   
+a:    20     1   -     -     -     -       6   -     -     -     -     -   
+f:    10     1   -     -     -     -       6   -     -     -     -     -   
+b:     9     1   -     -     -     -       6   -     -     -     -     -   
+d:    30     2   -     -     -     -       6   -     -     -     -     -   
+s:    50     1   -     -     -     -       6   -     -     -     -     -   
+t:    50     2   -     -     -     -       6   -     -     -     -     -   
+C:    70     2   -     -     -     -       6   -     -     -     -     -   
+B:    60     2   -     -     -     -       6   -     -     -     -     -   
+N:    50     1   -     -     -       1     6   -     -     -     -     -   
+/:    90     2   -     -     -     -       6   -     -     -     -     -   
+*:    95     2   -     -     -     -       6   -     -     -     -     -   
+@:    99     3   -     -     -     -       6   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     'd' destroyer      (territory value 0)
+            fast, cheap, and sinks subs
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 3 hexes/turn.
+3 HP, crippled at 1 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 4, volume of hold is 0.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -     100   -       1   -     -   
+      ammo:   -     -      20   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     0   -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:   -     -     -     -     -     -     -   
+    plains:   -     -     -     -     -     -     -   
+    forest:   -     -     -     -     -     -     -   
+ mountains:   -     -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:     5     1   -     -     -     -       0   -     -     -     -     -   
+a:     5     1   -     -     -     -       0   -     -     -     -     -   
+f:    10     1   -     -     -     -       0   -     -     -     -     -   
+b:     5     1   -     -     -     -       0   -     -     -     -     -   
+d:    60     1   -     -     -     -       0   -     -     -     -     -   
+s:    70     2   -     -     -     -       0   -     -     -     -     -   
+t:    60     1   -     -     -     -       0   -     -     -     -     -   
+C:    40     1   -     -     -     -       0   -     -     -     -     -   
+B:    20     1   -     -     -     -       0   -     -     -     -     -   
+N:   -       1   -     -     -     -       0   -     -     -     -     -   
+/:    99     1   -     -     -     -       0   -     -     -     -     -   
+*:    90     1   -     -     -     -       0   -     -     -     -     -   
+@:    80     1   -     -     -     -       0   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     's' submarine      (territory value 0)
+            sneaks around and sinks ships
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 3 hexes/turn.
+2 HP, crippled at 1 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 10.
+Volume is 4, volume of hold is 0.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -     100   -       1   -     -   
+      ammo:   -     -      10   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     0   -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:   -     -     -     -     -     -     -   
+    plains:   -     -     -     -     -     -     -   
+    forest:   -     -     -     -     -     -     -   
+ mountains:   -     -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:   -       1   -     -     -     -       0   -     -     -     -     -   
+a:   -       1   -     -     -     -       0   -     -     -     -     -   
+f:    10     1   -     -     -     -       0   -     -     -     -     -   
+b:     5     1   -     -     -     -       0   -     -     -     -     -   
+d:    40     3   -     -     -     -       0   -     -     -     -     -   
+s:    10     3   -     -     -     -       0   -     -     -     -     -   
+t:    60     3   -     -     -     -       0   -     -     -     -     -   
+C:    40     3   -     -     -     -       0   -     -     -     -     -   
+B:    50     4   -     -     -     -       0   -     -     -     -     -   
+N:   -       1   -     -     -     -       0   -     -     -     -     -   
+/:   -       1   -     -     -     -       0   -     -     -     -     -   
+*:   -       1   -     -     -     -       0   -     -     -     -     -   
+@:   -       1   -     -     -     -       0   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     't' troop transport      (territory value 0)
+            carries infantry and armor across the pond
+
+Initially: 0 in country, 0/10000 hexes density, unnamed.
+Maximum speed 2 hexes/turn.
+3 HP, crippled at 2 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 6, volume of hold is 6.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -     200   -       1   -     -   
+      ammo:   -     -      20   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     0   -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:   -     -     -     -     -     -     -   
+    plains:   -     -     -     -     -     -     -   
+    forest:   -     -     -     -     -     -     -   
+ mountains:   -     -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    20     1   -     -     -       6     0   -     -     -     -     -   
+a:     5     1   -     -     -       6     0   -     -     -     -     -   
+f:    10     1   -     -     -     -       0   -     -     -     -     -   
+b:     5     1   -     -     -     -       0   -     -     -     -     -   
+d:    40     1   -     -     -     -       0   -      50   -     -     -   
+s:    40     1   -     -     -     -       0   -      50   -     -     -   
+t:    40     1   -     -     -     -       0   -      50   -     -     -   
+C:    30     1   -     -     -     -       0   -      50   -     -     -   
+B:     9     1   -     -     -     -       0   -      50   -     -     -   
+N:   -       1   -     -     -     -       0   -     -     -     -     -   
+/:   -       1   -     -     -     -       0   -     -     -     -     -   
+*:   -       1   -     -     -     -       0   -     -     -     -     -   
+@:   -       1   -     -     -     -       0   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     'C' carrier      (territory value 0)
+            carries fighters and bombers around
+
+Initially: 0 in country, 0/10000 hexes density, named.
+Maximum speed 4 hexes/turn.
+4 HP, crippled at 2 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 6, volume of hold is 10.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -     400   -       1   -     -   
+      ammo:   -     -      40   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     2   -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:   -     -     -     -     -     -     -   
+    plains:   -     -     -     -     -     -     -   
+    forest:   -     -     -     -     -     -     -   
+ mountains:   -     -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    30     1   -     -     -     -       0   -     -     -     -     -   
+a:    20     1   -     -     -     -       0   -     -     -     -     -   
+f:    40     1   -     -     -       6     0   -     -     -     -     -   
+b:    10     1   -     -     -       2     0   -     -     -     -     -   
+d:    30     1   -     -     -     -       0   -     -     -     -     -   
+s:    30     1   -     -     -     -       0   -     -     -     -     -   
+t:    40     1   -     -     -     -       0   -     -     -     -     -   
+C:    20     1   -     -     -     -       0   -     -     -     -      10 
+B:    20     1   -     -     -     -       0   -     -     -     -      10 
+N:   -       1   -     -     -     -       0   -     -     -     -     -   
+/:   -       1   -     -     -     -       0   -     -     -     -     -   
+*:   -       1   -     -     -     -       0   -     -     -     -     -   
+@:   -       1   -     -     -     -       0   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     'B' battleship      (territory value 0)
+            the most powerful ship
+
+Initially: 0 in country, 0/10000 hexes density, named.
+Maximum speed 4 hexes/turn.
+8 HP, crippled at 4 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 6, volume of hold is 0.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -     200   -       1   -     -   
+      ammo:   -     -      40   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     2   -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:   -     -     -     -     -     -     -   
+    plains:   -     -     -     -     -     -     -   
+    forest:   -     -     -     -     -     -     -   
+ mountains:   -     -     -     -     -     -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    50     2   -     -     -     -       0   -     -     -     -     -   
+a:    50     2   -     -     -     -       0   -     -     -     -     -   
+f:    50     2   -     -     -     -       0   -     -     -     -     -   
+b:    20     2   -     -     -     -       0   -     -     -     -     -   
+d:    70     2   -     -     -     -       0   -     -     -     -     -   
+s:    50     2   -     -     -     -       0   -     -     -     -     -   
+t:    90     2   -     -     -     -       0   -     -     -     -     -   
+C:    50     2   -     -     -     -       0   -     -     -     -      10 
+B:    90     2   -     -     -     -       0   -     -     -     -      10 
+N:   -       2   -     -     -     -       0   -     -     -     -     -   
+/:   100     2   -     -     -     -       0   -     -     -     -     -   
+*:   100     3   -     -     -     -       0   -     -     -     -     -   
+@:   100     4   -     -     -     -       0   -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     'N' atomic bomb      (territory value 0)
+            leveler of cities (and anything else)
+
+Initially: 0 in country, 0/10000 hexes density, named.
+Maximum speed 1 hexes/turn.
+1 HP, crippled at 0 HP, chance to retreat 0%.
+20% extra for start up, 300% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 10.
+Volume is 1, volume of hold is 0.
+Can be made to change sides. Can be disbanded and sent home.
+ Hits by self-destruction.
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -     -       1   -     -     -     -   
+      ammo:   -     -       1   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:     0   -     -     -     -     -     -   
+  shallows:     0   -     -     -     -     -     -   
+     swamp:     0   -     -     -     -     -     -   
+    desert:     0   -     -     -     -     -     -   
+    plains:     0   -     -     -     -     -     -   
+    forest:     0   -     -     -     -     -     -   
+ mountains:     0   -     -     -     -     -     -   
+       ice:     0   -     -     -     -     -     -   
+    vacuum:     0   -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:   200    60   -     -     -     -     -     -     -     -     -     -   
+a:   200    60   -     -     -     -     -     -     -     -     -     -   
+f:   200    60   -     -     -     -     -     -     -     -     -     -   
+b:   200    60   -     -     -     -     -     -     -     -     -     -   
+d:   200    60   -     -     -     -     -     -     -     -     -     -   
+s:   200    60   -     -     -     -     -     -     -     -     -     -   
+t:   200    60   -     -     -     -     -     -     -     -     -     -   
+C:   200    60   -     -     -     -     -     -     -     -     -     -   
+B:   200    60   -     -     -     -     -     -     -     -     -     -   
+N:   -      60   -     -     -     -     -     -     -     -     -     -   
+/:   200    60   -     -     -     -     -     -     -     -     -     -   
+*:   200    60   -     -     -     -     -     -     -     -     -     -   
+@:   200    60   -     -     -     -     -     -     -     -     -     -   
+
+
+--------------------------------------------------
+
+     '/' base      (territory value 1)
+            airstrip plus port
+
+Initially: 0 in country, 0/10000 hexes density, named.
+Maximum speed 0 hexes/turn.
+10 HP, crippled at 5 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 1, volume of hold is 20.
+Can be made to change sides. Can be disbanded and sent home.
+ 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -      10   200   -     -     -     -   
+      ammo:   -       5   100   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:   -     -     -     -     -     -     -   
+  shallows:   -     -     -     -     -     -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:     0   -     -     -      20   -     -   
+    plains:     0   -     -     -     100   -     -   
+    forest:     0   -     -     -      50   -     -   
+ mountains:     0   -     -     -      20   -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    10     1   -     -      50     2   -     -     -       1   -       3 
+a:    10     1   -     -      50     2   -     -     -     -     -       3 
+f:    20     1   -     -      50     4   -     -     -     -     -       3 
+b:    20     1   -     -      50     4   -     -     -     -     -       3 
+d:    20     1   -     -      50     2   -     -     -     -     -       3 
+s:    20     1   -     -      50     2   -     -     -     -     -       3 
+t:    30     1   -     -      50     2   -     -     -     -     -       3 
+C:    20     1   -     -      50     2   -     -     -     -     -       3 
+B:    20     1   -     -      50     2   -     -     -     -     -       3 
+N:   -       1   -     -      50     2   -     -     -     -     -       3 
+/:   -       1   -     -     -     -     -     -     -     -     -       3 
+*:   -       1   -     -     -     -     -     -     -     -     -       3 
+@:   -       1   -     -     -     -     -     -     -     -     -       3 
+
+
+--------------------------------------------------
+
+     '*' town      (territory value 5)
+            smaller than a city
+
+Initially: 5 in country, 100/10000 hexes density, named.
+Maximum speed 0 hexes/turn.
+20 HP, crippled at 10 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see others 100%.
+Own visibility is 100.
+Volume is 1, volume of hold is 40.
+Can be made to change sides. 
+Builds units all the time. 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -      20   500   -     -     -     -   
+      ammo:   -      10   200   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:   -     -     -     -     100   -     -   
+  shallows:   -     -     -     -     100   -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:     0   -     -     -      20   -     -   
+    plains:     0   -     -     -     100   -     -   
+    forest:     0   -     -     -      50   -     -   
+ mountains:     0   -     -     -      20   -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    30     1   -     -      50    10   -     -     -       1     4     1 
+a:    20     1   -     -      50    10   -     -     -     -       7     1 
+f:    50     1   -     -      50    10   -     -     -     -       8     1 
+b:    40     1   -     -      50    10   -     -     -     -      16     1 
+d:    40     1   -     -      50    10   -     -     -     -      10     1 
+s:   -       1   -     -      50    10   -     -     -     -      16     1 
+t:    30     1   -     -      50    10   -     -     -     -      12     1 
+C:    20     1   -     -      50    10   -     -     -     -      30     1 
+B:    20     1   -     -      50    10   -     -     -     -      40     1 
+N:   -       1   -     -      50    10   -     -     -     -      20     1 
+/:   -       1   -     -     -     -     -     -     -     -     -       1 
+*:   -       1   -     -     -     -     -     -     -     -     -       1 
+@:   -       1   -     -     -     -     -     -     -     -     -       1 
+
+
+--------------------------------------------------
+
+     '@' city      (territory value 25)
+            capital of a side
+
+Initially: 1 in country, 0/10000 hexes density, named.
+Maximum speed 0 hexes/turn.
+40 HP, crippled at 20 HP, chance to retreat 0%.
+20% extra for start up, 0% extra for R&D.
+0 extra moves used up by an attack.
+0% to succumb to siege, 0% to revolt, attrition damage 1 HP.
+Chance to see 100% at 1 hex, to 100% at 3 hexes.
+Own visibility is 100.
+Volume is 1, volume of hold is 80.
+Can be made to change sides. 
+Builds units all the time. 
+
+  Resource   ToBui  Prod Store  Eats ToMov  Hits HitBy
+               (0)   (0)   (0)   (0)   (0)   (0)   (0)
+      fuel:   -      50   900   -     -     -     -   
+      ammo:   -      20   400   -     -       1     1 
+
+   Terrain  Slowed Rand% Hide% Defn% Prod% Attr% Acdn%
+               (-)   (0)   (0)   (0)   (0)   (0)   (0)
+       sea:   -     -     -     -     100   -     -   
+  shallows:   -     -     -     -     100   -     -   
+     swamp:   -     -     -     -     -     -     -   
+    desert:     0   -     -     -      20   -     -   
+    plains:     0   -     -     -     100   -     -   
+    forest:     0   -     -     -      50   -     -   
+ mountains:     0   -     -     -      20   -     -   
+       ice:   -     -     -     -     -     -     -   
+    vacuum:   -     -     -     -     -     -     -   
+
+     Hit%  Damg  Cap% Guard  Pro% Holds Enter Leave  Mob% Bridg Build   Fix
+      (0)   (0)   (0)   (0)   (0)   (0)   (1)   (0) (100)   (0)   (0)   (0)
+i:    50     1   -     -      50    20   -     -     -       1     4     1 
+a:    40     1   -     -      50    20   -     -     -     -       7     1 
+f:    70     1   -     -      50    20   -     -     -     -       8     1 
+b:    60     1   -     -      50    20   -     -     -     -      16     1 
+d:    50     1   -     -      50    20   -     -     -     -      10     1 
+s:   -       1   -     -      50    20   -     -     -     -      16     1 
+t:    30     1   -     -      50    20   -     -     -     -      12     1 
+C:    20     1   -     -      50    20   -     -     -     -      30     1 
+B:    50     1   -     -      50    20   -     -     -     -      40     1 
+N:   -       1   -     -      50    20   -     -     -     -      20     1 
+/:   -       1   -     -     -     -     -     -     -     -     -       1 
+*:   -       1   -     -     -     -     -     -     -     -     -       1 
+@:   -       1   -     -     -     -     -     -     -     -     -       1 
+
+

@@ -1,0 +1,555 @@
+% -*-LaTeX-*-
+% Converted automatically from troff to LaTeX by tr2tex on Tue Sep 14 18:59:38 1993
+% tr2tex was written by Kamal Al-Yahya at Stanford University
+% (Kamal%Hanauma@SU-SCORE.ARPA)
+
+\error \fB nicht interpretiert!
+
+\documentstyle[troffms,a5]{dipl}
+\begin{document}
+%
+% input file: custom.ms
+%
+\title{CUSTOMIZING XCONQ (Made Somewhat Simple)}
+\author{Stan Shebs}
+\authoraff{Department of Computer Science \\
+University of Utah}
+\begin{abstract}
+For advanced players who desire new challenges, %
+\it xconq \rm%
+provides several
+customization mechanisms.
+It is possible to build new maps, scenarios, and historical periods.
+This document describes the customization process in excruciating detail.
+The reader is assumed to be familiar with %
+\it xconq \rm%
+and its basic
+documentation.
+\end{abstract}
+\shead{INTRODUCTION}
+\par\noindent
+%
+\it Xconq \rm%
+has been designed to facilitate the construction of new maps,
+scenarios, and historical periods.
+All these additions happen through a single mechanism, the %
+\it mapfile\rm%
+,
+which comes in several parts, and may also load other mapfiles.
+Saved games are very detailed mapfiles; less detailed mapfiles are more
+suitable as scenarios.  Maps and period descriptions are mapfiles with
+most sections missing.
+\par\noindent
+Mapfiles are created either by text editing,
+by %
+\it xconq\rm%
+, or by a combination of both.  
+Since they are mostly read by variations on C's %
+\it scanf \rm%
+function,
+the format is rather rigid; numbers may not be omitted, no blank lines
+are allowed (but whitespace between numbers on a line is OK),
+and mistakes will not always be recognized.
+The one general exception is the period description, which is read by
+a lexical analyzer, which allows free-format input.  Other more specific
+exceptions will be noted below.
+\shead{MAPFILES}
+\par\noindent
+A mapfile is a normal ASCII text file.  It begins with a header line of the
+form
+\begin{itemize}
+\item
+%
+\bf Xconq %
+\it n [+-][+-][+-][+-][+-][+-] description[;] %
+\rm \end{itemize}\par\noindent
+where %
+\it n \rm%
+is the number of additional mapfiles to be loaded (up to 16 or so in all),
+each + or -
+indicates the presence or absence of a particular section, and the
+%
+\it description \rm%
+is free-form text (remainder of the line) describing the mapfile.
+Note that that all reading/writing in the mapfile is case-sensitive,
+including the header words.
+The sections are for version, period, map, globals, sides, and units,
+in that order.  Most sections vary in size, and some vary also in
+the detail of the information they contain.  Most include extension
+flags, which are reserved for future expansion of mapfiles.
+\par\noindent
+Additional notes may be included by terminating the %
+\it description \rm%
+with a semicolon (with NO whitespace following).
+In such a case, the following text lines
+will skipped over until a period "." is seen by itself on a line.
+\par\noindent
+Following the header are the names of the %
+\it n \rm%
+mapfiles, one to a line.
+Each will be loaded into %
+\it xconq \rm%
+before the rest of the current mapfile.
+This process is recursive (at least in theory).  Any conflicts are
+resolved by simple overwriting.  Note that this presents the possibility
+of catastrophic conflicts if the designer is not careful to, say, match
+units and periods.  A file with a given name will be loaded only once;
+a second attempt will result in a warning message, and the program will
+continue on.
+\par\noindent
+The version section is quite simple, since it is one line;
+exactly the version
+string displayed when %
+\it xconq \rm%
+starts up.  This is typically only needed for
+saved games, but might be convenient while %
+\it xconq \rm%
+versions are changing
+incompatibly.
+When this section is loaded, the version is merely compared with the
+internal version number, and %
+\it xconq \rm%
+fails if they do not match.
+\par\noindent
+The period section is a program in a simple postfix language,
+which when executed fills in the period description.
+\par\noindent
+The map section includes the world dimensions and terrain.
+It may also include information about countries at some future date.
+\par\noindent
+The globals section includes any global values, such as the current turn,
+and also the win/lose conditions for a scenario.
+\par\noindent
+The sides section defines the sides in a game.  Required info is little
+more than the name of the side, but a detailed section may also include
+the area of the map seen by that side, and other data.
+\par\noindent
+Finally, the units sections lists a number of units in the game.
+Again, detail can range from type, name, and position to complete
+details on its orders.
+\par\noindent
+Each of these sections is entirely optional - %
+\it xconq \rm%
+can synthesize its
+own replacements for each.  For instance, a mapfile could specify a map
+and two sides, or a period, or an entire game, by including the appropriate
+sections.
+The sections do interact somewhat, with dependencies as follows:
+\begin{itemize}
+\item
+Maps, win/lose conditions in globals,
+detailed sides, and units depend on period.
+\item
+Detailed and/or non-neutral units depend on sides.
+\end{itemize}\par\noindent
+The following sections discuss each part of a mapfile in more detail.
+The version secton
+has already been covered sufficiently.
+Since the period defines what may appear in all the other sections,
+I shall begin with it.
+
+\input period.tex
+
+\shead{MAPS}
+\par\noindent
+Maps alone are the easiest thing to customize.  You can either do ordinary
+text editing to acquire the map data, then add the headers, or use the
+online terrain editing capability of %
+\it xconq \rm%
+and save the terrain alone.
+\par\noindent
+The map header has the form
+\begin{itemize}
+\item
+%
+\bf Map %
+\it width height scale seen extension %
+\rm \end{itemize}\par\noindent
+where %
+\it width \rm%
+and %
+\it height \rm%
+are the size of the map,
+while the %
+\it scale \rm%
+is
+the width of a single hex in km (measured between parallel faces).
+The %
+\it seen \rm%
+flag is %
+\bf 0 \rm%
+if the map is not known to the players,
+and %
+\bf 1 \rm%
+if it is (this is like using %
+\bf "-v" \rm%
+on the command line).
+The %
+\it extension \rm%
+is an extension flag, with a value of %
+\bf 0 \rm%
+for the normal map.
+Other values are reserved for extensions.
+\par\noindent
+The preferred way to build a map is to use the %
+\bf "-B" \rm%
+option of %
+\it xconq\rm%
+.
+This enables the space bar to "paint" terrain onto the map.
+The "brush" is defined by using the terrain characters as commands
+(they will override any normal commands on the same letters).
+The argument is also useful - if positive, it is the radius of the
+area to be painted with the given terrain type, if negative,
+it is the length of a horizontal bar.  Thus, in the standard period,
+the sequence %
+\bf "999. " \rm%
+will convert all but the largest maps into open sea.
+To save the map by itself, answer with the string "m" when "saving the game"
+(described in more detail below).
+\par\noindent
+The other way to build is by using a text editor and following the format
+exactly.
+The terrain data is a number of long lines of characters.  The length of
+the lines must be exactly the width of the map.  The characters for
+terrain types are defined by the period.
+The coordinate system is Cartesian oblique, with the y axis tilted to form
+a 60-degree angle with the x axis.  Thus, landforms in the mapfile should
+appear to be leaning to the left, if they are to appear upright during play.
+\par\noindent
+Maps should have some distinguishing terrain
+on the northern and southern edges;  also, remember that the default
+map shape wraps around in the east-west direction, so landforms should
+match up.  If the wraparound is undesirable, a vertical stripe of
+some otherwise-unused type (such as outer space) is useful to block movement.
+\par\noindent
+Run-length encoding is also available.  It is flagged by a numeric digit,
+followed by any number of digits, followed by a terrain character.  The
+terrain character will be replicated the number of times specified by the
+digit string.  The encoding may be freely intermixed with normal terrain,
+but cannot extend over line boundaries.
+\shead{GLOBALS}
+\par\noindent
+Globals include a number of values affecting an entire game.  The header
+is in the following form:
+\begin{itemize}
+\item
+%
+\bf Globals %
+\it gametime endtime setproduct leavemap numconds extension %
+\rm \end{itemize}\par\noindent
+where %
+\it gametime \rm%
+is the elapsed turns, %
+\it endtime \rm%
+is the last turn
+of the game, %
+\it setproduct \rm%
+controls whether unit construction is changeable,
+%
+\it leavemap \rm%
+allows units to leave by the map edges,
+and %
+\it extension \rm%
+is reserved for extensions (is normally %
+\bf 0\rm%
+).
+\par\noindent
+%
+\it numconds \rm%
+specifies the number of winning/losing conditions.
+Conditions are evaluated at the end of each turn (along with other
+ways to lose, such as losing all of one's units).
+A win condition results in the side achieving it winning
+while all others lose.
+A losing condition knocks the side out of the game, and the other sides
+continue normally.
+Multiple win and lose conditions
+act as disjunctions - when one is satisfied, something will happen.
+There is a limit of about 10 conditions or so.
+All conditions include a starting and ending time for
+when they are in effect, as well as the number of a side to which it
+applies, or %
+\bf -1 \rm%
+it is to be applied to all sides equally.
+\par\noindent
+The first line of a condition is the same for all types:
+\begin{itemize}
+\item
+ %
+\it win/lose type start end side(s) %
+\rm \end{itemize}\par\noindent
+where %
+\it win/lose \rm%
+is %
+\bf 1 \rm%
+if the condition is for winning
+and %
+\bf 0 \rm%
+for losing,
+%
+\it start \rm%
+and %
+\it end \rm%
+are the starting and ending turns for testing
+the condition, %
+\it side(s) \rm%
+is the number of a side to which the condition
+applies (or %
+\bf -1 \rm%
+if it applies to any side), 
+and %
+\it type \rm%
+is the type of condition:
+\begin{itemize}
+\item[{%
+\bf 0\rm%
+}]
+Territory; next line is one number, the amount of territory
+(above if to win, below if to lose).
+\item[{%
+\bf 1\rm%
+}]
+Number of units; next line is list of numbers, one for each unit type.
+To win, must possess at least that many of each type.
+To lose, must be at or below that many for %
+\it all \rm%
+unit types
+simultaneously
+(the default losing condition is this one, with all zeros).
+To make this condition apply to only one unit type, set all the other
+numbers to very low (for win condition) or very high (for lose condition)
+values, outside the range normally occurring during a game.
+\item[{%
+\bf 2\rm%
+}]
+Quantity of resources; next line is a list of numbers, one for each
+resource type.  Winning and losing is same as for unit types.
+\item[{%
+\bf 3\rm%
+}]
+Possession; next line is three numbers,
+the first two representing the coordinates of a hex, and the third
+the number of a unit type (or %
+\bf -1 \rm%
+to indicate all unit types).
+To win, must have a unit of the specified type on the hex.
+To lose, do not have a unit on that hex.
+\end{itemize}\par\noindent
+Each condition has a sort of dual identity, since it is interpreted
+slightly differently, depending on whether it is flagged for winning
+or losing.  The logic is a little twisted perhaps - special conditions
+should have all cases tested carefully before a scenario is released.
+\shead{SIDES}
+\par\noindent
+Sides need relatively little information stored about them, particularly
+for a scenario.  The header is simple:
+\begin{itemize}
+\item
+%
+\bf Sides %
+\it numsides detail extension %
+\rm \end{itemize}\par\noindent
+where
+{\it numsides}
+is the number of sides recorded, and
+{\it detail}
+is the level of detail that was recorded.
+\par\noindent
+The side's name can be set using the naming or %
+\bf C\rm%
+all command, when
+the cursor is not over a unit, or if an argument is supplied (this will be
+the number of a side, and can be used in build mode to change the names
+of other sides).
+\par\noindent
+The exact contents of each level of detail are as follows:
+\begin{itemize}
+\item[{%
+\bf 1\rm%
+}]
+Name of side only is saved.  This is sufficient for many scenarios.
+\item[{%
+\bf 2\rm%
+}]
+Name, attributes, and political status and production counts (used for
+numbering unnamed units) saved.
+\item[{%
+\bf 3\rm%
+}]
+All of above, plus view of explored part of world.
+\item[{%
+\bf 4\rm%
+}]
+All of above, plus hosts and player types, plus statistics if used.
+\item[{%
+\bf 9\rm%
+}]
+All possible data.  This is the level used for saved games.
+(At the moment, this is equivalent to level 4, but may include more data
+in the future.)
+\end{itemize}\par\noindent
+The data for each level begins on a new line, and some levels need several
+lines (such as the view data).  The best way to study the layout is to
+examine a saved game.
+\shead{UNITS}
+\par\noindent
+Units have quite a few attributes, nearly all of which must be saved.
+The header is as simple as for sides:
+\begin{itemize}
+\item
+%
+\bf Units %
+\it numunits detail extension %
+\rm \end{itemize}\par\noindent
+where %
+\it numunits \rm%
+is the number of units saved, %
+\it detail \rm%
+is the level of detail that was recorded, and of course %
+\it extension \rm%
+is the usual extension with only a value of %
+\bf 0\rm%
+.
+There are several levels of detail:
+\begin{itemize}
+\item[{%
+\bf 1\rm%
+}]
+Type, name, and position, and side.
+The re-created units will be fully supplied and awake.
+Neutral units have a side of -1.
+Units capable of construction will be idled, so there should be at
+least one movable unit present.
+\item[{%
+\bf 2\rm%
+}]
+All of above, plus scalar attributes and supply amounts, all on one line.
+(Look at a saved game or the source code to interpret the numbers.)
+\item[{%
+\bf 3\rm%
+}]
+All of above, plus orders and standing orders if defined.
+\item[{%
+\bf 9\rm%
+}]
+All possible data.  This is the level used for saved games.
+(Same as level 3 at present.)
+\end{itemize}\par\noindent
+Build mode offers a number of way to manipulate units on any side,
+as described in the next section.
+\shead{SCENARIOS}
+\par\noindent
+The %
+\bf -B \rm%
+command line option starts up %
+\it xconq \rm%
+in %
+\it build mode\rm%
+,
+where many
+additional actions are possible, all oriented towards the editing of
+game state.  All commands can be performed on any side's units, and
+none of the machine players will move (this can be toggled by using the
+quit command 'Q', then saying 'n' to the confirmation question).  Build mode
+allows some other acts:
+\begin{itemize}
+\item
+Move any unit anywhere instantly, using the moveto command 'm'.
+\item
+Create any unit anywhere, using '\bs ' (prompts for unit type, argument
+specifies side, defaults to neutral).
+\item
+Modify terrain anywhere, as described under the map section.
+\item
+See all units everywhere, using 'V'
+\item
+Do anything to any unit as if it were your own, using the usual commands.
+\end{itemize}\par\noindent
+Once all desired changes have been made, you may wish to allow machine
+players to move a little, just to randomize things a bit.  Then use the
+normal game save command.  In build mode, you will be asked to enter a
+string indicating sections and levels of detail.  The string should contain
+a character for each section you want written out - 'g' for globals, 'u'
+for units, and so forth.  The letters 'u' and 's' must each be followed by
+a digit indicating the level of detail desired, as described earlier.
+The default string is %
+\bf "ms1u1"\rm%
+, which will write a mapfile with the map,
+side names, and unit types/names/positions/sides, which is sufficient
+for many interesting scenarios.
+The file that will be written is always called %
+\bf "random.scn"\rm%
+,
+is written into the current directory, and should be renamed as desired.
+After sufficient playtesting, it may be added to the scenario menu, just
+by adding its name to the file %
+\bf "mapfiles" \rm%
+in the library directory.
+\par\noindent
+Scenario construction is not for everybody.  Since the processes are
+semi-internal, the error-checking is not as extensive.  For instance,
+you can load a submarine with battleships as passengers.  There are
+also more subtle questions of balance, which are usually revealed by
+repeated play of the scenario.  As a rule, the lower levels of detail
+are safer to use - level 1 details for sides and units are often
+simple enough to be typed in or edited by hand.
+\shead{EXAMPLES}
+\par\noindent
+A period description with only infantry and cities:
+\displaybegin
+Xconq 0 -+---- Very simple test period
+Period 0
+
+"generic" period-name
+
+"standard" font
+
+"i" "infantry" "moves around" utype
+"@" "city" "makes infantry units" utype
+
+"+" "land" "green" ttype  ; must always have at least one terrain type
+
+1 @ in-country
+100 land @ favored
+
+@ first-unit
+i first-product
+
+1 i @ make
+true @ maker
+1 i @ capacity  ; makers need to be able to hold or be held by products
+
+1 i speed
+
+0 t* i moves
+
+begin\{notes\}
+This is just a test.
+Kids, don't try this at home!
+end\{notes\}
+
+end
+\displayend
+A tiny map with two cities, including an "empire" period description to ensure
+meaningful city definitions:
+\displaybegin
+Xconq 1 --+--+ Tiny map;
+just an example...
+%.
+eempire.per
+Map 9 5 100 1 0
+:........
+:.+++++..
+:..+\^{}\^{}\^{}..
+:...+\~{}\~{}..
+:........
+Units 2 1 0
+@ New Cork 2,3 -1
+@ Old York 4,1 -1
+\displayend
+\shead{LOSSAGES}
+\par\noindent
+Several words are marked NIY, meaning that although they can be used,
+the code does not actually take them into account.
+\end{document}
