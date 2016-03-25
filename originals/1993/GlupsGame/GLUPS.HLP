@@ -1,0 +1,36 @@
+Hier sind die Instruktionen:
+
+Die Aufgabe besteht darin, durch Legen von sogenannten Preglups auf ein
+Spielbrett eine geschlossene Kurve herzustellen. Diese verschwindet
+dann vom Spielfeld, gibt Punkte, und zwar quadratisch zur L„nge, und
+macht damit anderen Spielsteinen Platz. Dieser Wert wird dann noch mit
+dem Level (mod 10) multipliziert. Die kleinste Loop mit der Kantenl„nge
+2 gibt im Level 0 genau einen Punkt.
+
+  Zum Spiel: Mit der Maus verschiebt man die Preglups, mit der rechten
+Maustaste dreht man diese nach rechts, mit der linken Taste platziert
+man sie auf dem Spielfeld. Drckt man gleichzeitig beide Maustasten
+(erst rechts, dann links) so erh„lt man einen speziellen Spielstein,
+den `deleter'. Platziert man ihn auf einer Schlange, so l”st sich diese
+auf und gibt Punkte wie oben beschrieben.
+
+  Das Spiel endet, wenn man dreimal die Zeit fr einen Preglup
+verstreichen l„át, ohne diesen zu platzieren. Dies wird durch die
+Farbfolge grn-->blau-->rot symbolisiert. Am Ende des Spiels gelangt man
+durch Drcken einer Taste (der Tastatur) in's Hauptmenu zurck. Die Zahlen,
+die in manchen Feldern des Spielfelds stehen sind Bonuszeiten. Werden diese
+berbaut, so erh„lt man zum Bau des n„chsten Loops diese Zeit gutgeschrieben.
+Man kann die Zeiten auch sammeln, erh„lt aber nie mehr als 3s Bonus. Hat
+man diesen Maximalwert erreicht, so verfallen die weiteren berbauten
+Bonuszeiten. Erreicht man einen neuen Level (nach zehn Loops), gibt's
+wieder vier neue Bonuszeiten auf dem Spielbrett.
+
+  Es gibt verschiedene S„tze von Preglups. Man w„hlt sie šber die Zehner-
+stelle im Level aus. (Ihre Definition ist in der Datei `glups.bau'). Die
+Einerstelle im Level gibt die Zeit zum Platzieren eines Preglups an.
+(0->10s, 1->9s, ..., 9->1s)
+
+  Rechts unten ist der Spielstand zu sehen, links unten die Anzahl der
+bisher erzielten Loops, und in der Mitte die Anzahl der verbleibenden
+deleter. Fr je fnf Loops gibt es einen deleter mehr.
+

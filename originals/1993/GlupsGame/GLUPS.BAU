@@ -1,0 +1,45 @@
+# 1.Zeile anzahl der levels
+# dann
+# 1. Bitvektor fr Level/10
+# 2. Wahrscheinlichkeit (0-100) fr Erscheinen.
+# 3. center
+# 4. Das Teil selbst (-lr)
+# maximum 100 lines
+7
+fff 100 1 r
+fff 100 1 -
+fff 100 2 ---
+fff 100 2 -r-
+041 100 2 --
+001  50 2 r-r
+003  50 3 -r-r-
+003  25 3 -r-l-
+003  25 3 -l-r-
+002  25 3 r-r-r
+002  25 3 l-r-l
+002  50 2 rllr
+004  25 2 rlr
+014  50 1 rl
+014  50 1 lr
+004  25 2 r-l
+004  25 2 l-r
+02c  70 1 r-
+02c  70 1 l-
+004   5 3 rl-lr
+004   5 3 lr-lr
+004   5 3 rl-rl
+008  50 3 l----
+008  50 3 r----
+010  50 1 rr
+010  25 2 rll
+010  25 2 lrr
+010  20 2 -lr
+010  20 2 -rl
+020  33 2 -rr
+020  33 2 -ll
+020  25 2 -r-r
+020  25 2 -l-l
+040  10 2 r--l
+040  10 2 l--r
+040  10 2 r--r
+040  33 3 --r--
