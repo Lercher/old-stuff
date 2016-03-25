@@ -1,0 +1,73 @@
+all: scan.exe
+
+
+scan.exe : scan.c getopt.obj
+	bcc -ms -v -y scan.c getopt.obj
+
+getopt.obj : getopt.c
+	bcc -ms -c getopt.c
+
+
+xxx: makefile
+	echo ---Alines--- > xxx
+	for %i in (2 3 4 5 6 7 8 9 10) do echo a %i >> xxx
+	echo ---Blines--- >> xxx
+	for %i in (2 3 4 5 6 7 8 9 10) do echo b %i >> xxx
+
+test: xxx scan.exe
+	-scan -Cfxxx -a $l +++
+	ask return
+	-scan -fxxx a \\ $l
+	ask return
+	-scan -fxxx 1 // $l
+	ask return
+	-scan -ifxxx a $0 $0 $1 $1$n
+	
+test.-: xxx scan.exe
+	-scan -afxxx $-$l <makefile
+	
+test.l: xxx scan.exe
+	-scan -afxxx -l5 $l
+	ask return
+	-scan -afxxx -L15 $l
+	ask return
+	-scan -afxxx -l5 -L15 $l
+	ask return
+	-scan -afxxx -l15 -L5 $l
+	ask return
+	-scan -fxxx -p5 a $l
+	ask return
+	-scan -fxxx -P5 b $l
+	ask return
+	-scan -fxxx -l3 -L5 a $l
+	ask return
+	-scan -rfxxx -l3 -L5 b $l
+
+test.2: xxx scan.exe
+	-scan -fxxx -aCn2  -l5 -L15 "***$l***" "$l"
+	ask return
+	-scan -fxxx -aCn2w -l5 -L15 "***$l***" "$l"
+	ask return
+	-scan -fxxx  -Cn2w -l5 -L15 1 "***$l***" "$l"
+	ask return
+	-scan -fxxx  -Cn2  -l5 -L15 1 "***$l***" "$l"
+	ask return
+	-scan -fxxx -iCn2w -l5 -L15 2 "***$l***" "$l"
+
+clean:
+	del scan.obj
+	del *.swp
+	del *.map
+	del *.sym
+	del *.old
+	del xxx
+
+prepare: scan.exe
+	-tdstrip scan
+	lzexe scan
+	
+install: prepare clean
+	copy scan.exe h:\math\bin
+
+arj: prepare makefile clean
+	arj u ..\arc\scan scan.c getopt.c getopt.obj getopt.h scan.exe makefile
