@@ -1,0 +1,17 @@
+# Set S to
+# a for Dragoncurve.
+# c for modified Dragoncurve.
+# e for color
+
+S=e
+a>aLb
+b>aRb
+
+c>ccLdc
+d>cdRcc
+
+e>f3RLR4h5LRL1g
+f>hLh
+g>hRh
+h>fRRLRRLLLRLLLRRLRRLg
+
