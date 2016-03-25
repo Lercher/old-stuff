@@ -1,0 +1,8 @@
+@@@Hilfe
+Starte den Leser mit
+  øhyper -f interrupø ~keyword~
+  øhyper -f glossaryø ~keyword~
+  øhyper -f memoryø ~keyword~
+  øhyper -f primerø
+
+Beenden mit øqø
