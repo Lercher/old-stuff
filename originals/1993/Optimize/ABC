@@ -1,0 +1,121 @@
+Vorlesung 1
+Name Lineare Algebra 1
+Other 1000
+Penalty 0 0 10 20 30
+
+Vorlesung 2
+Name Analysis 1
+Other 1000
+Penalty 0 0 10 20 30
+
+
+Temperatur 50000
+Koeffizient 15/16
+Zyklen 2000
+Minpenalty 5000
+Maxpenalty 5000
+
+Gruppenpenalty 20
+
+Termin a
+zu 1
+Name Mo 8-10
+Opt 24
+
+Termin c
+zu 1
+Name Mo 14-16
+Opt 20
+
+Termin f
+zu 1
+Name Mi 8-10
+Opt 0
+Max 0
+
+Termin g
+zu 1
+Name Mi 10-12
+Opt 96
+
+Termin h
+zu 1
+Name Mi 12-14
+Opt 24
+
+Termin i
+zu 1
+Name Mi 14-16
+Opt 0
+Max 0
+
+Termin k
+zu 1
+Name Do 12-14
+Opt 48
+
+Termin l
+zu 1
+Name Do 14-16
+Opt 24
+
+Termin m
+zu 1
+Name Do 16-18
+Opt 0
+Max 0
+
+
+
+Termin a
+zu 2
+Name Mo 8-10
+Opt 48
+
+Termin b
+zu 2
+Name Mo 12-14
+Opt 24
+
+Termin c
+zu 2
+Name Mo 14-16
+Opt 24
+
+Termin d
+zu 2
+Name Di 14-16
+Opt 24
+
+Termin e
+zu 2
+Name Di 16-18
+Opt 24
+
+Termin f
+zu 2
+Name Mi 8-10
+Opt 24
+
+Termin g
+zu 2
+Name Mi 10-12
+Opt 24
+
+Termin h
+zu 2
+Name Mi 12-14
+Opt 48
+
+Termin i
+zu 2
+Name Mi 14-16
+Opt 24
+
+Termin j
+zu 2
+Name Mi 16-18
+Opt 0
+Max 0
+
+

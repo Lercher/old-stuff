@@ -1,0 +1,90 @@
+------------------------------------------------------------------------------
+Zusammenfassung
+------------------------------------------------------------------------------
+Lineare Algebra 1 (Other 1000 Penaltys   0   0  10  20  30)
+a:  25 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mo 8-10
+c:  20 Stud, Opt  20 Min --- Max --- Penalty  20  Name Mo 14-16
+f:   0 Stud, Opt   0 Min --- Max   0 Penalty  20  Name Mi 8-10
+g:  96 Stud, Opt  96 Min --- Max --- Penalty  20  Name Mi 10-12
+h:  24 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mi 12-14
+i:   0 Stud, Opt   0 Min --- Max   0 Penalty  20  Name Mi 14-16
+k:  48 Stud, Opt  48 Min --- Max --- Penalty  20  Name Do 12-14
+l:  25 Stud, Opt  24 Min --- Max --- Penalty  20  Name Do 14-16
+m:   0 Stud, Opt   0 Min --- Max   0 Penalty  20  Name Do 16-18
+Gesamt 238 Studenten.
+
+Analysis 1 (Other 1000 Penaltys   0   0  10  20  30)
+a:  49 Stud, Opt  48 Min --- Max --- Penalty  20  Name Mo 8-10
+b:  25 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mo 12-14
+c:  25 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mo 14-16
+d:  24 Stud, Opt  24 Min --- Max --- Penalty  20  Name Di 14-16
+e:  24 Stud, Opt  24 Min --- Max --- Penalty  20  Name Di 16-18
+f:  24 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mi 8-10
+g:  25 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mi 10-12
+h:  48 Stud, Opt  48 Min --- Max --- Penalty  20  Name Mi 12-14
+i:  25 Stud, Opt  24 Min --- Max --- Penalty  20  Name Mi 14-16
+j:   0 Stud, Opt   0 Min --- Max   0 Penalty  20  Name Mi 16-18
+Gesamt 269 Studenten.
+
+GesammtÑrger 760  GruppenÑrger 140  StudentenÑrger 620
+Temperatur 50000  AbkÅhlunkskoeffizient 15/16 bei 2000 Zyklen.
+Maxpenalty 5000  Minpenalty 5000
+
+------------------------------------------------------------------------------
+Studenten mit érger >= 2
+------------------------------------------------------------------------------
+ 10 Solleder            Markus              170972 Regensburg          m 1 L #1g#2a
+ 10 Amann               Ottmar              060472 Regensburg          m 1 M #1c#2a
+ 20 Vierheilig          Annette             170474 Regensburg          w 1 L #1g#2i
+ 10 Stattenberger       GÅnther             220973 Regensburg          m 1 P #1g#2c
+ 10 Golz                Bernd               130466 Nîrdlingen          m 1 M #1a#2d
+ 10 Pauli               Christine           250171 Freyung             w 1 L #1c#2b
+ 10 Ganslmeier          Bernhard            110273 Landshut            m 1 P #1g#2h
+ 10 Weiss               Sylvia              260673 MÅnchen             w 1 L #1g#2h
+ 10 Stra·er             Barbara             261174 Salzburg            w 1 L #1h#2f
+ 20 Zehentbauer         Tanja               210174 Landshut            w 1 L #1g#2e
+ 10 Rehrl               Tobias              180673 MÅnchen             m 1 P #1h#2d
+ 10 Saller              Thomas              130372 Plattling           m 1 L #1h#2d
+ 10 Rehm                Susanne             300174 Landshut            w 1 L #1k#2h
+ 10 Bauer               Monika              200874 Simbach/Inn         w 1 L #1l#2h
+ 10 Lang                Michael             120973 Berching            m 1 L #1g#2e
+ 10 Langenfelder        Andrea              221173 Passau              w 1 L #1h#2d
+ 10 Friedl              Stefan              230373 Kîtzting            m 1 L #1k#2e
+ 10 Koller              Andreas             230472 Regensburg          m 1 P #1h#2e
+ 10 Walter              Christian           150869 Neumarkt            m 1 P #1g#2h
+ 10 Wax                 Sonja               150374 Landshut            w 1 P #1g#2a
+ 10 Graf                Michael             280173 Cham                m 1 L #1g#2e
+ 10 MÅllbauer           Stefan              191172 Weiden              m 1 L #1g#2e
+ 10 Klug                Johannes            181072 Vohenstrau·         m 1 L #1l#2d
+ 10 Biberger            Josef               180770 Rohr/NB             m 1 P #1g#2e
+ 10 MÅhlbauer           Elke                270174 Kîtzting            w 1 L #1g#2f
+ 10 Stierstorfer        Franz               300570 SÅnching            m 1 L #1g#2h
+ 10 Rauther             Andreas             130772 LÅbeck              m 1 P #1c#2i
+ 20 Striegl             Bernhard            180574 Regensburg          m 1 P #1g#2h
+ 10 Seebauer            Diana               011073 Cham                w 1 L #1g#2b
+ 10 Hagmaier            Thomas              180272 Regensburg          m 1 P #1a#2g
+ 20 Brock               Ulrike              020874 Augsburg            w 1 L #1g#2h
+ 20 Rotheigner          Birgit              200474 Schwandorf          w 1 L #1g#2h
+ 10 Wei·mann            Robert              050868 NÅrnberg            m 1 P #1g#2e
+ 10 Gramm               Andreas             260373 Regensburg          m 1 P #1g#2h
+ 10 Puchta              Markus              020874 Regensburg          m 1 P #1g#2b
+ 10 Schewiola           Andreas             101173 Freyung             m 1 L #1c#2a
+ 20 Harant              Heribert            281173 Grafenau            m 1 L #1g#2i
+ 10 Mirwald             Hans                230564 ?                   m 1 P #1h#2e
+ 10 Weber               Michaela            181273 Regensburg          w 1 L #1g#2b
+ 10 Steinkirchner       Christian           190371 Straubing           m 2 M #1l#2d
+ 10 Tham                Erik                170373 Kaufbeuren          m 1 P #1h#2i
+ 10 Proske              Matthias            141074 MÅnchen             m 1 M #1a#2f
+ 10 Menzel              Matthias            310872 Niedermarsberg      m 2 L #1l#2e
+ 20 Lahoda              Walter              020371 Freyung             m 3 L #1g#2e
+ 10 Brandl              Holger              160474 Regensburg          m 1 L #1a#2b
+ 10 Huber               Walter              171172 Vilshofen           m 1 L #1c#2d
+ 10 Thanner             JÅrgen              281269 Nabburg             m 1 P #1g#2h
+ 10 Cufferi             Anton               200772 Hutthurm            m 1 L #1g#2a
+ 10 Biller              Andreas             161273 Schwandorf          m 1 L #1k#2e
+ 10 Kangler             Wolfram             221273 Regensburg          m 1 P #1h#2b
+ 10 Maier               Robert              170670 Lauingen            m 1 M #1g#2d
+ 10 Wellens             Thomas              170674 Solothurn           m 1 P #1g#2c
+ 10 Hîllinger           Rainer              240773 Griesbach/Rottal    m 1 L #1g#2b
+ 10 Rust                Andreas             180974 Straubing           m 1 M #1h#2b
+ 10 Avsic               Tom                 181073 Krans               m 1 P #1g#2i
