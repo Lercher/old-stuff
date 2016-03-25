@@ -1,0 +1,11 @@
+[OPTIONS]
+TITLE=Hilfe zu Martin's Notify
+COPYRIGHT=(C) 1996, M. Lercher
+COMPRESS=HIGH
+CONTENTS=Themenuebersicht
+
+[FILES]
+hilfe.rtf
+
+[CONFIG]
+BrowseButtons()

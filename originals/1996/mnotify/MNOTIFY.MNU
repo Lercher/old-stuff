@@ -1,0 +1,10 @@
+mnotify MENU
+BEGIN
+    POPUP      "&File"
+    BEGIN
+        MENUITEM   "&About",            IDM_ABOUT
+        MENUITEM   "&Clear",            IDM_CLEAR
+		MENUITEM   "&Help",             IDM_HELP
+		MENUITEM   "E&xit",             IDM_EXIT
+    END
+END 

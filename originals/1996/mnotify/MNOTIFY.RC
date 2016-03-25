@@ -1,0 +1,15 @@
+//REGEN_FILEHEADING
+//REGEN_FILEHEADING
+
+#include <windows.h>
+#include "MNOTIFY.h"
+
+#include "mnotify.mnu"
+
+//REGEN_RC
+//REGEN_RC
+
+
+APPL_ICO        ICON   APPL_ICO.ICO
+
+

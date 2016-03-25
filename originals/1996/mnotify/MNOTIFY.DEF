@@ -1,0 +1,17 @@
+;REGEN_FILEHEADING
+;REGEN_FILEHEADING
+
+NAME               MNOTIFY
+DESCRIPTION        ''
+EXETYPE            WINDOWS
+STUB               'WINSTUB.EXE'
+CODE               MOVEABLE DISCARDABLE PRELOAD
+DATA               MOVEABLE MULTIPLE PRELOAD
+HEAPSIZE           4096
+STACKSIZE          8192
+EXPORTS
+                   MainWndProc
+             ;Definition file code regeneration bracket
+;REGEN_DEF
+;REGEN_DEF
+
