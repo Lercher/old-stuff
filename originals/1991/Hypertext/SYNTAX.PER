@@ -1,0 +1,63 @@
+#
+# This perl script converts the Latex Help file
+# of the TeX-Schell by J. Schlegelmilch into the
+# hypertext Format of hyper.exe by M. Lercher
+#
+die("Cannot open") unless open(F, "syntax.txt");
+$on = 1;
+print "Hypertext Hilfe zu LaTeX.\n\nDer folgende Fehler ist aufgetreten:\n";
+print "  Sie haben eine ønicht eingegebeneø Seite gew„hlt. Tut mir leid.\n";
+print "  Drcken Sie bitte ~ESC~.\n";
+while(<F>)
+{
+	$on = 1 if (/^\.chars/o || /^.topic/o);
+	next unless $on;
+
+	s/Index/šbersicht/g;
+	if (/^\.chars/o)
+	{
+		($dummy, $chrs) = split;
+		($bx, $ex, $al, $eq) = split(/ */, $chrs);
+		$line = 0;
+	}
+	else
+	{
+	if (/Der vollst„ndige šbersicht/o)
+	{
+		print "Den vollst„ndigen Index erhalten Sie durch Drcken der Taste ~F1~.\n\n";
+		print "Mit der ~Eingabetaste~ folgen Sie einem ^.link^øLinkø. Mit der\n";
+		print "~ESC~ Taste kommen Sie zur vorherigen Seite. Mit ~h~ kommen Sie zur šbersicht.\n";
+		print "Natrlich Funktionieren die ~Cursortasten~, ~Bild~ und ~Bild~\n";
+		print "@@@.link\nDas war ein Link. Drcken Sie jetzt ~ESC~ um zur šbersicht\n";
+		print "zurckzukehren.\n";
+		$line = 0;
+		$on = 0;	
+	}
+	else
+	{
+		chop;
+		if (/^\.topic/o)
+		{
+			($dummy, $pn) = split(/[ =]/);
+			$p = 1;
+			$line = -1;
+		}
+		s/~/~~/go;
+		s/ø/øø/go;
+		s/\^/^^/go;
+		s/^\.topic ([^$eq]*).*/@@@$1/o;
+		s/$bx([^$ex$al]*)$ex/^$1^ø$1ø/go;
+		s/$bx([^$ex]*)$al([^$ex]*)$ex/^$2^ø$1ø/go;
+		print;
+		print "\n";
+		$line++;
+		if ($line > 22)
+		{
+			$line = 0;
+			$p++;
+#			print "~>>>~ Page down\n@@@",$pn," ", $p, "\n";
+			print "~>>>~ Page down\n";
+		}
+	}
+	}
+}

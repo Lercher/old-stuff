@@ -1,0 +1,61 @@
+# Borland C 2.0:
+# CC = bcc -w -O -Z -2 -a -k- -d -f- -ff-
+# Turbo C 2.0:
+CC = tcc -w -O -Z -a -k- -d -f- -N
+
+all : hyper.exe hyptsr.exe key.c
+
+hyper.exe : hyptext.c
+	ren hyptext.c hyper.c
+	-$(CC) -y -v -mc -w-par hyper.c
+	ren hyper.c hyptext.c
+
+hyptsr.exe : hyptext.c
+	ren hyptext.c hyptsr.c
+	-$(CC) -ohyptsr.obj -ms -DASTSR hyptsr.c tess.lib
+	ren hyptsr.c hyptext.c
+
+key.exe : key.c
+	$(CC) -ms key.c
+
+syntax.idx : syntax hyper.exe
+	hyper -f syntax -i
+
+install : hyper.exe hyptsr.exe syntax.idx
+	-tdstrip hyper.exe
+	-lzexe hyper
+	-refresh -f syntax.idx h:\math\texstuff
+	-refresh -f syntax     h:\math\texstuff
+	-refresh -f hyper.exe  h:\math\bin
+	-refresh -f hyptsr.exe h:\math\bin
+	flag h:\math\texstuff\syntax.* s
+	flag h:\math\bin\hyp*.exe s
+	
+clean : 
+	del *.old
+	del *.obj
+	del *.sym
+	del *.bak
+	del *.idx
+
+arj :	clean
+	arj u -xhyper.arj hyper
+
+edit :
+	ue hyptext.c
+
+test : hyper.exe d
+	hyper -f d
+
+test.s : hyper.exe syntax
+	hyper -f syntax
+
+debug : hyper.exe
+	td hyper.exe -f d
+
+debug.s : hyper.exe
+	td286 hyper.exe -f syntax
+
+syntax : syntax.txt syntax.per
+	perl syntax.per > syntax
+

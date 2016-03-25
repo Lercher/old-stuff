@@ -1,0 +1,83 @@
+Hypertext-Hilfe.
+@@@main
+MicroHyperText - Minimales Verzeigertes System.
+
+^use^ Bedienung.
+^prg^ Programmierung.
+^autor^ Autor.
+@@@use
+Bedienung.
+----------
+
+Links sind solche ^.solche^K„stchen, sie verbinden Seiten miteinander. 
+Das sind ^>fake^Keyfakes, spezielle ^.fake^Seiten, deren Text nicht ausgegeben
+wird, sondern in den Tastaturpuffer geschrieben wird.
+
+Diese Tasten haben folgende Bedeutung:
+  ~RET~  Follow link, call keyfake.
+  ~ESC~  Eine Link-Seite zurck.
+  ~->~   Eine Linkmarkierung rechts.
+  ...    Die anderen Richtungen.
+  ~<-~   Eine Linkmarkierung links.
+  ~h~    Zur ersten Seite springen. (home)
+  ~PgUp~ Eine Seite nach oben.
+  ~PgDn~ Eine Seite nach unten.
+  ~F1~   ^index^Index zeigen oder weiterbl„ttern.
+  ~q~    Beenden des Programms. (quit)
+@@@index
+Die ~Index~funktion (~F1~) zeigt alle auáer den ^.punktiert^punktierten
+und den ^.fake^Keyfake Seitennamen an.
+@@@>fake
+
+echo Sehen Sie diesen Text ...
+
+@@@.fake
+Der Name einer Keyfake-Seite beginnt mit dem Zeichen ø>ø. Sie faát h”chstens
+80 Zeichen. Der Text wird in den Tastaturpuffer geschrieben und dann der
+Hypertextreader beendet, damit das Anwenderprogramm den Text lesen kann.
+
+Beispiel: Das ist ein ^>fake^Keyfake.
+@@@prg
+Programmierung.
+---------------
+
+Ein Hypertext ist ein normales Textfile, nur mit wenigen Sonderzeichen
+versehen. N„mlich ø@@@ø, ø^^ø,ø øø øund ø~~ø.
+Dabei bedeutet
+  @@@~name~ am Zeilenanfang den Beginn der Seite mit Namen ~name~,
+  ^^~name~^^ einen Link zur Seite ~name~ und
+  ~~ Start bzw. Ende einer ~grnen~ Hervorhebung.
+  øø Start bzw. Ende einer øblauenø Hervorhebung.
+  Die letzten drei Sonderzeichen^.welche^ selbst erh„lt man durch verdoppeln.
+
+Dateien:
+  ht.exe     - Das Programm.
+  hyper      - Der Hypertext.
+  hyper.idx  - Indexdatei zu hyper.
+
+In der Shellvariable ~HYPERFILE~ kann man eine andere Datei statt
+"hyper" vereinbaren.
+@@@autor
+Autor.
+------
+
+  øMartin Lercherø
+  Schl”álgartenweg 40
+  D-8415 Nittenau
+  Tel. 09436/8475
+
+ ^>mail^c3524@rrzc1.rz.uni-regensburg.de
+@@@>mail
+mail c3524@rrzc1.rz.uni-regensburg.de
+
+@@@.solche
+Das ist ein Link. Zurck mit ~ESC~
+@@@.punktiert
+Eine Seite heiát ~punktiert~, falls ihr ~name~ mit einem Punkt ~.~
+beginnt. Dies ist eine punktierte Seite.
+
+Sie sind dazu da, weniger wichtige Texte zu verbergen, da nicht in sie
+hineingebl„ttert werden kann. Eine punktierte Seite erscheint auch
+nicht im ^index^Index.
+@@@.welche
+^^, ~~ und øø.

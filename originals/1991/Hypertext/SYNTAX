@@ -1,0 +1,6525 @@
+Hypertext Hilfe zu LaTeX.
+
+Der folgende Fehler ist aufgetreten:
+  Sie haben eine ønicht eingegebeneø Seite gew„hlt. Tut mir leid.
+  Drcken Sie bitte ~ESC~.
+@@@šbersicht
+  (La)TeX Syntax-šbersicht
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+(entnommen aus:
+ 'LaTeX -- Eine Einfhrung' von H. Kopka.
+Copyright 1992 Helmut Kopka und Addison-Wesley (Deutschland) GmbH.
+Die Kapitel-Angaben in den Hilfetexten beziehen sich auf dieses
+Buch.)
+
+Stil-Befehle:
+ ^Stil^ø\rmø ^Stil^ø\ttø ^Stil^ø\sfø ^Stil^ø\slø ^Stil^ø\calø ^Stil^ø\bfø ^Stil^ø\emø ^Stil^ø\itø ^Stil^ø\scø ^Stil^ø\mitø
+
+Fontgr”áen:
+ ^Gr”áen^ø\tinyø                 ^Gr”áen^ø\largeø
+ ^Gr”áen^ø\scriptsizeø           ^Gr”áen^ø\Largeø
+ ^Gr”áen^ø\footnotesizeø         ^Gr”áen^ø\LARGEø
+ ^Gr”áen^ø\smallø                ^Gr”áen^ø\hugeø
+ ^Gr”áen^ø\normalsizeø           ^Gr”áen^ø\Hugeø
+
+Maáeinheiten:
+ ^Einh^ømmø ^Einh^øcmø ^Einh^øinø ^Einh^øptø ^Einh^øpcø ^Einh^øbpø ^Einh^øddø ^Einh^øccø ^Einh^øspø ^Einh^øemø ^Einh^øexø
+
+Umgebungen:
+  ^abstract^øabstractø        ^appendix^øappendixø        ^array^øarrayø
+~>>>~ Page down
+  ^center^øcenterø          ^description^ødescriptionø     ^displaymath^ødisplaymathø
+  ^document^ødocumentø        ^enumerate^øenumerateø       ^eqnarray^øeqnarrayø
+  ^equation^øequationø        ^figure^øfigureø          ^flushleft^øflushleftø
+  ^flushright^øflushrightø      ^fussypar^øfussyparø        ^itemize^øitemizeø
+  ^letter^øletterø          ^list^ølistø            ^math^ømathø
+  ^minipage^øminipageø        ^picture^øpictureø         ^quotation^øquotationø
+  ^quote^øquoteø           ^samepage^øsamepageø        ^sloppypar^øsloppyparø
+  ^tabbing^øtabbingø         ^table^øtableø           ^tabular^øtabularø
+  ^thebibliography^øthebibliographyø ^theindex^øtheindexø        ^titlepage^øtitlepageø
+  ^trivlist^øtrivlistø        ^verbatim^øverbatimø        ^verse^øverseø
+
+Akzent-Befehle:
+  ^Akz^ø\`ø ^Akz^ø\'ø ^Akz^ø\^^ø ^Akz^ø\~~ø ^Akz^ø\=ø ^Akz^ø\.ø ^Akz^ø\uø ^Akz^ø\vø ^Akz^ø\Hø ^Akz^ø\tø ^Akz^ø\cø ^Akz^ø\dø ^Akz^ø\bø
+
+^Sonder^øSonderzeichenø
+
+Den vollst„ndigen Index erhalten Sie durch Drcken der Taste ~F1~.
+
+Mit der ~Eingabetaste~ folgen Sie einem ^.link^øLinkø. Mit der
+~ESC~ Taste kommen Sie zur vorherigen Seite. Mit ~h~ kommen Sie zur šbersicht.
+Natrlich Funktionieren die ~Cursortasten~, ~Bild~ und ~Bild~
+@@@.link
+Das war ein Link. Drcken Sie jetzt ~ESC~ um zur šbersicht
+zurckzukehren.
+@@@!
+   !
+  ßßß
+Feldtrennzeichen fr Makešbersicht innerhalb der ^\index^ø\indexø
+Befehle.
+ Beispiel: \index{Befehl!zerbrechlich}
+erzeugt im šbersichtregister unter dem Haupteintrag `Befehl'
+einen Untereintrag `zerbrechlich'.
+
+siehe: (Kap. 8.3)
+
+@@@"
+   "
+  ßßß
+1. Im Original (ohne ^german^øgermanø.sty) Textzeichen
+   zur Erzeugung von ".
+ 
+2. Maskierungszeichen fr Makešbersicht.
+    Beispiel: ^\index^ø\indexø{"!}
+   hebt die Sonderbedeutung von ! auf und gibt es im
+   šbersichtregister aus. Selbstmaskierung durch "" zur
+   Erzeugung von Umlauten mit Makešbersicht:
+    \index{Fr""uhst""uck}
+
+3. Feldtextklammerung fr ^BibTeX^øBibTeXø. Beispiel:
+   AUTOR = "Norbert Schwarz"
+
+4. [z] Nach Eingabe von
+     \catcode`\"=\active \let"=\"
+   Befehl zur Erzeugung von Umlauten in
+   vereinfachter Form: "a erzeugt „.
+ 
+5. [g] Bei Verwendung von ^german^øgermanø.sty spezielles
+   Befehlsumschaltzeichen in Verbindung mit den
+   nachfolgenden Kombinationen. In allen anderen
+~>>>~ Page down
+   F„llen in der Bedeutung von 1.
+
+siehe: ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. 2.5.1)
+       (Kap. 2.5.2)
+       (Kap. B.2)
+       (Kap. 8.3)
+       (Kap. D.1.7)
+ 
+@@@""
+  ""   [g]
+  ßßßßßßßß
+Trennhilfe zur Festlegung der ersten Trennm”glichkeit
+in einem Wort ohne Anfgen des Trennstriches bei
+einer evtl. Trennung: Zeichen""kombination erlaubt die
+Trennungen bei Zeichen|kom|bi|na|ti|on
+
+siehe: ^"^ø"ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.2)
+ 
+@@@"'
+  "'   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung der deutschen Anfhrungsstriche `oben'.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.4)
+
+@@@"-
+  "-   [g]
+  ßßßßßßßß
+Trennhilfe zur Festlegung der ersten Trennm”glichkeit
+in einem Wort: Zeichen"-kombination erlaubt die
+Trennungen bei Zeichen-kom-bi-na-ti-on.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.2)
+ 
+@@@"<
+  "<   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung der franz”sischen ”ffnenden
+Anfhrungzeichen: "< = ®; gleichwertig mit \flqq.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.5)
+ 
+@@@">
+  ">   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung der franz”sischen schlieáenden
+Anfhrungzeichen: "> = ¯; gleichwertig mit \frqq.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.5)
+ 
+@@@"`
+  "`   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung der deutschen Anfhrungsstriche `unten';
+gleichwertig mit \glqq.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.4)
+ 
+@@@"ck
+  "ck   [g]
+  ßßßßßßßßß
+Trennhilfe zum Trennen von `ck'. Dru"cker erzeugt
+`Drucker' und im Falle einer Trennung `Druk-ker'.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.2)
+
+@@@"e
+  "e   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung von fremdl„ndischen Umlauten mit
+h”hergestellten Umlautpunkten. Fr e sind erlaubt: e,
+i, E und I.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.1)
+ 
+@@@"u
+  "u   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung von Umlauten mit tiefergestellten
+Umlautpunkten. Fr u sind erlaubt: a, o, u, A, O und U.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.1)
+ 
+@@@"s
+  "s   [g]
+  ßßßßßßßß
+Befehl zur Erzeugung des á; gleichwertig mit \3.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.1)
+ 
+@@@"tt
+  "tt   [g]
+  ßßßßßßßßß
+Trennhilfe bei zusammengesetzten W”rtern mit gleichem
+Konsonantentripel. Schi"ffahrt erzeugt `Schiffahrt' und
+im Falle einer Trennung `Schiff-fahrt'. Fr tt sind
+erlaubt: ff, ll, mm, nn, pp und tt.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"|^ø"|ø
+       ^\"^ø\"ø
+       (Kap. D.1.2)
+
+@@@"|
+  "|   [g]
+  ßßßßßßßß
+Befehl zur Aufhebung von Ligaturen und gleichzeitig
+Angabe einer Trennstelle: \Auf"|lage erzeugt `Auflage'
+statt `Auflage' und erlaubt die Trennung `Auf-lage'.
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^\"^ø\"ø
+       (Kap. D.1.4)
+ 
+@@@#
+   #
+  ßßß
+Ersetzungszeichen zur Parameterbergabe bei
+anwendereigenen Befehls- und Umgebungsdefinitionen.
+
+siehe: (Kap. 7.3.2)
+       (Kap. 7.4.2)
+
+ 
+@@@$
+   $
+  ßßß
+Umschaltzeichen vom Textmode in den mathematischen
+Mode und zurck zur Erzeugung von Textformeln;
+gleichwertig mit ^\(^ø\(ø bzw. ^\begin^ø\beginø{^math^ømathø} beim ersten
+Auftreten und mit ^\)^ø\)ø bzw. ^\end^ø\endø{math} beim zweiten
+Auftreten.
+
+siehe: (Kap. 5.1)
+ 
+@@@%
+   %
+  ßßß
+Kommentarzeichen. Der Text in der laufenden
+Eingabezeile hinter dem % Zeichen wird als
+Kommentar angesehen und von der TeX-Bearbeitung
+ausgeblendet.
+
+siehe: (Kap. 4.11)
+
+@@@&
+   &
+  ßßß
+Spaltensprungbefehl innerhalb der ^array^øarrayø und
+^tabular^øtabularø Umgebung.
+
+siehe: (Kap. 4.8.1)
+ 
+@@@^^
+  ^^   [m]
+  ßßßßßßß
+Hochstellung (Exponenten) in Formeln.
+
+siehe: (Kap. 5.2.2)
+
+@@@_
+  _   [m]
+  ßßßßßßß
+Tiefstellung (Indizes) in Formeln.
+
+siehe: (Kap. 5.2.2)
+
+@@@@
+   @
+  ßßß
+1. In ^Makešbersicht^øMakešbersichtø lexikalischer Zuweisungsoperator
+   innerhalb des ^\index^ø\indexø Befehls:
+    ^\index^ø\indexø{Summe@$\sum$} erzeugt im šbersichtregister
+   das Summenzeichen $\sum$ und ordnet es lexikalisch
+   beim Wortwert `Summe' an.
+2. Fr ^BibTeX^øBibTeXø Kennzeichnung des Eingabetyps.
+   Beispiel: @BOOK kennzeichnet die Literaturangaben
+   fr ein Buch.
+ 
+siehe: (Kap. 8.2)
+       (Kap. B.3)
+
+@@@|
+  |
+  ßßßßßßßßßßßßßßßßß
+Makešbersicht-Befehlseinleitung in ^\index^ø\indexø Befehlen:
+.endpara
+1. Nach der Befehlsdefinition ^\newcommand^ø\newcommandø{\ii}[1]{{\em#1}}
+   erscheint mit ^\index^ø\indexø{šbersicht|ii} das Stichwort `šbersicht'
+   mit einer kursiven Seitenangabe.
+2. Der Erg„nzungsbefehl ^\see^ø\seeø aus ^Makešbersicht^ømakeidxø.sty
+   kann im ^\index^ø\indexø Befehl als
+    ^\index^ø\indexø{Bibliographie|see{Literaturverzeichnis}}
+   zur Erzeugung eines Querverweises im šbersichtregister
+   bergeben werden.
+
+siehe: (Kap. 8.3)
+
+@@@~~
+   ~~
+  ßßß
+Normaler Wortzwischenraum, nach dem kein Zeilenumbruch
+erfolgen kann.
+
+siehe: (Kap. 3.5.1.1)
+
+@@@{}
+   {}
+  ßßßß
+1. Teil eines Befehls zur Aufnahme zwingender Parameter.
+
+2. Bei Klammerung von Textteilen, Schaffung einer
+   namenlosen Umgebung.
+
+3. In BibTeX Umklammerung der Angaben fr einen
+   Eingabetyp sowie alternative Form der
+   Feldtextklammerung.
+
+siehe: ^[]^ø[]ø
+       (Kap. 2.1)
+       (Kap. 2.2)
+       (Kap. B.2)
+
+@@@[]
+   []
+  ßßßß
+Bei Befehlen Teil des Befehls zur Aufnahme optionaler
+Parameter.
+
+siehe: ^{}^ø{}ø
+       (Kap. 2.1)
+ 
+@@@()
+   ()
+  ßßßß
+Bei Bildbefehlen Teil des Befehls zur Aufnahme
+eines Koordinatenpaares. In ^BibTeX^øBibTeXø alternative
+Form der „uáersten Umklammerung fr einen
+Eingabetyp.
+
+siehe: (Kap. 6.2)
+       (Kap. B.2)
+
+@@@comblank
+   \  (\backslash mit Leerzeichen)
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Normaler Zwischenraum nach einem Befehl ohne
+Parameter oder nach einem Punkt, der kein Satzende
+sein soll.
+
+siehe: ^~~^ø~~ø
+       (Kap. 2.1)
+       (Kap. 3.5.1.1)
+ 
+@@@\!
+  \!   [m]
+  ßßßßßßßß
+Negativer Zwischenraum von -1/6 quad in Formeln.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 5.5.1)
+ 
+@@@\"
+   \"
+  ßßßß
+LaTeX-Originalbefehl zur Erzeugung von Umlauten:
+\"u ergibt .
+
+siehe: ^"^ø"ø
+       ^""^ø""ø
+       ^"'^ø"'ø
+       ^"-^ø"-ø
+       ^"<^ø"<ø
+       ^">^ø">ø
+       ^"`^ø"`ø
+       ^"ck^ø"ckø
+       ^"e^ø"eø
+       ^"u^ø"uø
+       ^"s^ø"sø
+       ^"tt^ø"ttø
+       ^"|^ø"|ø
+       (Kap. 2.5.1)
+       (Kap. D.1.7)
+
+@@@\'
+   \'
+  ßßßß
+1. Befehl zur Erzeugung eines "Akut Akzentes".
+
+2. Innerhalb der ^tabbing^øtabbingø Umgebung Sprungbefehl
+   ans Ende der vorangehenden Spalte.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+       (Kap. 4.6.4)
+
+@@@\(
+  \(   [z]
+  ßßßßßßßß
+Umschaltzeichen vom Textmode in den mathematischen
+Mode zur Erzeugung von Textformeln. Gleichwertig
+mit ^\begin^ø\beginø{^math^ømathø} bzw. dem ersten Auftreten eines
+^$^ø$ø Zeichens.
+
+siehe: (Kap. 5.1)
+ 
+@@@\)
+  \)   [z]
+  ßßßßßßßß
+Rckschaltzeichen von Textformeln in den normalen
+Textmode. Gleichwertig mit ^\end^ø\endø{^math^ømathø} bzw.
+dem zweiten Auftreten eines ^$^ø$ø Zeichens.
+
+siehe: (Kap. 5.1)
+
+@@@\+
+   \+
+  ßßßß
+Versetzungsbefehl fr den linken Rand innerhalb
+der ^tabbing^øtabbingø Umgebung um einen Tabstop nach
+rechts.
+
+siehe: ^\-^ø\-ø
+       (Kap. 4.6.3)
+ 
+@@@\,
+   \,
+  ßßßß
+Kleiner Zwischenraum von 1/6 quad in Text und
+Formeln.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 3.5.1.3)
+       (Kap. 5.5.1)
+
+@@@\-
+   \-
+  ßßßß
+1. Kennzeichnung einer m”glichen Trennung
+   innerhalb eines Wortes, die Trennungen nur
+   an den gekennzeichneten Stellen erlaubt.
+
+2. Innerhalb der ^tabbing^øtabbingø Umgebung Rcksetzen
+   des linken Randes um einen Tabstop nach links.
+
+siehe: ^\+^ø\+ø
+       (Kap. 3.6.1)
+       (Kap. 4.6.3)
+ 
+@@@\.
+   \.
+  ßßßß
+Befehl zur Erzeugung eines "Punkt Akzentes".
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+ 
+@@@\/
+   \/
+  ßßßß
+Italic Korrektur: Zusatzzwischenraum am Ende
+von geneigten Schriften oder Befehl zur
+Aufhebung von Ligaturen.
+
+siehe: (Kap. 3.5.1.4)
+       (Kap. 3.5.1.5)
+ 
+@@@\3
+  \3   [p][g]
+  ßßßßßßßßßßß
+Nach Eingabe von \let\3=\ss Befehl zur
+vereinfachten Darstellung des á.
+
+siehe: ^german^øgermanø.sty
+       (Kap. 2.5.1)
+ 
+@@@\:
+  \:   [m]
+  ßßßßßßßß
+Mittlerer Zwischenraum von 2/9 quad in Formeln.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 5.5.1)
+
+@@@\;
+  \;   [m]
+  ßßßßßßßß
+Groáer Zwischenraum von 5/18 quad in Formeln.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 5.5.1)
+ 
+@@@\<
+   \<
+  ßßßß
+Rcksprung um einen Tabstop nach links innerhalb
+der ^tabbing^øtabbingø Umgebung.
+
+siehe: ^\>^ø\>ø
+       ^\=^ø\=ø
+       (Kap. 4.6.3)
+ 
+@@@\
+   \=
+  ßßßß
+1. Befehl zur Erzeugung eines "Makron Akzentes".
+
+2. Innerhalb der ^tabbing^øtabbingø Umgebung: Setzen eines
+   Tabulatorstops an der momentanen Stelle in der
+   Zeile.
+
+siehe: ^\<^ø\<ø
+       ^\>^ø\>ø
+       (Kap. 2.5.7)
+       (Kap. 4.6.1)
+ 
+@@@\>
+   \>
+  ßßßß
+Sprung zum n„chsten Tabstop nach rechts innerhalb
+der ^tabbing^øtabbingø Umgebung.
+
+siehe: ^\<^ø\<ø
+       ^\=^ø\=ø
+       (Kap. 4.6.1)
+ 
+@@@\@.
+   \@.
+  ßßßßß
+Zusatzzwischenraum am Satzende nach dem Punkt,
+wenn der Satz mit einem Groábuchstaben endet.
+
+siehe: ^~~^ø~~ø
+       ^comblank^ø\ ø
+       (Kap. 3.5.1.1)
+
+@@@\[
+  \[   [z]
+  ßßßßßßßß
+Umschaltbefehl vom Textmode in den mathematischen
+Mode zur Erzeugung von abgesetzten Formeln;
+gleichwertig mit ^\begin^ø\beginø{^displaymath^ødisplaymathø}.
+
+siehe: ^\]^ø\]ø
+       (Kap. 5.1)
+
+@@@\\
+  \\[abstand]   [z]
+  ßßßßßßßßßßßßßßßßß
+Zeilenendbefehl mit Zeilenumbruch. Optional fgt
+[abstand] vertikalen Zwischenraum der L„nge
+abstand zus„tzlich zum Zeilenwechsel ein.
+Beispiel: \\[0.5ex].
+
+Bei der \\*[abstand] Form kann kein Seitenumbruch vor der
+n„chsten Zeile stattfinden.
+
+siehe: ^\linebreak^ø\linebreakø
+       ^\newline^ø\newlineø
+       ^\nolinebreak^ø\nolinebreakø
+       ^\par^ø\parø
+       (Kap. 3.5.2.1)
+
+@@@\]
+  \]   [z]
+  ßßßßßßßß
+Gleichwertig mit ^\end^ø\endø{^displaymath^ødisplaymathø}.
+
+siehe: ^\[^ø\[ø
+       (Kap. 5.1)
+ 
+@@@\^^
+   \^^
+  ßßßß
+Befehl zur Erzeugung eines "Circumflex Akzentes".
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+
+@@@\_
+   \_
+  ßßßß
+Befehl zur Erzeugung des _ Zeichens fr Wortverbindungen.
+
+siehe: ^Sonder^øBefehlszeichenø
+       (Kap. 2.5.4)
+
+@@@\`
+   \`
+  ßßßß
+1. Befehl zur Erzeugung eines "Gravis Akzentes".
+
+2. Innerhalb der ^tabbing^øtabbingø Umgebung: Der nachfolgende
+   Text wird rechtsbndig ans Ende der Zeile gesetzt.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+       (Kap. 4.6.4)
+ 
+@@@\{
+   \{
+  ßßßß
+Befehl zum Ausdruck der geschweiften Klammer:  \{ = {
+
+siehe: ^Sonder^øSonderzeichenø
+       (Kap. 2.5.4)
+
+@@@\}
+   \}
+  ßßßß
+Befehl zum Ausdruck der geschweiften Klammer:  \} = }
+
+siehe: ^Sonder^øSonderzeichenø
+       (Kap. 2.5.4)
+
+@@@\~~
+   \~~
+  ßßßß
+Befehl zur Erzeugung einer Tilde als Akzent: \~~n = ¤
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+
+@@@\a
+  \a=
+  ßßß
+Makron-Akzent in ^tabular^øtabularø Umgebung.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 4.6.4)
+
+@@@\a'
+  \a'
+  ßßß
+Akute-Akzent in ^tabular^øtabularø Umgebung.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 4.6.4)
+ 
+@@@\a`
+  \a`
+  ßßß
+Gravis-Akzent in ^tabular^øtabularø Umgebung.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 4.6.4)
+ 
+@@@\abovedisplayskip
+  \abovedisplayskip   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßß
+Vertikaler Abstand einer langen abgesetzten Formel
+zur vorangehenden Textzeile. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer
+elastischen Maáangabe.
+
+siehe: ^\abovedisplayshortskip^ø\abovedisplayshortskipø
+       ^\belowdisplayskip^ø\belowdisplayskipø
+       ^\belowdisplayshortskip^ø\belowdisplayshortskipø
+       (Kap. 5.5.4)
+ 
+@@@\abovedisplayshortskip
+  \abovedisplayshortskip   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Vertikaler Abstand einer kurzen abgesetzten Formel
+zur vorangehenden Textzeile. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer elastischen
+Maáangabe.
+
+siehe: ^\abovedisplayskip^ø\abovedisplayskipø
+       ^\belowdisplayskip^ø\belowdisplayskipø
+       ^\belowdisplayshortskip^ø\belowdisplayshortskipø
+       (Kap. 5.5.4)
+
+@@@\acute
+  \acute{x}   [m]
+  ßßßßßßßßßßßßßßß
+Akut Akzent ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+ 
+@@@\addcontentsline
+  \addcontentsline{file}{format}{eintrag}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Manueller Zusatz von eintrag in den
+Verzeichnisfile, .toc, .lof oder .lot fr file,
+im Format eines Gliederungsbefehls fr format,
+z. B. section.
+
+siehe: ^\addtocontents^ø\addtocontentsø
+       ^\tableofcontents^ø\tableofcontentsø
+       ^\contentsline^ø\contentslineø
+       (Kap. 3.4.3)
+       (Kap. 3.4.4)
+ 
+@@@\address
+  \address{absender}
+  ßßßßßßßßßßßßßßßßßß
+Im ^ds^øletterø Stil Name und Anschrift des Absenders.
+Zeilen im absender Feld werden durch ^\\^ø\\ø getrennt.
+
+siehe: Die ^letter^øletterø Umgebung
+       (Kap. A.1)
+
+@@@\addtocontents
+  \addtocontents{file}{eintrag}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Manueller Zusatz von eintrag in den
+Verzeichnisfile, .toc, .lof oder .lot fr file.
+
+siehe: ^\addcontentsline^ø\addcontentslineø
+       ^\contentsline^ø\contentslineø
+       (Kap. 3.4.3)
+       (Kap. 3.4.4)
+
+@@@\addtocounter
+  \addtocounter{z„hler}{betrag}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Addiert betrag zum momentanen Wert des Z„hlers z„hler.
+
+siehe: ^\newcounter^ø\newcounterø
+       ^\refstepcounter^ø\refstepcounterø
+       ^\setcounter^ø\setcounterø
+       ^\stepcounter^ø\stepcounterø
+       (Kap. 7.1.3)
+ 
+@@@\addtolength
+  \addtolength{\l„nge}{maábetrag}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Addiert das L„ngenmaá maábetrag zum momentanen
+Wert des L„ngenbefehls \l„nge.
+
+siehe: ^\newlength^ø\newlengthø
+       ^\setlength^ø\setlengthø
+       ^\settowidth^ø\settowidthø
+       ^Wertzuweisung^øWertzuweisungø
+       (Kap. 7.2)
+
+@@@\addvspace
+  \addvspace{maábetrag}
+  ßßßßßßßßßßßßßßßßßßßßß
+Fgt vertikalen Zwischenraum der Gr”áe maábetrag
+an der Stelle dieses Befehls zwischen Abs„tzen
+ein, bei mehrfachem Auftreten jedoch nur bis
+zum maximalen maábetrag.
+
+siehe: (Kap. 7.2)
+ 
+@@@\Alph
+  \Alph{z„hler}
+  ßßßßßßßßßßßßß
+Druckt den augenblicklichen Wert von z„hler als
+Groábuchstabe aus.
+
+siehe: ^\alph^ø\alphø
+       ^\arabic^ø\arabicø
+       ^\fnsymbol^ø\fnsymbolø
+       ^\pagenumbering^ø\pagenumberingø
+       ^\Roman^ø\Romanø
+       ^\roman^ø\romanø
+       (Kap. 7.1.4)
+ 
+@@@\alph
+  \alph{z„hler}
+  ßßßßßßßßßßßßß
+Druckt den augenblicklichen Wert von z„hler als
+Kleinbuchstabe aus.
+
+siehe: ^\Alph^ø\Alphø
+       ^\arabic^ø\arabicø
+       ^\fnsymbol^ø\fnsymbolø
+       ^\pagenumbering^ø\pagenumberingø
+       ^\Roman^ø\Romanø
+       ^\roman^ø\romanø
+       (Kap. 7.1.4)
+ 
+@@@\and
+  \and
+  ßßßß
+Trennt Autorenangaben auf der durch ^\maketitle^ø\maketitleø
+erzeugten Titelseite.
+
+siehe: ^\author^ø\authorø
+       ^\date^ø\dateø
+       ^\thanks^ø\thanksø
+       ^\title^ø\titleø
+       Die ^titlepage^øtitlepageø Umgebung
+       (Kap. 3.3.1)
+ 
+@@@\arabic
+  \arabic{z„hler}
+  ßßßßßßßßßßßßßßß
+Druckt den augenblicklichen Wert von z„hler als
+arabische Zahl aus.
+
+siehe: ^\Alph^ø\Alphø
+       ^\alph^ø\alphø
+       ^\fnsymbol^ø\fnsymbolø
+       ^\pagenumbering^ø\pagenumberingø
+       ^\Roman^ø\Romanø
+       ^\roman^ø\romanø
+       (Kap. 7.1.4)
+ 
+
+@@@\arccos
+  \arccos   [m]
+  ßßßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "arccos" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\arcsin
+  \arcsin   [m]
+  ßßßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "arcsin" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\arctan
+  \arctan   [m]
+  ßßßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "arctan" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\arg
+  \arg   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "arg" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\arraycolsep
+  \arraycolsep
+  ßßßßßßßßßßßß
+Der halbe Spaltenabstand in der ^array^øarrayø Umgebung.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen
+einer Maáangabe.
+
+siehe: (Kap. 4.8.2)
+ 
+@@@\arrayrulewidth
+  \arrayrulewidth
+  ßßßßßßßßßßßßßßß
+Die Liniendicke vertikaler und horizontaler Linien
+in der ^array^øarrayø und ^tabular^øtabularø Umgebung. ^Wertzuweisung^øWertzuweisungø
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maáangabe.
+
+siehe: (Kap. 4.8.2)
+ 
+@@@\arraystretch
+  \arraystretch
+  ßßßßßßßßßßßßß
+Faktor (Standard = 1.0) zur Ver„nderung des
+Zeilenabstandes einer Tabelle. ^Wertzuweisung^øWertzuweisungø
+durch ^\renewcommand^ø\renewcommandø{\arraystretch}{faktor}.
+
+siehe: (Kap. 4.8.2)
+
+@@@\austrian
+  \austrian   [g]
+  ßßßßßßßßßßßßßßß
+Umschaltungsname auf ”sterreichische Sprachstrukturen
+mit ^\selectlanguage^ø\selectlanguageø.
+
+siehe: ^\french^ø\frenchø
+       ^\english^ø\englishø
+       ^\german^ø\germanø
+       ^\USenglish^ø\USenglishø
+       ^german^øgermanø.sty
+       (Kap. D.1.6)
+
+@@@\author
+  \author{name}
+  ßßßßßßßßßßßßß
+Erzeugt die Autorenangaben auf der durch ^\maketitle^ø\maketitleø
+erzeugten Titelseite.
+
+siehe: ^\and^ø\andø
+       ^\date^ø\dateø
+       ^\thanks^ø\thanksø
+       ^\title^ø\titleø
+       Die ^titlepage^øtitlepageø Umgebung
+       (Kap. 3.3.1)
+
+@@@\b
+  \b{x}
+  ßßßßß
+Befehl zur Erzeugung des Unterstreichungsakzentes.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+
+@@@\bar
+  \bar{x}   [m]
+  ßßßßßßßßßßßßß
+Makron Akzent ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+
+@@@\baselineskip
+  \baselineskip
+  ßßßßßßßßßßßßß
+Zeilenabstand innerhalb eines Absatzes. Jeder
+Zeichensatz kennt einen internen Zeilenabstand.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch
+Anh„ngen einer Maáangabe.
+
+siehe: ^\baselinestretch^ø\baselinestretchø
+       (Kap. 3.2.3)
+ 
+@@@\baselinestretch
+  \baselinestretch
+  ßßßßßßßßßßßßßßßß
+Faktor (Standard = 1.0), mit dem ^\baselineskip^ø\baselineskipø
+intern bei der Erzeugung des Zeilenabstandes
+multipliziert wird. ^Wertzuweisung^øWertzuweisungø kann durch
+ ^\renewcommand^ø\renewcommandø{\baselinestretch}{faktor}
+erfolgen. Neuer Wert wird erst nach der n„chsten
+Schriftgr”áenumschaltung wirksam!
+
+siehe: ^\baselineskip^ø\baselineskipø
+       (Kap. 3.2.3)
+       (Kap. 4.1.3)
+
+@@@\begin
+  \begin{umgebung}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßß
+leitet eine Umgebung ein, also einen Formatierungsbereich.
+Umgebung kann eine der vorgegebenen Umgebungen sein als auch
+eine selbstdefinierte. Manche Umgebungen ben”tigen weitere
+Parameter hinter der }-Klammer. Zu jedem \begin{Umgebung}
+Befehl geh”rt ein ^\end^ø\endø{Umgebung} Befehl mit demselben
+Umgebungsnamen. Umgebungen k”nnen geschachtelt werden, drfen
+sich aber nicht berschneiden.
+
+Die meisten Erkl„rungbefehle, z. B. alle Schriftarten-
+und Schriftgr”áenbefehle k”nnen mit ihrem Namen eine Umgebung
+bilden. \begin{^\small^ø\smallø} schaltet innerhalb der Umgebung auf
+die Schriftgr”áe \small um. Diese Umgebung wird mit
+\end{small} beendet.
+
+siehe: ^\newenvironment^ø\newenvironmentø
+       ^\renewenvironment^ø\renewenvironmentø
+       ^\newtheorem^ø\newtheoremø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 2.2)
+       (Kap. 2.2)
+@@@abstract
+  Die Umgebung abstract
+  ßßßßßßßßßßßßßßßßßßßßß
+dient zur Erzeugung einer Zusammenfassung. Bei Dokumentstil
+^ds^øarticleø wird hierbei die Schriftgr”áe ^\small^ø\smallø
+gew„hlt und die ^quotation^øquotationø Umgebung aktiviert. Bei ^ds^øreportø
+erscheint die Zusammenfassung auf eigenen Seiten und in gleicher
+Breite wie der sonstige Text. In beiden F„llen wird der
+zusammenfassende Text mit der zentrierten šberschrift Abstract
+oder Zusammenfassung (^german^øgermanø) versehen.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 3.3.2)
+
+@@@appendix
+  Die Umgebung appendix
+  ßßßßßßßßßßßßßßßßßßßßß
+erzeugt einen Anhang. Sie bewirkt Rcksetzung des obersten
+Gliederungsz„hlers und dessen Numerierung als Groábuchstabe.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 3.3.4)
+
+@@@array
+  Die Umgebung array
+  ßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{array}[pos]{col} dient zur Erzeugung von
+Matrizen und Feldern. Die Spaltendefinition col erh„lt fr jede
+Spalte ein Formatierungszeichen: So erzeugt ^\begin^ø\beginø{array}{lcr}
+eine dreispaltige Matrix mit einer linksbndigen ersten, einer
+zentrierten zweiten und einer rechtsbndigen dritten Spalte. Der
+optionale Parameter pos richtet mit t die erste Zeile des Feldes
+und mit b die letzte Zeile des Feldes auf die Grundlinie der
+umgebenden Formel aus. Standard ist die vertikal zentrierte
+Ausrichtung.
+
+siehe: Die ^tabular^øtabularø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.8.1)
+       (Kap. 5.4.3)
+
+@@@center
+  Die Umgebung center
+  ßßßßßßßßßßßßßßßßßßß
+In dieser Umgebung erscheint der Text zeilenweise zentriert. Die
+einzelnen Zeilen werden durch ^\\^ø\\ø getrennt.
+
+siehe: ^\centering^ø\centeringø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.2.1)
+
+@@@description
+  Die Umgebung description
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+erzeugt eine markierte, eingerckte Liste. Die Markierung besteht
+aus der jeweiligen Marke der zugeh”rigen ^\item^ø\itemø[Marke] Befehle.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.3)
+       (Kap. 4.3.3)
+
+@@@displaymath
+  Die Umgebung displaymath
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+schaltet vom Textmode in den mathematischen Mode zur Erzeugung
+einer abgesetzten Formel um und ist gleichwertig mit ^\[^ø\[ø.
+^\end^ø\endø{displaymath} oder ^\]^ø\]ø beenden gleichermaáen diese Umgebung.
+
+siehe: Die ^equation^øequationø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 5.1)
+
+@@@document
+  Die Umgebung document
+  ßßßßßßßßßßßßßßßßßßßßß
+ist die „uáerste Umgebung eines jeden Textdokuments; sie ist
+fr jedes LaTeX-Dokument zwingend. Der Anfang dieser Umgebung
+^\begin^ø\beginø{document} beendet den Vorspann, das Ende ^\end^ø\endø{document}
+beendet den ganzen Text.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 1.3)
+
+@@@enumerate
+  Die Umgebung enumerate
+  ßßßßßßßßßßßßßßßßßßßßßß
+erzeugt eine markierte, eingerckte Liste. Die Markierung h„ngt
+von der Schachtelungstiefe ab und besteht in der ersten Stufe
+aus einer laufenden Nummer, die mit jedem ^\item^ø\itemø Befehl erzeugt
+und um eins erh”ht wird.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.3)
+       (Kap. 4.3.2)
+
+@@@eqnarray
+  Die Umgebung eqnarray
+  ßßßßßßßßßßßßßßßßßßßßß
+schaltet vom Textmode in den mathematischen Mode zur Erzeugung
+einer dreispaltigen Tabelle {rcl}. Die einzelnen Zeilen der
+Gruppe werden durch ^\\^ø\\ø Befehle und deren Felder durch ^&^ø&ø
+getrennt. Jede Zeile erh„lt eine laufende Formelnummer. Letztere
+kann jeweils mit dem Befehl ^\nonumber^ø\nonumberø unterdrckt werden.
+
+Die Umgebung eqnarray* verzichtet von vornherein auf die
+Formelnumerierung.
+
+siehe: Die ^equation^øequationø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 5.4.7)
+
+@@@equation
+  Die Umgebung equation
+  ßßßßßßßßßßßßßßßßßßßßß
+schaltet vom Textmode in den mathematischen Mode zur Erzeugung
+einer abgesetzten Formel mit automatischer Formelnumerierung um.
+
+siehe: Die ^displaymath^ødisplaymathø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 5.1)
+
+@@@figure
+  Die Umgebung figure
+  ßßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{figure}[loc] definiert eine gleitende Umgebung
+zur Aufnahme von Bildern. Der optionale Parameter loc kann jede
+Kombination von h, t, b und p sein und bestimmt die erlaubten
+Gleitm”glichkeiten. Standard ist tbp.
+
+Die Umgebung figure* nimmt Bilder ber beide
+Spalten bei zweispaltiger Textformatierung auf; loc kann dann
+nur t, p oder tp sein.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 6.6.1)
+
+@@@flushleft
+  Die Umgebung flushleft
+  ßßßßßßßßßßßßßßßßßßßßßß
+setzt den Text zeilenweise linksbndig. Die einzelnen Zeilen
+werden durch ^\\^ø\\ø getrennt.
+
+siehe: ^\raggedleft^ø\raggedleftø
+       ^\raggedright^ø\raggedrightø
+       Die ^flushright^øflushrightø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.2.2)
+
+@@@flushright
+  Die Umgebung flushright
+  ßßßßßßßßßßßßßßßßßßßßßßß
+setzt den Text zeilenweise rechtsbndig. Die einzelnen Zeilen
+werden durch ^\\^ø\\ø getrennt.
+
+siehe: ^\raggedleft^ø\raggedleftø
+       ^\raggedright^ø\raggedrightø
+       Die ^flushleft^øflushleftø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.2.2)
+
+@@@fussypar
+  Die Umgebung fussypar
+  ßßßßßßßßßßßßßßßßßßßßß
+Die Formatierung innerhalb dieser Umgebung erfolgt standardm„áig,
+d.h. mit begrenzter Elastizit„t fr die Wortabst„nde. Der
+Gegensatz ist die Umgebung ^sloppypar^øsloppyparø.
+
+siehe: ^\fussy^ø\fussyø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 3.6.3)
+
+@@@itemize
+  Die Umgebung itemize
+  ßßßßßßßßßßßßßßßßßßßß
+erzeugt eine markierte, eingerckte Liste. Die Markierung h„ngt
+von der Schachtelungstiefe ab und besteht in der ersten Stufe
+aus einem ^Sonder^ø\bulletø, die mit jedem ^\item^ø\itemø Befehl erzeugt wird.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.3)
+       (Kap. 4.3.1)
+
+@@@letter
+  Die Umgebung letter
+  ßßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{letter}{Empf„nger} leitet einen Brief
+beim Dokumentstil ^ds^øletterø ein. Empf„ngername und
+Anschrift werden im Parameter Empf„nger bergeben; die
+Zeilentrennung im Empf„ngerfeld erfolgt mit ^\\^ø\\ø.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. A.1)
+
+@@@list
+  Die Umgebung list
+  ßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{list}{Standardmarke}{Listenerkl„rung}
+leitet eine allgemeine Listenumgebung ein. Standardmarke
+definiert die Markierung, die mit jedem ^\item^ø\itemø Befehl erzeugt
+wird. Listenerkl„rung enth„lt die gewnschten L„ngenerkl„rungen
+fr die Liste.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.4)
+
+@@@math
+  Die Umgebung math
+  ßßßßßßßßßßßßßßßßß
+schaltet vom Textmode in den mathematischen Mode zur Erzeugung
+von Textformeln um. Gleichwertig mit ^\(^ø\(ø oder dem ersten Auftreten
+eines ^$^ø$ø Zeichens. ^\end^ø\endø{math}, ^\)^ø\)ø oder ein zweites ^$^ø$ø beenden
+gleichmaáen diese Umgebung.
+
+siehe: Die ^displaymath^ødisplaymathø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 5.1)
+
+@@@minipage
+  Die Umgebung minipage
+  ßßßßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{minipage}[pos]{Breite}erzeugt eine Teilseite
+der angegebenen Breite. Der optionale Parameter pos richtet mit t
+die oberste Zeile und mit b die unterste Zeile der minipage Box auf
+die laufende Zeile aus. Standard ist die vertikale Zentrierung.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.7.3)
+
+@@@picture
+  Die Umgebung picture
+  ßßßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{picture}(x_dimen,y_dimen) dient zur Erzeugung
+eines Bildes mit den Abmessungen x_dimen Breite und y_dimen H”he.
+Diese Angaben erfolgen dimensionslos. Sie sind Vielfache der mit
+^\unitlength^ø\unitlengthø gesetzen L„ngeneinheit.
+
+Bei der Form ^\begin^ø\beginø{picture}(x_dimen,y_dimen)(x_offset,y_offset)
+wird das Bild zus„tzlich um die Betr„ge x_offset nach links und
+y_offset nach unten verschoben.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 6.2)
+       (Kap. 6.5.4)
+
+@@@quotation
+  Die Umgebung quotation
+  ßßßßßßßßßßßßßßßßßßßßßß
+rckt den Text beidseitig ein. Abs„tze innerhalb dieser Umgebung
+sind durch zus„tzliches Einrcken der ersten Zeile gekennzeichnet.
+
+siehe: Die ^quote^øquoteø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.2.3)
+
+@@@quote
+  Die Umgebung quote
+  ßßßßßßßßßßßßßßßßßß
+rckt den Text beidseitig ein. Abs„tze innerhalb dieser Umgebung
+sind durch vergr”áerten Absatzabstand gekennzeichnet.
+
+siehe: Die ^quotation^øquotationø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.2.3)
+
+@@@samepage
+  Die Umgebung samepage
+  ßßßßßßßßßßßßßßßßßßßßß
+erlaubt Seitenumbruch nur zwischen Abs„tzen, nicht aber innerhalb
+eines Absatzes oder vor und nach abgesetzten Formeln oder
+Einrckungen, es sei denn er wird dort mit ^\newpage^ø\newpageø oder
+^\pagebreak^ø\pagebreakø erzwungen.
+
+siehe: ^\samepage^ø\samepageø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 3.5.5.5)
+
+@@@sloppypar
+  Die Umgebung sloppypar
+  ßßßßßßßßßßßßßßßßßßßßßß
+Die Formatierung der  Abs„tze innerhalb dieser Umgebung erlaubt
+groázgigere Wortabst„nde und vermindert Trennungen. Sinnvoll
+fr sonst beidbndig schwer zu formatierende Texte. Der Gegensatz
+ist die Umgebung ^fussypar^øfussyparø.
+
+siehe: ^\sloppy^ø\sloppyø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 3.6.3)
+
+@@@tabbing
+  Die Umgebung tabbing
+  ßßßßßßßßßßßßßßßßßßßß
+In dieser Umgebung k”nnen mit ^\=^ø\=ø Befehlen beliebige Tabulatorstops
+gesetzt werden, zu denen in weiteren Zeilen mit ^\>^ø\>ø Befehlen vor-
+und mit ^\<^ø\<ø Befehlen zurckgesprungen werden kann. Mit ^\+^ø\+ø und ^\-^ø\-ø
+Befehlen kann der linke Rand der tabbing-Umgebung jeweils um einen
+Tabulatorstop nach rechts oder links versetzt werden.
+
+Der Befehl ^\`^ø\`ø setzt nachfolgenden Text rechtsbndig ans Ende der Zeile
+und der Befehl ^\'^ø\'ø springt zurck ans Ende der vorangehenden Spalte.
+Dabei bestimmt ^\tabbingsep^ø\tabbingsepø den Abstand zwischen einem Tabulatorstop
+und dem mit LText\' vor dem momentanen Tabstop angeordneten LText.
+
+Die Akzent-Befehle ^Akz^ø\=ø, ^Akz^ø\`ø und ^Akz^ø\'ø mssen in der
+Umgebung tabbing als ^\a=^ø\a=ø, ^\a`^ø\a`ø und ^\a'^ø\a'ø geschrieben werden.
+
+Mit ^\pushtabs^ø\pushtabsø wird der augenblickliche Satz von Tabulatorstellungen
+abgespeichert, ^\poptabs^ø\poptabsø aktiviert wieder den vorigen Satz von
+Tabulatorstellungen.
+
+siehe: Die ^tabular^øtabularø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.6.1)
+@@@table
+  Die Umgebung table
+  ßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{table}[loc] leitet eine gleitende Umgebung fr
+Tabellen ein. Der optionale Parameter loc kann jede Kombination
+von h, t, b und p sein und bestimmt die erlaubten Gleitm”glichkeiten.
+Standard ist tbp.
+
+Die Umgebung table* nimmt Tabellen ber beide Spalten bei
+zweispaltiger Textformatierung auf; loc kann dann nur t, p oder
+tp sein.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.8.4)
+       (Kap. 6.6.1)
+
+@@@tabular
+  Die Umgebung tabular
+  ßßßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{tabular}[pos]{col} erzeugt eine Tabelle. Die
+Spaltendefinition col erh„lt fr jede Spalte ein
+Formatierungszeichen: c, l, r fr eine zentrierte, links- oder
+rechtsbndige Spalte oder p{wd} fr eine Spalte der Breite wd,
+in der mehrzeiliger Text als Zeileneintrag erscheinen kann.
+
+Mit dem Eintrag @{Text} zwischen zwei der vorstehenden
+Formatierungszeichen wird derselbe Text in allen Zeilen zwischen
+die entsprechenden Spalten eingefgt.  Mit dem Befehl
+^\extracolsep^ø\extracolsepø als Text wird zus„tzliche Breite vor allen
+nachfolgenden Spalten der Tabelle eingerichtet.
+
+Ein ^|^ø|ø vor, zwischen oder nach den Formatierungszeichen erzeugt
+an diesen Stellen eine vertikale Linie ber die ganze Tabellenh”he.
+
+Der optionale Parameter loc richtet mit t die erste Zeile der
+Tabelle und mit b die letzte Zeile der Tabelle auf die Grundlinie
+der „uáeren Umgebung aus. Standard ist die vertikale zentrierte
+Ausrichtung.
+
+Die Spalteneintr„ge der einzelnen Zeilen werden mit ^&^ø&ø getrennt
+~>>>~ Page down
+und die Tabellenzeile als Ganzes mit ^\\^ø\\ø abgeschlossen.
+
+Bei der Form ^\begin^ø\beginø{tabular*}{Breite}[pos]{col} wird eine
+Tabelle der angegebenen Breite erzeugt. Hierbei sollte am Anfang
+der Formatierungsfeldes col ein @{^\extracolsep^ø\extracolsepø^\fill^ø\fillø} stehen,
+um zwischen den Spalten so viel Zwischenraum einzufgen, daá
+gerade die gewnschte Gesamtbreite erreicht wird.
+
+siehe: ^\tabcolsep^ø\tabcolsepø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.8.1)
+
+@@@thebibliography
+  Die Umgebung thebibliography
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der Befehl ^\begin^ø\beginø{thebibliography}{Mustermarke} leitet ein
+Literaturverzeichnis ein.Fr Mustermarke ist ein Musterwort
+zu w„hlen, das die Tiefe der Listeneinrckung bestimmt. Jeder
+Eintrag des Verzeichnisses beginnt mit einem ^\bibitem^ø\bibitemø Befehl.
+
+siehe: ^BibTeX^øBibTeXø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.3.6)
+       (Kap. 8.2.2)
+
+@@@theindex
+  Die Umgebung theindex
+  ßßßßßßßßßßßßßßßßßßßßß
+ist eine Umgebung zur zweispaltigen Formatierung des šbersichtregisters.
+Die Eintragungen erfolgen durch ^\item^ø\itemø, ^\subitem^ø\subitemø, ^\subsubitem^ø\subsubitemø
+bzw. ^\indexspace^ø\indexspaceø Befehle.
+
+siehe: ^Makešbersicht^øMakešbersichtø
+       ^\printindex^ø\printindexø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 8.2.3)
+
+@@@titlepage
+  Die Umgebung titlepage
+  ßßßßßßßßßßßßßßßßßßßßßß
+erzeugt eine Titelseite ohne Seitenummer bei freier
+Anwendergestaltung.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 3.3.1)
+
+@@@trivlist
+  Die Umgebung trivlist
+  ßßßßßßßßßßßßßßßßßßßßß
+erzeugt eine triviale Liste ohne Mustermarke und Listenerkl„rung,
+bei der ^\leftmargin^ø\leftmarginø, ^\labelwidth^ø\labelwidthø und ^\itemsep^ø\itemsepø zu 0pt gesetzt
+sind und ^\listparindent^ø\listparindentø=^\parindent^ø\parindentø und ^\parsep^ø\parsepø=^\parskip^ø\parskipø
+zugewiesen wird.
+
+siehe: Die ^list^ølistø Umgebung
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.4.5)
+
+@@@verbatim
+  Die Umgebung verbatim
+  ßßßßßßßßßßßßßßßßßßßßß
+ist eine Umgebung zum Ausdruck von Text in Form der Originaleingabe
+in Schreibmaschinenschrift ^\tt^ø\ttø. Mehrfache Leerzeichen,
+Zeilenschaltungen und Befehlszeichen werden unver„ndert ausgegeben.
+
+In der Umgebung verbatim* werden zus„tzlich Leerzeichen durch _
+gekennzeichnet.
+
+siehe: ^\verb^ø\verbø
+       ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.10)
+
+@@@verse
+  Die Umgebung verse
+  ßßßßßßßßßßßßßßßßßß
+ist eine Umgebung zur Formatierung von Gedichten, Reimen, Versen
+u.„. Strophen werden durch Leerzeilen, die einzelnen Zeilen durch
+^\\^ø\\ø voneinander getrennt.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 4.2.4)
+
+@@@\belowdisplayskip
+  \belowdisplayskip   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßß
+Vertikaler Abstand einer langen abgesetzten Formel
+zur nachfolgenden Textzeile. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer
+elastischen Maáangabe.
+
+siehe: ^\abovedisplayskip^ø\abovedisplayskipø
+       ^\abovedisplayshortskip^ø\abovedisplayshortskipø
+       ^\belowdisplayshortskip^ø\belowdisplayshortskipø
+       (Kap. 5.5.4)
+
+@@@\belowdisplayshortskip
+  \belowdisplayshortskip   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Vertikaler Abstand einer kurzen abgesetzten Formel
+zur nachfolgenden Textzeile. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer elastischen
+Maáangabe.
+
+siehe: ^\abovedisplayskip^ø\abovedisplayskipø
+       ^\abovedisplayshortskip^ø\abovedisplayshortskipø
+       ^\belowdisplayskip^ø\belowdisplayskipø
+       (Kap. 5.5.4)
+ 
+@@@\bf
+  \bf
+  ßßß
+Schriftumschaltung auf "Boldface = Fettdruck".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+
+@@@\bibitem
+  \bibitem[marke]{bezug} Text
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Befehl zum Eintrag in das Literaturverzeichnis der ^thebibliography^øthebibliographyø
+Umgebung. Auf das Bezugswort bezug kann im Text mit ^\cite^ø\citeø
+Befehlen Bezug genommen werden, wodurch die gew„hlte, optionale
+Markierung marke der Literaturstelle ausgedruckt wird. Standard
+ist eine fortlaufende Nummer in eckigen Klammern.
+
+siehe: ^\bibliography^ø\bibliographyø
+       ^\bibliographystyle^ø\bibliographystyleø
+       ^BibTeX^øBibTeXø
+       ^\nocite^ø\nociteø
+       (Kap. 4.3.6)
+       (Kap. 8.2.2)
+ 
+@@@\bibliography
+  \bibliography{file}
+  ßßßßßßßßßßßßßßßßßßß
+erzeugt ein Literaturverzeichnisses in Verbindung mit dem
+^BibTeX^øBibTeXø-Programm. Fr file ist der Grundname der
+Literaturdatenbank anzugeben.
+
+siehe: ^\bibitem^ø\bibitemø
+       ^\bibliographystyle^ø\bibliographystyleø
+       ^\cite^ø\citeø
+       ^\nocite^ø\nociteø
+       Die ^thebibliography^øthebibliographyø Umgebung
+       ^šbersicht^øšbersichtø
+       (Kap. 8.2.2)
+       (Kap. B.1)
+
+@@@\bibliographystyle
+  \bibliographystyle{stil}
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Wahl des Stils fr das erzeugte Literaturverzeichnis. Fr stil kann
+zwischen plain, unsrt, alpha und abbrv gew„hlt werden.
+
+siehe: ^\bibitem^ø\bibitemø
+       ^\bibliography^ø\bibliographyø
+       ^BibTeX^øBibTeXø
+       ^\cite^ø\citeø
+       ^\nocite^ø\nociteø
+       Die ^thebibliography^øthebibliographyø Umgebung
+       ^šbersicht^øšbersichtø
+       (Kap. B.1)
+ 
+@@@\big
+  \bigkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßß
+Gr”áeres Klammersymbol als normal, aber kleiner als \Big.
+
+siehe: ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+
+@@@\Big
+  \Bigkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßß
+Gr”áeres Klammersymbol als \big, aber kleiner als \bigg.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\bigg
+  \biggkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Gr”áeres Klammersymbol als Big, aber kleiner als \Bigg.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\Bigg
+  \Biggkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Gr”átes Klammersymbol.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+
+@@@\biggl
+  \bigglkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Entspricht \bigg mit gleichzeitig funktionell ”ffnender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\Biggl
+  \Bigglkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Entspricht \Bigg mit gleichzeitig funktionell ”ffnender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+
+@@@\biggm
+  \biggmkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Entspricht \bigg, aber gr”áerer horizontaler Abstand
+(Beziehungsoperation).
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+@@@\Biggm
+  \Biggmkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Entspricht \Bigg, aber gr”áerer horizontaler Abstand
+(Beziehungsoperation).
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+@@@\biggr
+  \biggrkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Entspricht \bigg mit gleichzeitig funktionell schlieáender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\Biggr
+  \Biggrkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Entspricht \Bigg mit gleichzeitig funktionell schlieáender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\bigl
+  \biglkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Entspricht \big mit gleichzeitig funktionell ”ffnender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\Bigl
+  \Biglkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Entspricht \Big mit gleichzeitig funktionell ”ffnender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+ 
+@@@\bigm
+  \bigmkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Entspricht \big, aber gr”áerer horizontaler Abstand
+(Beziehungsoperation).
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+@@@\Bigm
+  \Bigmkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Entspricht \Big, aber gr”áerer horizontaler Abstand
+(Beziehungsoperation).
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+@@@\bigr
+  \bigrkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Entspricht \big mit gleichzeitig funktionell schlieáender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\Biggm^ø\Biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\Bigr^ø\Bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+
+@@@\Bigr
+  \Bigrkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Entspricht \Big mit gleichzeitig funktionell schlieáender Klammerung.
+
+siehe: ^\big^ø\bigøkl_symbol
+       ^\Big^ø\Bigøkl_symbol
+       ^\bigg^ø\biggøkl_symbol
+       ^\Bigg^ø\Biggøkl_symbol
+       ^\biggl^ø\biggløkl_symbol
+       ^\Biggl^ø\Biggløkl_symbol
+       ^\biggm^ø\biggmøkl_symbol
+       ^\biggr^ø\biggrøkl_symbol
+       ^\Biggr^ø\Biggrøkl_symbol
+       ^\bigl^ø\bigløkl_symbol
+       ^\Bigl^ø\Bigløkl_symbol
+       ^\bigm^ø\bigmøkl_symbol
+       ^\Bigm^ø\Bigmøkl_symbol
+       ^\bigr^ø\bigrøkl_symbol
+       ^mKlammer^øKlammersymboleø
+       (Kap. 5.5.3)
+
+@@@\bigskip
+  \bigskip   [z]
+  ßßßßßßßßßßßßßß
+Groáer vertikaler Zwischenraum vom Betrag ^\bigskipamount^ø\bigskipamountø
+zwischen Abs„tzen.
+
+siehe: ^\medskip^ø\medskipø
+       ^\medskipamount^ø\medskipamountø
+       ^\smallskip^ø\smallskipø
+       ^\smallskipamount^ø\smallskipamountø
+       (Kap. 3.5.3)
+
+@@@\bigskipamount
+  \bigskipamount
+  ßßßßßßßßßßßßßß
+Standardwert fr den durch ^\bigskip^ø\bigskipø erzeugten Zwischenraum.
+^Wertzuweisung^øWertzuweisungø durch Anh„ngen einer elastischen
+Maázahl oder mit ^\setlength^ø\setlengthø.
+
+siehe: ^\medskip^ø\medskipø
+       ^\medskipamount^ø\medskipamountø
+       ^\smallskip^ø\smallskipø
+       ^\smallskipamount^ø\smallskipamountø
+
+@@@\bmod
+  \bmod   [m]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "mod".
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\boldmath
+  \boldmath   [z]
+  ßßßßßßßßßßßßßßß
+Schaltet auf Fettdruck in mathematischen Formeln um. Der Befehl
+muá im Textmode, also vor dem Umschaltbefehl in den mathematischen
+Mode gegeben werden. Fr eine Teilformel in Fettdruck muá mit
+^\mbox^ø\mboxø{\boldmath^$^ø$ø...^$^ø$ø} vorbergehend in Textmodus
+zurckgeschaltet werden.
+
+siehe: ^\unboldmath^ø\unboldmathø
+       (Kap. 5.4.9)
+ 
+@@@\bottomfraction
+  \bottomfraction
+  ßßßßßßßßßßßßßßß
+Bruchteil einer Seite, bis zu dem Gleitobjekte am unteren
+Seitenende angebracht werden k”nnen. ^Wertzuweisung^øWertzuweisungø mit:
+ ^\renewcommand^ø\renewcommandø{\bottomfraction}{dezimal_bruch}
+
+siehe: ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+
+@@@\bottomnumber
+  \bottomnumber
+  ßßßßßßßßßßßßß
+Maximale Anzahl von Gleitobjekten, die am unteren Seitenende
+angebracht werden k”nnen. ^Wertzuweisung^øWertzuweisungø durch
+^\setcounter^ø\setcounterø{bottomnumber}{num}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+ 
+@@@\breve
+  \breve{x}   [m]
+  ßßßßßßßßßßßßßßß
+Breve Akzent ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+ 
+@@@\c
+  \c{zeichen}
+  ßßßßßßßßßßß
+Erzeugt eine Cedille unter zeichen:  \c{C} = €
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+
+@@@\cal
+  \cal   [m]
+  ßßßßßßßßßß
+Schriftartenbefehl zur Erzeugung kalligraphischer
+Schriftzeichen in Formeln.
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 5.3.2)
+ 
+@@@\caption
+  \caption[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine numerierte šber- oder Unterschrift mit dem Text von
+berschrift innerhalb der Gleitumgebungen ^figure^øfigureø oder
+^table^øtableø. Mit kurzform kann statt der vollen šber- oder Unterschrift
+eine Kurzform im Bild- oder Tabellenverzeichnis aufgenommen werden.
+
+siehe: (Kap. 6.6.3)
+
+@@@\captions
+  \captions{sprache}
+  ßßßßßßßßßßßßßßßßßß
+Interner Befehl aus ^german^øgermanø.sty, der die sprachabh„ngigen
+W”rter aus LaTeX definiert. Standardm„áig steht fr sprache
+english, german und french bereit.
+
+siehe: (Kap. D.2.1)
+ 
+@@@\cc
+  \cc{liste}
+  ßßßßßßßßßß
+Befehl im Dokumentstil ^ds^øletterø zur Erzeugung eines "cc:"
+bzw. mit ^german^øgermanø evtl. "Kopien an" oder "Verteiler", gefolgt
+von einer Namensliste liste am Ende des Briefes.
+
+siehe: (Kap. A.1)
+
+@@@\centering
+  \centering
+  ßßßßßßßßßß
+Erkl„rung, daá der Text ab hier zeilenweise zentriert werden soll.
+Die einzelnen Zeilen werden durch \\ getrennt.
+
+siehe: Die ^center^øcenterø Umgebung
+       ^\centerline^ø\centerlineø
+       (Kap. 4.2.1)
+
+@@@\centerline
+  \centerline{text}
+  ßßßßßßßßßßßßßßßßß
+Erg„nzender TeX-Befehl, der den Inhalt von text in eigener Zeile
+horizontal zentriert.
+
+siehe: Die ^center^øcenterø Umgebung
+       ^\centering^ø\centeringø
+       (Kap. 4.2.1)
+ 
+@@@\chapter
+  \chapter[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Startet ein neues Kapitel mit einer neuen Seite und formatiert die
+Kapitelberschrift berschrift mit gleichzeitig laufender
+Kapitelnummer. Mit kurzform kann statt des Textes von
+berschrift eine Kurzform ins Inhaltsverzeichnis und in
+den Kopfzeilen eingetragen werden.
+
+Die \chapter*{berschrift} Form startet ein neues Kapitel mit einer
+neuen Seite und formatiert die Kapitelberschrift berschrift, jedoch
+ohne laufende Kapitelnummer. Ebenso unterbleibt eine Eintragung von
+berschrift im Inhaltsverzeichnis.
+
+siehe: ^\paragraph^ø\paragraphø
+       ^\part^ø\partø
+       ^\section^ø\sectionø
+       ^\subparagraph^ø\subparagraphø
+       ^\subsection^ø\subsectionø
+       ^\subsubsection^ø\subsubsectionø
+       (Kap. 3.3.3)
+ 
+@@@\check
+  \check{x}   [m]
+  ßßßßßßßßßßßßßßß
+H cek Akzent in mathematischen Formeln.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+
+@@@\circle
+  \circle{durchmesser}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl zur Erzeugung eines Kreises vom Durchmesser
+durchmesser in der ^picture^øpictureø Umgebung. Der Befehl ist als
+Argument in einem ^\put^ø\putø oder ^\multiput^ø\multiputø Befehl einzusetzen.
+
+Die \circle*{durchmesser} Form fllt zus„tzlich den Kreis.
+
+siehe: ^\oval^ø\ovalø
+       (Kap. 6.4.5)
+ 
+@@@\cite
+  \cite[zusatz]{bezug}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bezug auf eine Literaturstelle mit dem Schlsselwort bezug durch
+Ausdruck der Literaturmarkierung. Mit dem optionalen zusatz kann der
+Markierung ein Zusatz angefgt werden.
+
+siehe: ^\bibitem^ø\bibitemø
+       ^\bibliography^ø\bibliographyø
+       ^\bibliographystyle^ø\bibliographystyleø
+       ^BibTeX^øBibTeXø
+       ^\nocite^ø\nociteø
+       (Kap. 4.3.6)
+       (Kap. 8.2.2)
+       (Kap. B.1)
+
+@@@\cleardoublepage
+  \cleardoublepage   [z]
+  ßßßßßßßßßßßßßßßßßßßßßß
+Beendet die laufende Seite und bringt alle evtl. unbearbeiteten
+Gleitobjekte auf einer oder mehreren eigenen Seiten unter. Die
+n„chste Seite startet als rechte Seite mit einer ungeraden
+Seitennummer.
+
+siehe: ^\clearpage^ø\clearpageø
+       ^\newpage^ø\newpageø
+       ^\nopagebreak^ø\nopagebreakø
+       ^\pagebreak^ø\pagebreakø
+       (Kap. 3.5.5.4)
+
+@@@\clearpage
+  \clearpage
+  ßßßßßßßßßß
+Beendet die laufende Seite und bringt alle evtl. unbearbeiteten
+Gleitobjekte auf einer oder mehreren eigenen Seiten unter.
+
+siehe: ^\cleardoublepage^ø\cleardoublepageø
+       ^\newpage^ø\newpageø
+       ^\nopagebreak^ø\nopagebreakø
+       ^\pagebreak^ø\pagebreakø
+       (Kap. 3.5.5.2)
+ 
+@@@\cline
+  \cline{n-m}
+  ßßßßßßßßßßß
+Erzeugt innerhalb der ^tabular^øtabularø Umgebung eine horizontale Linie vom
+Anfang der Spalte n bis zum Ende der Spalte m. Beispiel: \cline{2-5}
+
+siehe: (Kap. 4.8.1)
+
+@@@\closing
+  \closing{gruá}
+  ßßßßßßßßßßßßßß
+Ende des Brieftextes innerhalb der ^letter^øletterø Umgebung. gruá steht
+fr die gewnschte Gruáformel.
+
+siehe: (Kap. A.1)
+ 
+@@@\columnsep
+  \columnsep
+  ßßßßßßßßßß
+Erkl„rung des Spaltenabstandes bei zweispaltiger Seitenformatierung.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\columnseprule^ø\columnsepruleø
+       (Kap. 3.1)
+
+@@@\columnseprule
+  \columnseprule
+  ßßßßßßßßßßßßßß
+Erkl„rung der Strichdicke fr den vertikalen Strich zwischen den Spalten
+bei zweispaltiger Seitenformatierung. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\columnsep^ø\columnsepø
+       (Kap. 3.1)
+ 
+@@@\contentsline
+  \contentsline{gl_typ}{\numberline{gl_num}titel_text}{seite}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Dieser Befehl wird durch ^\tableofcontents^ø\tableofcontentsø fr jeden Eintrag des
+Inhaltsverzeichnisses in den .toc File geschrieben. Mit dem Editor
+k”nnen solche Befehle manuell in den .toc File zugefgt oder ge„ndert
+werden. gl_typ steht fr den Namen eines Gliederungsbefehls, z. B.
+section, gl_num ist die zugeh”rige Gliederungsnummer wie
+2.3 und seite ist die zugeh”rige Seitennummer.
+
+siehe: ^šbersicht^øšbersichtø
+
+@@@\cos
+  \cos   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "cos" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\cosh
+  \cosh   [m]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "cosh" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\cot
+  \cot   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "cot" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\coth
+  \coth   [m]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "coth" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\csc
+  \csc   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "csc" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\d
+  \d{zeichen}
+  ßßßßßßßßßßß
+Erzeugt einen "dot under" Akzent.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+ 
+@@@\dashbox
+  \dashbox{dash}(x_dimen,y_dimen)[pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl zur Erzeugung eines gestrichelten Rahmens der
+Breite x_dimen und der H”he y_dimen mit der Strichelungsweite
+dash in der ^picture^øpictureø Umgebung. Ohne pos erscheint der Textinhalt
+von text innerhalb des Rahmens zentriert. Der optionale Parameter
+pos l„át mit l, r, t, b oder einer Paarkombination wie lt
+eine ge„nderte Positionierung zu.  Der Befehl ist als Argument in
+einem ^\put^ø\putø oder ^\multiput^ø\multiputø Befehl einzusetzen.
+
+siehe: ^\fbox^ø\fboxø
+       ^\frame^ø\frameø
+       ^\framebox^ø\frameboxø
+       ^\makebox^ø\makeboxø
+       ^\mbox^ø\mboxø
+       ^\parbox^ø\parboxø
+       ^\raisebox^ø\raiseboxø
+       (Kap. 6.4.2)
+
+@@@\date
+  \date{datum_text}
+  ßßßßßßßßßßßßßßßßß
+1. Der Befehl ^\maketitle^ø\maketitleø erzeugt standardm„áig das
+   aktuelle Datum auf einer Titelseite. Die Erkl„rung
+   durch \date erzeugt statt dessen an der Stelle des
+   aktuellen Datums datum_text.
+
+2. [p] Ausdruck von datum_text statt des automatisch
+   erzeugten aktuellen Datums bei Briefen.
+
+3. In der Form \dateSprache:
+   Interner Anpassungsbefehl aus ^german^øgermanø.sty, der die
+   sprachabh„ngige Datumsform fr den Befehl ^\today^ø\todayø
+   definiert. Standardm„áig steht Sprache fr austrian,
+   english, french, german und USenglish bereit. Nach
+   Aufruf von \dateSprache erzeugen anschlieáende \today
+   Befehle das sprachspezifische Datum. Der Befehl wird
+   normalerweise mit ^\selectlanguage^ø\selectlanguageø aktiviert.
+
+siehe: (Kap. 3.3.1)
+       (Kap. A.2)
+       (Kap. D.1.6)
+       (Kap. D.2.1)
+@@@\dblfloatpagefraction
+  \dblfloatpagefraction
+  ßßßßßßßßßßßßßßßßßßßßß
+Bei zweispaltiger Seitenformatierung der Bruchteil einer eigenen
+Seite fr Gleitobjekte, der mindestens gefllt werden muá.
+^Wertzuweisung^øWertzuweisungø durch
+ ^\renewcommand^ø\renewcommandø{dblfloatpagefraction}{dezimal_bruch}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+@@@\dblfloatsep
+  \dblfloatsep
+  ßßßßßßßßßßßß
+Bei zweispaltiger Seitenformatierung der Abstand zwischen
+Gleitobjekten, die ber beide Spalten reichen. ^Wertzuweisung^øWertzuweisungø
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer elastischen Maáangabe.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+
+@@@\dbltextfloatsep
+  \dbltextfloatsep
+  ßßßßßßßßßßßßßßßß
+Bei zweispaltiger Seitenformatierung der Abstand zwischen
+Gleitobjekten, die oben auf der Seite ber zwei Spalten
+reichen, und dem nachfolgenden Text. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer elastischen Maáangabe.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+@@@\dbltopfraction
+  \dbltopfraction
+  ßßßßßßßßßßßßßßß
+Bei zweispaltiger Seitenformatierung der Bruchteil einer Seite,
+der oben zur Aufnahme von Gleitobjekten, die ber beide Spalten
+reichen, h”chstens zur Verfgung steht. ^Wertzuweisung^øWertzuweisungø durch
+ ^\renewcommand^ø\renewcommandø{\dbltopfraction}{db}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+@@@\dbltopnumber
+  \dbltopnumber
+  ßßßßßßßßßßßßß
+Bei zweispaltiger Seitenformatierung die maximale Zahl
+von Gleitobjekten, die ber beide Spalten reichen und
+die oben auf der Seite angeordnet werden k”nnen.
+^Wertzuweisung^øWertzuweisungø durch ^\setcounter^ø\setcounterø{dbltopnumber}{num}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+@@@\ddot
+  \ddot{x}   [m]
+  ßßßßßßßßßßßßßß
+Doppelpunkt Akzent in mathematischen Formeln.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+ 
+@@@\deg
+  \deg   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "deg" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\det
+  \det   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "det" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\dim
+  \dim   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "dim" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\discretionary
+  \discretionary{vor}{nach}{ohne}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Trennhilfe wie Dru\discretionary{k-}{k}{ck}er zur Erzeugung der
+Trennung `Druk-ker' und der ungetrennten Ausgabe als `Drucker'.
+
+siehe: ^\hyphenation^ø\hyphenationø
+       ^\showhyphens^ø\showhyphensø
+       (Kap. 3.6.1)
+ 
+@@@\displaystyle
+  \displaystyle   [m]
+  ßßßßßßßßßßßßßßßßßßß
+Umschaltung auf Schriftgr”áe \displaystyle als aktive
+Schrift innerhalb einer Teilformel.
+
+siehe: (Kap. 5.5.2)
+ 
+@@@ds
+  \documentstyle[optionen]{stil}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ist gew”hnlich der erste LaTeX-Befehl in einem Dokument,
+mit dem der Gesamtstil bestimmt wird. Fr stil stehen
+zur Verfgung:
+ article, book, letter und report
+von denen genau einer gew„hlt werden muá. Zus„tzlich k”nnen
+ein oder mehrere, durch Kommata getrennte Optionen gew„hlt
+werden. Diese sind
+ 11pt, 12pt, twocolumn, twoside, titlepage, leqno und fleqn
+
+Die Datei ^german^øgermanø.sty stellt zus„tzlich die Option german
+bereit.
+
+siehe: ^šbersicht^øšbersichtø
+       (Kap. 3.1)
+ 
+@@@\dot
+  \dot{x}   [m]
+  ßßßßßßßßßßßßßß
+Punkt Akzent in mathematischen Formeln.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+
+@@@\dotfill
+  \dotfill
+  ßßßßßßßß
+Auffllung von Zwischenraum einer Zeile zur vollen Zeilenl„nge
+mit einer Punktfolge.
+
+siehe: ^\hrulefill^ø\hrulefillø
+       (Kap. 3.5.1.7)
+ 
+@@@\doublerulesep
+  \doublerulesep
+  ßßßßßßßßßßßßßß
+Der Abstand von Doppellinien innerhalb der ^tabbing^øtabbingø
+oder ^array^øarrayø Umgebung. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maáangabe auáerhalb der
+Tabellenumgebung.
+
+siehe: (Kap. 4.8.2)
+ 
+@@@\dq
+  \dq   [g]
+  ßßßßßßßßß
+Befehl zur Erzeugung von " (wie durch " bei der
+LaTeX-Originalberabeitung).
+
+siehe: (Kap. D.1.7)
+
+@@@\em
+  \em
+  ßßß
+Umschaltung zwischen Standardschrift "Roman" und
+hervorhebender Schrift "Italic".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.1)
+ 
+@@@\encl
+  \encl{anlagen}
+  ßßßßßßßßßßßßßß
+Befehl im Dokumentstil ^ds^øletterø zur Ausgabe von "encl:" oder
+"Anlagen:" (falls eine deutsche Anpassung durchgefhrt wurde),
+gefolgt von einer Liste der mit anlagen angegebenen Anlagen.
+
+siehe: (Kap. A.1)
+       (Kap. A.3.1)
+
+@@@\end
+  \end{Umgebung}   [z]
+  ßßßßßßßßßßßßßßßßßßßß
+beendet eine Umgebung, die mit ^\begin^ø\beginø{Umgebung} eingeleitet
+wurde.
+
+siehe: ^šbersicht^øšbersichtø Umgebungen
+       (Kap. 2.2)
+ 
+@@@\english
+  \english   [g]
+  ßßßßßßßßßßßßßß
+Umschaltungsname auf englische Sprachstrukturen mit
+^\selectlanguage^ø\selectlanguageø.
+
+siehe: ^\austrian^ø\austrianø
+       ^\english^ø\englishø
+       ^\french^ø\frenchø
+       ^\german^ø\germanø
+       ^\USenglish^ø\USenglishø
+       ^german^øgermanø.sty
+       (Kap. D.1.6)
+ 
+@@@\evensidemargin
+  \evensidemargin   [v]
+  ßßßßßßßßßßßßßßßßßßßßß
+Linker Rand fr gerade Seiten. Wirksam nur beim Dokumentstil
+^ds^øbookø bzw. bei anderen Hauptstilen, falls Dokumentoption
+^ds^øtwosideø gesetzt.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer
+Maáangabe.
+
+siehe: ^\oddsidemargin^ø\oddsidemarginø
+       (Kap. 3.2.4)
+
+@@@\exp
+  \exp   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "exp" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\extracolsep
+  \extracolsep{zusatz\_breite}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Tabellenbefehl zur Einrichtung zus„tzlicher Breite vor
+alle nachfolgenden Spalten der Tabelle. Der Befehl wird
+als @-Ausdruck im Formatierungsfeld der Tabellenumgebung
+bergeben:
+ ^\begin^ø\beginø{^tabular^øtabularø}{lr@{\extracolsep{2.5mm}}lcr}
+
+siehe: ^\tabcolsep^ø\tabcolsepø
+       (Kap. 4.8.1)
+
+@@@\fbox
+  \fbox{text}
+  ßßßßßßßßßßß
+erzeugt einen Rahmen um text.
+
+siehe: ^\dashbox^ø\dashboxø
+       ^\fboxrule^ø\fboxruleø
+       ^\fboxsep^ø\fboxsepø
+       ^\frame^ø\frameø
+       ^\framebox^ø\frameboxø
+       ^\mbox^ø\mboxø
+       ^\makebox^ø\makeboxø
+       ^\parbox^ø\parboxø
+       ^\raisebox^ø\raiseboxø
+       (Kap. 4.7.1)
+
+@@@\fboxrule
+  \fboxrule
+  ßßßßßßßßß
+Liniendicke fr die durch ^\fbox^ø\fboxø und ^\framebox^ø\frameboxø
+erzeugten Rahmen. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maáangabe.
+
+siehe: ^\fboxsep^ø\fboxsepø
+       (Kap. 4.7.6)
+
+@@@\fboxsep
+  \fboxsep
+  ßßßßßßßß
+Abstand zwischen Rahmen und Text bei den ^\fbox^ø\fboxø und
+^\framebox^ø\frameboxø Befehlen. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maáangabe.
+
+siehe: ^\fboxrule^ø\fboxruleø
+       (Kap. 4.7.6)
+
+@@@\fill
+  \fill
+  ßßßßß
+Elastisches Maá mit der natrlichen L„nge "Null Einheiten", das auf jede
+beliebige L„nge gedehnt werden kann.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 2.4.2)
+ 
+@@@\floatpagefraction
+  \floatpagefraction
+  ßßßßßßßßßßßßßßßßßß
+Der Bruchteil einer eigenen Seite fr Gleitobjekte, der von
+Gleitobjekten mindestens gefllt werden muá, bevor eine neue
+Seite bereitgestellt wird. ^Wertzuweisung^øWertzuweisungø durch
+ ^\renewcommand^ø\renewcommandø{\floatpagefraction}{dezimal_bruch}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+@@@\floatsep
+  \floatsep
+  ßßßßßßßßß
+Der vertikale Abstand zwischen Gleitobjekten, die auf einer
+Seite oben oder unten erscheinen. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen eines elastischen Maáes.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+ 
+@@@\flq
+  \flq   [g]
+  ßßßßßßßßßß
+Befehl zur Erzeugung der franz”sischen, ”ffnenden halben
+Anfhrungzeichen.
+
+siehe: ^\dq^ø\dqø
+       ^\flqq^ø\flqqø
+       ^\frq^ø\frqø
+       ^\frqq^ø\frqqø
+       (Kap. D.1.5)
+ 
+@@@\flqq
+  \flqq   [g]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung der franz”sischen ”ffnenden
+Anfhrungzeichen: \flqq = ®; gleichwertig mit ^"<^ø"<ø.
+
+siehe: ^\dq^ø\dqø
+       ^\flq^ø\flqø
+       ^\frq^ø\frqø
+       ^\frqq^ø\frqqø
+       (Kap. D.1.5)
+
+@@@\flushbottom
+  \flushbottom
+  ßßßßßßßßßßßß
+Abs„tze werden so weit auseinandergezogen, daá alle
+Seiten an der untersten Zeile bereinstimmen. Standard
+bei ^ds^øbookø und ^ds^øtwosideø.
+
+siehe: (Kap. 3.2.4)
+
+@@@\fnsymbol
+  \fnsymbol{z„hler}
+  ßßßßßßßßßßßßßßßßß
+Druckt den augenblicklichen Wert von z„hler als "Fuánotensymbol" aus:
+ *   \dag      \ddag      \S    \P
+ **  \dag\dag  \ddag\ddag \parallel
+
+siehe: ^\Alph^ø\Alphø
+       ^\alph^ø\alphø
+       ^\arabic^ø\arabicø
+       ^\pagenumbering^ø\pagenumberingø
+       ^\Roman^ø\Romanø
+       ^\roman^ø\romanø
+       (Kap. 7.1.4)
+
+@@@\footheight
+  \footheight   [v]
+  ßßßßßßßßßßßßßßßßß
+H”he der Fuázeile, die normalerweise die Seitennummer enth„lt.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer
+Maáangabe.
+
+siehe: ^\footnote^ø\footnoteø
+       ^\footnotemark^ø\footnotemarkø
+       ^\footnoterule^ø\footnoteruleø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       ^\footskip^ø\footskipø
+       (Kap. 3.2.4)
+
+@@@\footnote
+  \footnote[num]{fuánotentext}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine Fuánote mit dem Text fuánotentext. Der
+optionale Parameter num unterdrckt die automatische
+Numerierung und verwendet statt dessen den
+eingetragenen Wert.
+
+siehe: ^\footheight^ø\footheightø
+       ^\footnotemark^ø\footnotemarkø
+       ^\footnoterule^ø\footnoteruleø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       ^\footskip^ø\footskipø
+       (Kap. 4.9.1)
+       (Kap. 4.9.2)
+ 
+@@@\footnotemark
+  \footnotemark[num]   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine Fuánotenmarkierung im laufenden Text. Der
+optionale Parameter num unterdrckt die automatische
+Numerierung und verwendet statt dessen den eingetragenen
+Wert. Kann in Strukturen verwendet werden, in denen
+^\footnote^ø\footnoteø nicht erlaubt ist (LR-Boxen, Tabellen, math.
+Formeln u. a.).
+
+siehe: ^\footheight^ø\footheightø
+       ^\footnoterule^ø\footnoteruleø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       ^\footskip^ø\footskipø
+       (Kap. 4.9.4)
+ 
+@@@\footnoterule
+  \footnoterule     [z]
+  ßßßßßßßßßßßßßßßßßßßßß
+Dieser interne Befehl erzeugt den horizontalen Strich
+zwischen dem Seitentext und anschlieáenden Fuánoten. Eine
+^Wertzuweisung^øWertzuweisungø erfolgt mit
+ ^\renewcommand^ø\renewcommandø{\footnoterule}{^\rule^ø\ruleø{breite}{h”he}^\vspace^ø\vspaceø{-h”he}}
+
+siehe: ^\footheight^ø\footheightø
+       ^\footnote^ø\footnoteø
+       ^\footnotemark^ø\footnotemarkø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       ^\footskip^ø\footskipø
+       (Kap. 4.9.3)
+ 
+@@@\footnotesep
+  \footnotesep
+  ßßßßßßßßßßßß
+Der vertikale Abstand zwischen zwei Fuánoten. ^Wertzuweisung^øWertzuweisungø
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\footheight^ø\footheightø
+       ^\footnote^ø\footnoteø
+       ^\footnotemark^ø\footnotemarkø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       ^\footskip^ø\footskipø
+       (Kap. 4.9.3)
+ 
+@@@\footnotesize
+  \footnotesize   [z]
+  ßßßßßßßßßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \footnotesize. Kleiner als
+^\small^ø\smallø, aber gr”áer als ^\scriptsize^ø\scriptsizeø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\footnotetext
+  \footnotetext[num]{fuánotentext}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine Fuánote mit dem Text fuánotentext ohne
+Fuánotenmarkierung im laufenden Text. Die Fuánote
+erh„lt standardm„áig den aktuellen Wert des
+Fuánotenz„hlers, der hierbei nicht ver„ndert wird,
+oder bei Verwendung des optionalen Parameters den
+Wert num. Zusammen mit ^\footnotemark^ø\footnotemarkø k”nnen Fuánoten
+in verbotenen Strukturen (LR-Boxen, math. Formeln,
+Tabellen u. a.) erzeugt werden, wobei \footnotetext
+im Anschluá an die unerlaubte Struktur gesetzt wird.
+
+siehe: ^\footheight^ø\footheightø
+       ^\footnote^ø\footnoteø
+       ^\footnotemark^ø\footnotemarkø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       ^\footskip^ø\footskipø
+       (Kap. 4.9.4)
+
+@@@\footskip
+  \footskip   [v]
+  ßßßßßßßßßßßßßßß
+Abstand von der Unterkante des Seitenrumpfes zur Unterkante
+der Fuázeile. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch
+Anh„ngen einer Maázahl.
+
+siehe: ^\footheight^ø\footheightø
+       ^\footnote^ø\footnoteø
+       ^\footnotemark^ø\footnotemarkø
+       ^\footnotesep^ø\footnotesepø
+       ^\footnotetext^ø\footnotetextø
+       (Kap. 3.2.4)
+ 
+@@@\frac
+  \frac{z„hler}{nenner}   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Mathematischer Grundbefehl zur Erzeugung eines Bruches.
+
+siehe: (Kap. 5.2.3)
+ 
+@@@\frame
+  \frame{text}   [z]
+  ßßßßßßßßßßßßßßßßßß
+Erzeugt einen Rahmen ohne Zwischenraum um text. Anwendung
+im wesentlichen als Bildobjektbefehl in ^\put^ø\putø und
+^\multiput^ø\multiputø Befehlen innerhalb der ^picture^øpictureø Umgebung.
+
+siehe: ^\fbox^ø\fboxø
+       ^\framebox^ø\frameboxø
+       (Kap. 6.4.8)
+
+@@@\framebox
+  \framebox[breite][pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt einen Rahmen der Breite breite um text. Der Text
+erscheint innerhalb des Rahmens standardm„áig horizontal
+zentriert und kann optional mit l oder r fr pos links-
+oder rechtsbndig angeordnet werden.
+
+siehe: (Kap. 4.7.1)
+
+  \framebox(x_dimen,y_dimen)[pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl zur Erzeugung eines Rahmens der Breite
+x_dimen und der H”he y_dimen in der ^picture^øpictureø Umgebung.
+Ohne pos erscheint der Textinhalt von text innerhalb
+des Rahmens zentriert. Der optionale Parameter pos l„át
+mit l, r, t, boder einer Paarkombination wie lt eine
+ge„nderte Positionierung zu.  Der Befehl ist als Argument
+in einem ^\put^ø\putø oder ^\multiput^ø\multiputø Befehl einzusetzen.
+
+siehe: ^\dashbox^ø\dashboxø
+       ^\fbox^ø\fboxø
+       ^\fboxrule^ø\fboxruleø
+       ^\fboxsep^ø\fboxsepø
+~>>>~ Page down
+       ^\frame^ø\frameø
+       ^\makebox^ø\makeboxø
+       ^\mbox^ø\mboxø
+       ^\parbox^ø\parboxø
+       ^\raisebox^ø\raiseboxø
+       (Kap. 6.4.2)
+ 
+@@@\french
+  \french   [g]
+  ßßßßßßßßßßßßß
+Umschaltungsname auf franz”sische Sprachstrukturen mit
+^\selectlanguage^ø\selectlanguageø.
+
+siehe: ^\austrian^ø\austrianø
+       ^\english^ø\englishø
+       ^\german^ø\germanø
+       ^\USenglish^ø\USenglishø
+       ^german^øgermanø.sty
+       (Kap. D.1.6)
+ 
+@@@\frenchspacing
+  \frenchspacing   [z]
+  ßßßßßßßßßßßßßßßßßßßß
+Nach diesem Befehl entf„llt der Zusatzzwischenraum nach
+Satzzeichen im nachfolgenden Text. Rckschaltbefehl: ^\nonfrenchspacing^ø\nonfrenchspacingø
+
+siehe: (Kap. 3.5.1.2)
+ 
+@@@\frq
+  \frq   [g]
+  ßßßßßßßßßß
+Befehl zur Erzeugung der franz”sischen, schlieáenden halben
+Anfhrungzeichen.
+
+siehe: ^\dq^ø\dqø
+       ^\flq^ø\flqø
+       ^\flqq^ø\flqqø
+       ^\frqq^ø\frqqø
+       (Kap. D.1.5)
+ 
+@@@\frqq
+  \frqq   [g]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung der franz”sischen schlieáenden
+Anfhrungzeichen: \frqq = ¯.
+Gleichwertig mit ">
+
+siehe: ^\dq^ø\dqø
+       ^\flq^ø\flqø
+       ^\flqq^ø\flqqø
+       ^\frq^ø\frqø
+       (Kap. D.1.5)
+ 
+@@@\fussy
+  \fussy
+  ßßßßßß
+Rckschaltbefehl fr die Standardformatierung, wenn mit ^\sloppy^ø\sloppyø
+vorher groázgigere Wortabst„nde zugelassen waren.
+
+siehe: Die ^fussypar^øfussyparø Umgebung
+       Die ^sloppypar^øsloppyparø Umgebung
+       (Kap. 3.6.3)
+ 
+@@@\gcd
+  \gcd   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "gcd" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\german
+  \german   [g]
+  ßßßßßßßßßßßßß
+Umschaltungsname auf deutsche Sprachstrukturen mit \selectlanguage.
+
+siehe: ^\austrian^ø\austrianø
+       ^\french^ø\frenchø
+       ^\english^ø\englishø
+       ^\USenglish^ø\USenglishø
+       ^german^øgermanø.sty
+       (Kap. D.1.6)
+
+@@@\germanTeX
+  \germanTeX   [g]
+  ßßßßßßßßßßßßßßßß
+Wiedereinschaltung der deutschen LaTeX-Befehle, wenn mit
+^\originalTeX^ø\originalTeXø auf die LaTeX-Originalbearbeitung geschaltet war.
+
+siehe: ^german^øgermanø.sty
+       (Kap. D.1.7)
+ 
+@@@\glossary
+  \glossary{glossary_eintrag}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Schreibt einen ^\glossaryentry^ø\glossaryentryø Befehl in den .glo File.
+
+siehe: ^\makeglossary^ø\makeglossaryø
+       (Kap. 8.2.4)
+ 
+@@@\glossaryentry
+  \glossaryentry{glossary_eintrag}{seiten_nummer}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+In dieser Form mit jedem ^\glossary^ø\glossaryø Befehl in den .glo File
+geschrieben.
+
+siehe: ^\makeglossary^ø\makeglossaryø
+       (Kap. 8.2.4)
+ 
+@@@\glq
+  \glq   [g]
+  ßßßßßßßßßß
+Befehl zur Erzeugung der deutschen halben Anfhrungsstriche `unten'.
+
+siehe: ^\dq^ø\dqø
+       ^\glqq^ø\glqqø
+       ^\grq^ø\grqø
+       ^\grqq^ø\grqqø
+       (Kap. D.1.4)
+
+@@@\glqq
+  \glqq   [g]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung der deutschen Anfhrungsstriche `unten';
+gleichwertig mit ^"`^ø"`ø.
+
+siehe: ^\dq^ø\dqø
+       ^\glq^ø\glqø
+       ^\grq^ø\grqø
+       ^\grqq^ø\grqqø
+       (Kap. D.1.4)
+ 
+@@@\grave
+  \grave{x}   [m]
+  ßßßßßßßßßßßßßßß
+Gravis Akzent ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+ 
+@@@\grq
+  \grq   [g]
+  ßßßßßßßßßß
+Befehl zur Erzeugung der deutschen halben Anfhrungsstriche `oben'.
+
+siehe: ^\dq^ø\dqø
+       ^\glq^ø\glqø
+       ^\glqq^ø\glqqø
+       ^\grqq^ø\grqqø
+       (Kap. D.1.4)
+ 
+@@@\grqq
+  \grqq   [g]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung der deutschen Anfhrungsstriche `oben'.
+
+siehe: ^\dq^ø\dqø
+       ^\glq^ø\glqø
+       ^\glqq^ø\glqqø
+       ^\grq^ø\grqø
+       (Kap. D.1.4)
+ 
+@@@\H
+  \H{zeichen}
+  ßßßßßßßßßßß
+Ungarischer Doppelakut Akzent.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+ 
+@@@\hat
+  \hat{x}   [m]
+  ßßßßßßßßßßßßß
+Circumflex ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+ 
+@@@\headheight
+  \headheight   [v]
+  ßßßßßßßßßßßßßßßßß
+Erkl„rt die H”he der Kopfzeile einer Seite. ^Wertzuweisung^øWertzuweisungø
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maáangabe.
+
+siehe: ^\headsep^ø\headsepø
+       ^\markboth^ø\markbothø
+       ^\markright^ø\markrightø
+       ^\pagestyle^ø\pagestyleø
+       ^\thispagestyle^ø\thispagestyleø
+       ^\topmargin^ø\topmarginø
+       (Kap. 3.2.4)
+ 
+@@@\headsep
+  \headsep   [v]
+  ßßßßßßßßßßßßßß
+Vertikaler Abstand zwischen Unterkante Kopfzeile und der
+Oberkante des Seitentextes. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maáangabe.
+
+siehe: ^\headheight^ø\headheightø
+       ^\markboth^ø\markbothø
+       ^\markright^ø\markrightø
+       ^\pagestyle^ø\pagestyleø
+       ^\thispagestyle^ø\thispagestyleø
+       (Kap. 3.2.4)
+ 
+@@@\hfill
+  \hfill
+  ßßßßßß
+Horizontaler Zwischenraum beliebiger Dehnbarkeit innerhalb
+einer Textzeile bzw. Auffllung einer Zeile zur vollen
+Zeilenl„nge mit Leerraum. Der Befehl steht als Abkrzung
+fr ^\hspace^ø\hspaceø{^\fill^ø\fillø}.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 3.5.1.6)
+ 
+@@@\hline
+  \hline
+  ßßßßßß
+Erzeugt eine horizontale Linie innerhalb der ^array^øarrayø und
+^tabular^øtabularø Umgebung ber die gesamte Tabellenbreite.
+
+siehe: ^\cline^ø\clineø
+       (Kap. 4.8.1)
+
+@@@\hom
+  \hom   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "hom" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\hoffset
+  \hoffset   [v]
+  ßßßßßßßßßßßßßß
+Linker Bezugsrand bei der Seitenformatierung. Standartwert ist 0pt,
+der Bezugsrand damit gleich dem physikalischen Druckerrand.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer evtl.
+auch negativen Maázahl (zur Kompensation der Druckerzufgung).
+ 
+siehe: ^\voffset^ø\voffsetø
+
+@@@\hrulefill
+  \hrulefill
+  ßßßßßßßßßß
+Auffllung von Zwischenraum einer Zeile zur vollen Zeilenl„nge
+mit einem horizontalen Strich.
+
+siehe: ^\dotfill^ø\dotfillø
+       (Kap. 3.5.1.7)
+
+@@@\hspace
+  \hspace{weite}
+  ßßßßßßßßßßßßßß
+Erzeugt horizontalen Zwischenraum der L„nge weite.
+Zwischenraum am Anfang oder Ende einer Zeile wird
+unterdrckt.
+
+Die \hspace*{weite} Form erzeugt horizontalen Zwischenraum
+der L„nge weite, auch wenn der Befehl am Anfang oder Ende
+einer Zeile steht. Mit \hspace*{\fill} kann beliebig
+elastischer Leerraum auch am Zeilenanfang eingerichtet werden.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 3.5.1.6)
+
+@@@\Huge
+  \Huge   [z]
+  ßßßßßßßßßßß
+Umschaltung auf die gr”áte verfgbare Schriftgr”áe.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+
+@@@\huge
+  \huge   [z]
+  ßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \huge. Kleiner als
+^\Huge^ø\Hugeø, aber gr”áer als ^\LARGE^ø\LARGEø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\hyphenation
+  \hyphenation{Trennungsliste}   [v]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Anlegung eines Trennverzeichnisses. Die Trennungsliste besteht
+aus einer Reihe von W”rtern, bei denen die m”glichen Trennungen
+durch - gekennzeichnet sind:
+ Tren-nun-gen Wor-ten ge-kenn-zeich-net
+
+siehe: ^\discretionary^ø\discretionaryø
+       ^\showhyphens^ø\showhyphensø
+       (Kap. 3.6.2)
+ 
+@@@\include
+  \include{file_n}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßß
+Der Text des Files mit dem Grundnamen file_n wird an der
+Stelle dieses Befehls in die LaTeX-Bearbeitung eingefgt.
+Der eingelesene File beginnt stets mit einer neuen Seite!
+
+siehe: ^\includeonly^ø\includeonlyø
+       ^\input^ø\inputø
+       ^\nofiles^ø\nofilesø
+       (Kap. 8.1.2)
+
+@@@\includeonly
+  \includeonly{file_liste}   [v]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Nur die in der Liste file_liste aufgefhrten, durch Kommata
+getrennten Files werden bei den im Textteil durch \include
+aufgerufenen Einfgungen tats„chlich bearbeitet. Trotz
+selektiver Bearbeitung werden richtige Gliederungs- und
+Seitennummern erzeugt.
+
+siehe: ^\include^ø\includeø
+       ^\input^ø\inputø
+       ^\nofiles^ø\nofilesø
+       (Kap. 8.1.2)
+
+@@@\indent
+  \indent
+  ßßßßßßß
+Die erste Zeile des n„chsten Absatzes wird eingerckt.
+
+siehe: ^\noindent^ø\noindentø
+       ^\parindent^ø\parindentø
+       (Kap. 3.5.4)
+ 
+@@@\index
+  \index{index_eintrag}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Schreibt einen ^\indexentry^ø\indexentryø Befehl in den .idx File.
+In Verbindung mit ^Makešbersicht^øMakešbersichtø sind Eintr„ge der
+Form
+ \index{haupt_eintrag}
+ \index{haupt_eintrag!sub_eintrag}
+ \index{haupt_eintrag!sub_eintrag!sub_sub_eintrag}
+m”glich, mit denen Makešbersicht eine lexikalisch geordnete
+^theindex^øtheindexø-Umgebung mit ^\item^ø\itemø, ^\subitem^ø\subitemø
+und ^\subsubitem^ø\subsubitemø Befehlen und den zugeh”rigen Eintr„gen
+erzeugt.
+
+siehe: ^\indexspace^ø\indexspaceø
+       ^\makeindex^ø\makeindexø
+       ^\printindex^ø\printindexø
+       (Kap. 8.2.3)
+       (Kap. 8.3)
+
+@@@\indexentry
+  \indexentry{index_eintrag}{seiten_nummer}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+In dieser Form mit jedem ^\index^ø\indexø Befehl in den .idx File geschrieben.
+
+siehe: ^\indexspace^ø\indexspaceø
+       ^\makeindex^ø\makeindexø
+       ^Makešbersicht^øMakešbersichtø
+       ^\printindex^ø\printindexø
+       (Kap. 8.2.3)
+
+@@@\indexspace
+  \indexspace
+  ßßßßßßßßßßß
+Befehl innerhalb der ^theindex^øtheindexø Umgebung zur Erzeugung
+einer Leerzeile.
+
+siehe: ^\index^ø\indexø
+       ^\indexentry^ø\indexentryø
+       ^\makeindex^ø\makeindexø
+       ^Makešbersicht^øMakešbersichtø
+       ^\printindex^ø\printindexø
+       (Kap. 8.2.3)
+
+@@@\inf
+  \inf   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "inf" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\input
+  \input{file}   [z]
+  ßßßßßßßßßßßßßßßßßß
+Fgt den Text des Files mit dem Grundnamen file und
+dem Anhang .tex in den laufenden Text an der Stelle
+dieses Befehls ein. Ein mit \input eingelesener File
+darf weitere \input Befehle enthalten.
+
+siehe: ^\include^ø\includeø
+       ^\includeonly^ø\includeonlyø
+       ^\nofiles^ø\nofilesø
+       (Kap. 8.1.1)
+ 
+@@@\intextsep
+  \intextsep
+  ßßßßßßßßßß
+Der vertikale Abstand zwischen Gleitobjekten und umgebendem Text.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer
+elastischen Maáangabe.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+ 
+@@@\it
+  \it
+  ßßß
+Schriftumschaltung auf "Italic = kursiv".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+
+@@@\item
+  \item[marke]   [z]
+  ßßßßßßßßßßßßßßßßßß
+Erzeugung einer Markierung in einer listenartigen Umgebung.
+Ohne den optionalen Parameter marke erfolgt eine von der
+Umgebung abh„ngige Standardmarkierung. Mit der Option wird
+der Text von marke als Markierung benutzt.
+
+siehe: ^\labelsep^ø\labelsepø
+       ^\labelwidth^ø\labelwidthø
+       ^\leftmargin^ø\leftmarginø
+       ^\listparindent^ø\listparindentø
+       ^\makelabel^ø\makelabelø
+       ^\rightmargin^ø\rightmarginø
+       (Kap. 4.3)
+       (Kap. 4.4.1)
+
+  \item{eintrag}
+  ßßßßßßßßßßßßßß
+Erzeugung eines Haupteintrages in der ^theindex^øtheindexø Umgebung.
+
+siehe: ^\itemindent^ø\itemindentø
+       ^\itemsep^ø\itemsepø
+       ^\subitem^ø\subitemø
+~>>>~ Page down
+       ^\subsubitem^ø\subsubitemø
+       Die ^description^ødescriptionø Umgebung
+       Die ^enumerate^øenumerateø Umgebung
+       Die ^itemize^øitemizeø Umgebung
+       Die ^list^ølistø Umgebung
+       Die ^theindex^øtheindexø Umgebung
+       Die ^trivlist^øtrivlistø Umgebung
+       (Kap. 8.2.3)
+ 
+@@@\itemindent
+  \itemindent
+  ßßßßßßßßßßß
+Der Betrag, um den die Markierung und der Text der ersten
+Zeile nach jedem ^\item^ø\itemø in der ^list^ølistø Umgebung eingerckt
+erscheint. Dieser Wert ist standardm„áig 0pt, kann aber
+durch eine ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch
+Anh„ngen einer Maázahl ge„ndert werden.
+
+siehe: ^\itemsep^ø\itemsepø
+       ^\subitem^ø\subitemø
+       ^\subsubitem^ø\subsubitemø
+       Die ^description^ødescriptionø Umgebung
+       Die ^enumerate^øenumerateø Umgebung
+       Die ^itemize^øitemizeø Umgebung
+       Die ^theindex^øtheindexø Umgebung
+       Die ^trivlist^øtrivlistø Umgebung
+       (Kap. 4.4.2)
+ 
+@@@\itemsep
+  \itemsep
+  ßßßßßßßß
+Der zus„tzlich zu ^\parsep^ø\parsepø eingefgte vertikale Abstand zwischen
+dem vorangehenden Aufz„hlungstext und der folgenden Listenmarkierung.
+^Wertzuweisung^øWertzuweisungø durch Anh„ngen einer elastischen Maáangabe oder mit
+^\setlength^ø\setlengthø.
+
+siehe: ^\item^ø\itemø
+       ^\itemindent^ø\itemindentø
+       ^\subitem^ø\subitemø
+       ^\subsubitem^ø\subsubitemø
+       ^\topsep^ø\topsepø
+       Die ^description^ødescriptionø Umgebung
+       Die ^enumerate^øenumerateø Umgebung
+       Die ^itemize^øitemizeø Umgebung
+       Die ^list^ølistø Umgebung
+       Die ^theindex^øtheindexø Umgebung
+       Die ^trivlist^øtrivlistø Umgebung
+       (Kap. 4.4.2)
+ 
+@@@\jot
+  \jot   [m]
+  ßßßßßßßßßß
+Der vertikale Zwischenraum zwischen den Zeilen einer mit den
+Umgebungen ^eqnarray^øeqnarrayø oder ^eqnarray^øeqnarray*ø erzeugten
+Formelgruppe. Standardwert ist 3pt. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer festen Maázahl.
+
+siehe: (Kap. 5.5.4)
+ 
+@@@\ker
+  \ker   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "ker" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\kill
+  \kill
+  ßßßßß
+Entfernen der zur Tabulatorsetzung benutzten Musterzeile
+innerhalb der ^tabbing^øtabbingø Umgebung.
+
+siehe: ^\+^ø\+ø
+       ^\-^ø\-ø
+       ^\<^ø\<ø
+       ^\>^ø\>ø
+       ^\=^ø\=ø
+       (Kap. 4.6.2)
+ 
+@@@\label
+  \label{marke}   [z]
+  ßßßßßßßßßßßßßßßßßßß
+Anbringung einer unsichtbaren Markierung marke im Text,
+auf die mit den Befehlen ^\ref^ø\refø{marke} und
+^\pageref^ø\pagerefø{marke} Bezug genommen werden kann.
+
+siehe: (Kap. 8.2.1)
+ 
+@@@\labelenum
+  \labelenum n
+  ßßßßßßßßßßßß
+Erkl„rungsbefehl fr die Standardmarkierungen der ^enumerate^øenumerateø
+Umgebungen fr alle Schachtelungstiefen mit n als i, ii, iii
+und iv. Mit
+ ^\renewcommand^ø\renewcommandø{labelenumii}{\arabic{enumii}.)}
+erscheint die Markierung der ^enumerate^øenumerateø-Umgebung zweiter Stufe
+als 1.), 2.) usw.
+
+siehe: ^\labelitem^ø\labelitemø
+       (Kap. 4.3.5)
+ 
+@@@\labelitem
+  \labelitem n
+  ßßßßßßßßßßßß
+Erkl„rungsbefehl fr die Standardmarkierungen der ^itemize^øitemizeø
+Umgebungen fr alle Schachtelungstiefen mit n als i, ii, iii
+und iv. Mit
+ ^\renewcommand^ø\renewcommandø{itemizei}{^$^ø$ø^mArrow^ø\Rightarrowø^$^ø$ø}
+erscheint die Markierung der „uáersten ^itemize^øitemizeø-Umgebung (erste Stufe)
+als =>.
+
+siehe: (Kap. 4.3.5)
+ 
+@@@\labelsep
+  \labelsep
+  ßßßßßßßßß
+Innerhalb der ^list^ølistø Umgebung der Abstand zwischen dem
+Markierungsfeld und dem Listentext. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\item^ø\itemø
+       ^\labelwidth^ø\labelwidthø
+       ^\leftmargin^ø\leftmarginø
+       ^\listparindent^ø\listparindentø
+       ^\makelabel^ø\makelabelø
+       ^\rightmargin^ø\rightmarginø
+       (Kap. 4.4.2)
+
+@@@\labelwidth
+  \labelwidth
+  ßßßßßßßßßßß
+Die Breite des Markierungsfeldes in der ^list^ølistø Umgebung.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer
+Maázahl.
+
+siehe: ^\item^ø\itemø
+       ^\labelsep^ø\labelsepø
+       ^\leftmargin^ø\leftmarginø
+       ^\listparindent^ø\listparindentø
+       ^\makelabel^ø\makelabelø
+       ^\rightmargin^ø\rightmarginø
+       (Kap. 4.4.2)
+ 
+@@@\LARGE
+  \LARGE   [z]
+  ßßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \LARGE. Kleiner als
+^\huge^ø\hugeø, aber gr”áer als ^\Large^ø\Largeø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\Large
+  \Large   [z]
+  ßßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \Large. Kleiner als
+^\LARGE^ø\LARGEø, aber gr”áer als ^\large^ø\largeø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\large
+  \large   [z]
+  ßßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \large. Kleiner als
+^\Large^ø\Largeø, aber gr”áer als ^\normalsize^ø\normalsizeø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+
+@@@\LaTeX
+  \LaTeX 
+  ßßßßßß
+erzeugt das LaTeX Logo.
+
+siehe: ^\TeX^ø\TeXø
+       (Kap. 2.1)
+ 
+@@@\left
+  \leftkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßß
+Paát ein Klammersymbol an die durch \left ... ^\right^ø\rightø Paare
+eingeschlossene Teilformel in der Gr”áe an. Beispiel: \left[.
+Soll ein Klammersymbol ungepaart verwendet werden, so kann das
+Gegensymbol \left. bzw. \right. (Klammersymbol `.') als
+unsichtbares Symbol benutzt werden.
+
+siehe: ^mKlammer^øKlammersymboleø
+       (Kap. 5.4.1)
+ 
+@@@\lefteqn
+  \lefteqn   [m]
+  ßßßßßßßßßßßßßß
+Befehl innerhalb der ^eqnarray^øeqnarrayø Umgebung, nach dem die zweite
+und weitere Formelzeilen mit einer kleinen Einrckung gegenber
+der ersten Zeile erscheinen.
+
+siehe: (Kap. 5.4.7)
+
+@@@\leftmargin
+  \leftmargin
+  ßßßßßßßßßßß
+In der ^list^ølistø Umgebung die Einrcktiefe des linken Randes gegenber
+dem linken Rand des umgebenden Textes. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maázahl. Bei verschachtelten ^list^ølistø Umgebungen
+k”nnen die verschiedenen Schachtelungstiefen durch Anh„ngen von i...vi
+gekennzeichnet werden, z. B. \leftmarginiii0.5cm.
+
+siehe: ^\item^ø\itemø
+       ^\labelsep^ø\labelsepø
+       ^\labelwidth^ø\labelwidthø
+       ^\listparindent^ø\listparindentø
+       ^\makelabel^ø\makelabelø
+       ^\rightmargin^ø\rightmarginø
+       (Kap. 4.4.2)
+       (Kap. 4.4.6)
+
+@@@\lg
+  \lg   [m]
+  ßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "lg" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\lim
+  \lim   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "lim" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\liminf
+  \liminf   [m]
+  ßßßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "liminf" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\limits
+  \limits   [m]
+  ßßßßßßßßßßßßß
+Ordnet obere und untere Grenzen ber und unter den
+zugeordneten Symbolen an, wenn diese standardm„áig
+hinter den Symbolen angebracht werden.
+
+siehe: (Kap. 5.2.5)
+       (Kap. 5.3.7)
+ 
+@@@\limsup
+  \limsup   [m]
+  ßßßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "limsup" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\line
+  \line(Delta_x,Delta_y){l„nge}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl innerhalb der ^picture^øpictureø Umgebung zur Erzeugung
+beliebiger horizontaler und vertikaler Linien sowie einer
+begrenzten Zahl geneigter Linien. Bei hor. und vert. Linien
+stellt l„nge die L„nge in den mit ^\unitlength^ø\unitlengthø gesetzten
+L„ngeneinheiten dar, bei geneigten Linien die Projektion der
+Linienl„nge auf die x-Achse.
+Die Neigung wird durch das Neigungspaar (Delta_x,Delta_y) bestimmt,
+das nur ganzzahlige Werte -6 <= Delta_x <= 6 und -6 <= Delta_y <= 6
+annehmen darf.
+
+siehe: ^\vector^ø\vectorø
+       (Kap. 6.4.3)
+ 
+@@@\linebreak
+  \linebreak[n]   [z]
+  ßßßßßßßßßßßßßßßßßßß
+Eine Empfehlung, eine Zeile an der Stelle des Befehls beidbndig
+zu brechen. Die Dringlichkeit der Empfehlung wird durch eine ganze
+Zahl zwischen 0 und 4 zum Ausdruck gebracht, wobei 4, ebenso wie
+der Befehl ohne die Option, gleichbedeutend mit zwingend ist.
+
+siehe: ^\\^ø\\ø
+       ^\newline^ø\newlineø
+       ^\nolinebreak^ø\nolinebreakø
+       ^\par^ø\parø
+       (Kap. 3.5.2.2)
+ 
+@@@\linethickness
+  \linethickness{strichdicke}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erkl„rt die Strichdicke fr horizontale und vertikale Linien
+innerhalb der {picture´ Umgebung. Fr strichdicke ist eine
+Maázahl einzutragen, z. B. 1.2mm.
+
+siehe: ^\line^ø\lineø
+       ^\vector^ø\vectorø
+       (Kap. 6.5.1)
+
+@@@\listoffigures
+  \listoffigures
+  ßßßßßßßßßßßßßß
+Erzeugt ein Bildverzeichnis mit den Angaben der ^\caption^ø\captionø Befehle
+aus den ^figure^øfigureø Umgebungen.
+
+siehe: ^\listoftables^ø\listoftablesø
+       (Kap. 3.4.4)
+ 
+@@@\listoftables
+  \listoftables
+  ßßßßßßßßßßßßß
+Erzeugt ein Bildverzeichnis mit den Angaben der ^\caption^ø\captionø Befehle
+aus den ^table^øtableø Umgebungen.
+
+siehe: ^\listoffigures^ø\listoffiguresø
+       (Kap. 3.4.4)
+ 
+@@@\listparindent
+  \listparindent
+  ßßßßßßßßßßßßßß
+Einrcktiefe der ersten Zeile eines Absatzes innerhalb der
+^list^ølistø Umgebung. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch
+Anh„ngen einer Maázahl.
+
+siehe: ^\labelsep^ø\labelsepø
+       ^\labelwidth^ø\labelwidthø
+       ^\leftmargin^ø\leftmarginø
+       ^\makelabel^ø\makelabelø
+       ^\rightmargin^ø\rightmarginø
+       (Kap. 4.4.2)
+ 
+@@@\ln
+  \ln   [m]
+  ßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "ln" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\load
+  \load{gr”áe}{stil}
+  ßßßßßßßßßßßßßßßßßß
+Gestattet die Verwendung von Zeichens„tzen, die nur bei
+Bedarf geladen werden, im mathematischen Mode.
+Beispiel: \load{^\footnotesize^ø\footnotesizeø}{^\sf^ø\sfø}
+
+siehe: (Kap. 8.5)
+
+@@@\log
+  \log   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "log" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\makebox
+  \makebox[breite][pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine Box der Breite breite um text. Der Text erscheint
+innerhalb der Box standardm„áig horizontal zentriert und kann
+optional mit l oder r fr pos links- oder rechtsbndig angeordnet
+werden.
+
+siehe: (Kap. 4.7.1)
+ 
+  \makebox(x_dimen,y_dimen)[pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl zur Erzeugung einer Box der Breite
+x_dimen und der H”he y_dimen in der ^picture^øpictureø Umgebung.
+Ohne pos erscheint der Textinhalt von text innerhalb
+der Box zentriert. Der optionale Parameter pos l„át
+mit l, r, t, b oder einer Paarkombination wie lt eine
+ge„nderte Positionierung zu.  Der Befehl ist als Argument
+in einem ^\put^ø\putø oder ^\multiput^ø\multiputø einzusetzen.
+
+siehe: ^\dashbox^ø\dashboxø
+       ^\fbox^ø\fboxø
+       ^\frame^ø\frameø
+       ^\framebox^ø\frameboxø
+~>>>~ Page down
+       ^\mbox^ø\mboxø
+       ^\parbox^ø\parboxø
+       ^\raisebox^ø\raiseboxø
+       (Kap. 6.4.2)
+
+@@@\makeglossary
+  \makeglossary   [v]
+  ßßßßßßßßßßßßßßßßßßß
+Befehl zur Aktivierung der ^\glossary^ø\glossaryø Befehle im Textteil.
+
+siehe: ^\glossaryentry^ø\glossaryentryø
+       (Kap. 8.2.4)
+ 
+@@@\makeindex
+  \makeindex   [v]
+  ßßßßßßßßßßßßßßßß
+Befehl zur Aktivierung der ^\index^ø\indexø Befehle im Textteil.
+
+siehe: ^\indexentry^ø\indexentryø
+       ^\indexspace^ø\indexspaceø
+       ^Makešbersicht^øMakešbersichtø
+       ^\printindex^ø\printindexø
+       (Kap. 8.2.3)
+ 
+@@@\makelabel
+  \makelabel
+  ßßßßßßßßßß
+Interner Befehl der mit jedem ^\item^ø\itemø Befehl innerhalb
+listenartiger Umgebungen aufgerufen wird.
+
+siehe: ^\labelsep^ø\labelsepø
+       ^\labelwidth^ø\labelwidthø
+       ^\leftmargin^ø\leftmarginø
+       ^\listparindent^ø\listparindentø
+       ^\rightmargin^ø\rightmarginø
+       (Kap. 4.4.1)
+       (Kap. 7.5.9)
+ 
+@@@\makelabels
+  \makelabels
+  ßßßßßßßßßßß
+Formatiert Briefaufkleber im ^ds^øletterø Stil mit den Angaben
+aus dem Empf„nger-Feld der ^letter^øletterø Umgebung.
+
+siehe: (Kap. A.1)
+ 
+@@@\maketitle
+  \maketitle
+  ßßßßßßßßßß
+Erzeugung einer Titelseite mit den Angaben der ^\author^ø\authorø,
+^\title^ø\titleø und ggf. ^\date^ø\dateø und ^\thanks^ø\thanksø Befehle.
+
+siehe: ^\and^ø\andø
+       Die ^titlepage^øtitlepageø Umgebung
+       (Kap. 3.3.1)
+
+@@@\marginpar
+  \marginpar[l_randnotiz]{r_randnotiz}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugung einer Randnotiz rechts vom Text mit dem Inhalt von
+r_randnotiz. Bei doppelseitiger Formatierung kann mit der
+optionalen l_randnotiz erreicht werden, daá die Randnotiz
+bei geraden Seiten mit dem Inhalt von l_randnotiz links vor
+dem Text erscheint.
+
+siehe: ^\marginparpush^ø\marginparpushø
+       ^\marginparsep^ø\marginparsepø
+       ^\marginparwidth^ø\marginparwidthø
+       ^\normalmarginpar^ø\normalmarginparø
+       ^\reversemarginpar^ø\reversemarginparø
+       (Kap. 4.9.6)
+ 
+@@@\marginparpush
+  \marginparpush
+  ßßßßßßßßßßßßßß
+Der minimale vertikale Abstand zwischen zwei Randnotizen.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer
+Maázahl.
+
+siehe: ^\marginpar^ø\marginparø
+       ^\marginparsep^ø\marginparsepø
+       ^\marginparwidth^ø\marginparwidthø
+       ^\normalmarginpar^ø\normalmarginparø
+       ^\reversemarginpar^ø\reversemarginparø
+       (Kap. 4.9.7)
+ 
+@@@\marginparsep
+  \marginparsep
+  ßßßßßßßßßßßßß
+Der Abstand zwischen dem Textrand und einer Randnotiz.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen
+einer Maázahl.
+
+siehe: ^\marginpar^ø\marginparø
+       ^\marginparpush^ø\marginparpushø
+       ^\marginparwidth^ø\marginparwidthø
+       ^\normalmarginpar^ø\normalmarginparø
+       ^\reversemarginpar^ø\reversemarginparø
+       (Kap. 4.9.7)
+
+@@@\marginparwidth
+  \marginparwidth
+  ßßßßßßßßßßßßßßß
+Die Boxbreite fr eine Randnotiz. ^Wertzuweisung^øWertzuweisungø durch
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\marginpar^ø\marginparø
+       ^\marginparpush^ø\marginparpushø
+       ^\marginparsep^ø\marginparsepø
+       ^\normalmarginpar^ø\normalmarginparø
+       ^\reversemarginpar^ø\reversemarginparø
+       (Kap. 4.9.7)
+ 
+@@@\markboth
+  \markboth{l_kopf}{r_kopf}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erkl„rt den Textinhalt der Kopfzeilen bei doppelseitiger
+Formatierung fr linke und rechte Kopfzeilen fr den
+Seitenstil ^\pagestyle^ømyheadingsø und, abweichend vom
+Standard, auch fr ^\pagestyle^øheadingsø.
+
+siehe: ^\headheight^ø\headheightø
+       ^\headsep^ø\headsepø
+       ^\markright^ø\markrightø
+       ^\pagestyle^ø\pagestyleø
+       ^\thispagestyle^ø\thispagestyleø
+       (Kap. 3.2.1)
+
+@@@\markright
+  \markright{kopfzeile}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erkl„rt den Textinhalt der Kopfzeilen fr den Seitenstil
+^\pagestyle^ømyheadingsø und, abweichend vom Standard, auch
+fr ^\pagestyle^øheadingsø. Bei doppelseitiger Seitenformatierung
+kann hiermit der rechte Kopf neu gesetzt werden.
+
+siehe: ^\headheight^ø\headheightø
+       ^\headsep^ø\headsepø
+       ^\markboth^ø\markbothø
+       ^\pagestyle^ø\pagestyleø
+       ^\thispagestyle^ø\thispagestyleø
+       (Kap. 3.2.1)
+ 
+@@@\mathindent
+  \mathindent
+  ßßßßßßßßßßß
+Die Einrcktiefe bei abgesetzten Formeln fr den Dokumentstil
+^ds^øfleqnø. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen
+einer Maázahl.
+
+siehe: (Kap. 3.1)
+ 
+@@@\max
+  \max   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "max" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\mbox
+  \mbox{text}
+  ßßßßßßßßßßß
+erzeugt eine LR-Box um text.
+
+siehe: ^\dashbox^ø\dashboxø
+       ^\fbox^ø\fboxø
+       ^\frame^ø\frameø
+       ^\framebox^ø\frameboxø
+       ^\makebox^ø\makeboxø
+       ^\parbox^ø\parboxø
+       ^\raisebox^ø\raiseboxø
+       (Kap. 4.7.1)
+ 
+@@@\medskip
+  \medskip   [z]
+  ßßßßßßßßßßßßßß
+Mittlerer vertikaler Zwischenraum vom Betrag ^\medskipamount^ø\medskipamountø
+zwischen Abs„tzen.
+
+siehe: ^\bigskip^ø\bigskipø
+       ^\bigskipamount^ø\bigskipamountø
+       ^\smallskip^ø\smallskipø
+       ^\smallskipamount^ø\smallskipamountø
+       (Kap. 3.5.3)
+
+@@@\medskipamount
+  \medskipamount
+  ßßßßßßßßßßßßßß
+Standardwert fr den durch ^\medskip^ø\medskipø erzeugten Zwischenraum.
+^Wertzuweisung^øWertzuweisungø durch Anh„ngen einer elastischen Maázahl oder
+mit ^\setlength^ø\setlengthø.
+
+siehe: ^\bigskip^ø\bigskipø
+       ^\bigskipamount^ø\bigskipamountø
+       ^\smallskip^ø\smallskipø
+       ^\smallskipamount^ø\smallskipamountø
+ 
+@@@\min
+  \min   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "min" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\mit
+  \mit   [m]
+  ßßßßßßßßßß
+Umschaltbefehl auf Schriftart "Math. Italic". Diese ist
+Standard im mathematischen Mode. Bei expliziter Angabe
+werden auch griechische Groábuchstaben in Italic gesetzt.
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 5.3.1)
+       (Kap. 8.5)
+ 
+@@@\multicolumn
+  \multicolumn{n}{col}{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Zusammenfassung der n„chsten n Spalten innerhalb der ^array^øarrayø
+und ^tabular^øtabularø Umgebung zu einer und Anordnung von text
+entsprechend col. Fr col sind hier erlaubt l, c, r sowie |.
+
+siehe: (Kap. 4.8.1)
+ 
+@@@\multiput
+  \multiput(x,y)(Delta_x,Delta_y){n}{bild_objekt}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Mehrfach-Positionierungsbefehl innerhalb der ^picture^øpictureø Umgebung.
+Das gew„hlte bild_objekt erscheint n-mal nacheinander bei
+(x,y), (x+Delta_x,y+Delta_y), ... (x+(n-1)Delta_x,y+(n-1)Delta_y).
+
+siehe: ^\put^ø\putø
+       ^\unitlength^ø\unitlengthø
+       (Kap. 6.3)
+
+@@@\myref
+  \myref{unser_zeichen} [p]
+  ßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt innerhalb der ^letter^øletterø Umgebung das Bezugszeichen
+unser_zeichen.
+
+siehe: (Kap. A.2)
+
+@@@\name
+  \name{autor}
+  ßßßßßßßßßßßß
+Im ^ds^øletterø Stil Name des Briefautors autor.
+
+siehe: (Kap. A.2)
+ 
+@@@\newcommand
+  \newcommand{\befehl}[narg]{def}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erkl„rung eines benutzereigenen Befehls \befehl, der mit
+def definiert wird. Der optionale Parameter narg <= 9
+bestimmt die Zahl der variablen Argumente des Befehls, die
+in der Definition mit den Ersetzungszeichen #1 bis #narg
+auftreten. Der neue Befehl ist zerbrechlich, wenn in der
+Definition zerbrechliche Befehle auftreten, sonst robust.
+
+siehe: ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. 7.3)
+ 
+@@@\newcounter
+  \newcounter{z„hler_name}[rcksetzer]   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Richtet einen neuen Z„hler mit dem Namen z„hler_name ein, der
+optional mit jeder Erh”hung des existierenden Z„hlers rcksetzer
+auf Null zurckgesetzt wird.
+
+siehe: ^\newcommand^ø\newcommandø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. 7.1.2)
+
+@@@\newenvironment
+  \newenvironment{umgebung}[narg]{begdef}{enddef}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erkl„rung einer benutzereigenen Umgebung mit dem Namen umgebung
+mit der ^\begin^ø\beginø-Definition begdef und der ^\end^ø\endø-Definition enddef.
+Der optionale Parameter narg <= 9 bestimmt die Zahl der
+variablen Argumente der Umgebung, die in begdef mit den
+Ersetzungszeichen #1 bis #narg auftreten mssen.
+
+siehe: ^\newcommand^ø\newcommandø
+       ^\newcounter^ø\newcounterø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. 7.4)
+ 
+@@@\newfont
+  \newfont{\fontname}{name scaled gr”áe}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Stellt den Zeichensatz mit dem physikalischen Filenamen name
+in der Vergr”áerungsstufe gr”áe unter dem Namen \fontname
+bereit. Nach Aufruf von \fontname ist fr diesen Zeichensatz
+der bisherige Wert von ^\baselineskip^ø\baselineskipø fr den Zeilenabstand
+gltig. Zweckm„áig sollte mit
+ ^\newcommand^ø\newcommandø{\font}{\fontname \baselineskipAbstand}
+ein Befehl \font eingerichtet werden, nach dessen
+Aufruf der Zeichensatz \fontname aktiv ist und diesem
+gleichzeitig der passende Zeilenabstand Abstand zugewiesen ist.
+
+siehe: ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. C.7.1)
+       (Kap. C.7.2)
+       (Kap. 4.1.4)
+@@@\newlength
+  \newlength{\l„nge}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Stellt einen neuen L„ngenbefehl unter dem Namen \l„nge bereit
+und initialisiert diesen zu 0pt. ^Wertzuweisung^øWertzuweisungø wie bei allen
+L„ngenbefehlen mit ^\setlength^ø\setlengthø oder einfach durch Anh„ngen
+einer Maázahl.
+
+TeX-Anmerkung: Jeder mit \newlength eingerichtete
+LaTeX-L„ngenbefehl belegt ein TeX-Register vom Typ \skip.
+Damit kann jedem neuen L„ngenbefehl sowohl ein elastisches
+als auch ein festes Maá zugeordnet werden.
+
+siehe: ^\addtolength^ø\addtolengthø
+       ^\newcommand^ø\newcommandø
+       ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       ^\setlength^ø\setlengthø
+       ^\settowidth^ø\settowidthø
+       (Kap. 7.2)
+@@@\newline
+  \newline   [z]
+  ßßßßßßßßßßßßßß
+Zeilenumbruch an der Stelle des Befehls ohne rechten
+Randausgleich.
+
+siehe: ^\\^ø\\ø
+       ^\linebreak^ø\linebreakø
+       ^\nolinebreak^ø\nolinebreakø
+       ^\par^ø\parø
+       (Kap. 3.5.2.1)
+
+@@@\newpage
+  \newpage
+  ßßßßßßßß
+Seitenumbruch an der Stelle des Befehls. Der Rest der Seite
+bleibt leer.
+
+siehe: ^\cleardoublepage^ø\cleardoublepageø
+       ^\clearpage^ø\clearpageø
+       ^\nopagebreak^ø\nopagebreakø
+       ^\pagebreak^ø\pagebreakø
+       (Kap. 3.5.5.1)
+ 
+@@@\newsavebox
+  \newsavebox{\boxname}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Richtet einen Speicher \boxname ein, in den LR-Boxen mit
+^\savebox^ø\saveboxø oder ^\sbox^ø\sboxø Befehlen abgespeichert werden k”nnen.
+
+siehe: ^\newcommand^ø\newcommandø
+       ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. 4.7.1)
+
+@@@\newtheorem
+  \newtheorem{satz}[num_wie]{Satz}[gl_z„hler]   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine neue Umgebung satz, mit der eine Theoremaussage
+in Italic gesetzt wird, der in Fettdruck der Begriff Satz,
+gefolgt von einer laufenden Nummer, vorangeht. Der optionale
+Zusatz num_wie ist der Name einer anderen, bereits definierten
+Theoremumgebung, mit der satz gemeinsam numeriert wird. Die
+andere Option gl_z„hler ist der Name eines Gliederungsz„hlers,
+wie ^\chapter^øchapterø, dessen momentaner Wert der Numerierung von Satz
+vorangeht und diese innerhalb der Gliederung jeweils mit 1
+beginnen l„át.
+
+siehe: ^\newcommand^ø\newcommandø
+       ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\renewcommand^ø\renewcommandø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. 4.5)
+ 
+@@@\nocite
+  \nocite{schlsselwort}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Eintrag ins Literaturverzeichnis mit Bezug schlsselwort auf eine
+Datenbank, ohne daá im Text hierauf Bezug genommen wird.
+
+siehe: ^\bibitem^ø\bibitemø
+       ^\bibliography^ø\bibliographyø
+       ^\bibliographystyle^ø\bibliographystyleø
+       ^BibTeX^øBibTeXø
+       (Kap. 8.2.2)
+       (Kap. B.1)
+
+@@@\nofiles
+  \nofiles   [v]
+  ßßßßßßßßßßßßßß
+Dieser Befehl im Vorspann unterdrckt die Erzeugung der
+Zusatzfiles .aux, .glo, .idx, .lof, .lot und .toc.
+
+siehe: ^\include^ø\includeø
+       ^\includeonly^ø\includeonlyø
+       ^\input^ø\inputø
+       (Kap. 3.5.5.1)
+ 
+@@@\noindent
+  \noindent
+  ßßßßßßßßß
+Die erste Zeile des n„chsten Absatzes wird nicht eingerckt.
+
+siehe: ^\indent^ø\indentø
+       ^\parindent^ø\parindentø
+       (Kap. 3.5.4)
+
+@@@\nolimits
+  \nolimits   [m]
+  ßßßßßßßßßßßßßßß
+Ordnet obere und untere Grenzen hinter den zugeordneten
+Symbolen an, wenn diese standardm„áig ber und unter den
+Symbolen angebracht werden.
+
+siehe: ^\limits^ø\limitsø
+       (Kap. 5.3.7)
+ 
+@@@\nolinebreak
+  \nolinebreak[n]   [z]
+  ßßßßßßßßßßßßßßßßßßßßß
+Eine Empfehlung, eine Zeile an der Stelle des Befehls nicht
+zu brechen. Die Dringlichkeit der Empfehlung wird durch eine
+ganze Zahl zwischen 0 und 4 zum Ausdruck gebracht, wobei 4,
+ebenso wie der Befehl ohne die Option, gleichbedeutend mit
+zwingend ist.
+
+siehe: ^\\^ø\\ø
+       ^\linebreak^ø\linebreakø
+       ^\newline^ø\newlineø
+       ^\par^ø\parø
+       (Kap. 3.5.2.2)
+ 
+@@@\nonfrenchspacing
+  \nonfrenchspacing   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßß
+Standardzeilenformatierung mit vergr”áerten Wortabst„nden nach
+Satzzeichen. Rckschaltbefehl nach ^\frenchspacing^ø\frenchspacingø.
+
+siehe: (Kap. 3.5.1.2)
+
+@@@\nonumber
+  \nonumber   [m]
+  ßßßßßßßßßßßßßßß
+Die vorangehende Formel in der ^eqnarray^øeqnarrayø Umgebung erh„lt keine
+Formelnummer.
+
+siehe: (Kap. 5.4.7)
+ 
+@@@\nopagebreak
+  \nopagebreak[n]   [z]
+  ßßßßßßßßßßßßßßßßßßßßß
+Eine Empfehlung, eine Seite an der Stelle des Befehls nicht zu
+brechen. Die Dringlichkeit der Empfehlung wird durch eine ganze
+Zahl zwischen 0 und 4 zum Ausdruck gebracht, wobei 4, ebenso
+wie der Befehl ohne die Option, gleichbedeutend mit zwingend ist.
+
+siehe: ^\cleardoublepage^ø\cleardoublepageø
+       ^\clearpage^ø\clearpageø
+       ^\pagebreak^ø\pagebreakø
+       (Kap. 3.5.5.1)
+ 
+@@@\normalmarginpar
+  \normalmarginpar
+  ßßßßßßßßßßßßßßßß
+Rckschaltbefehl fr die Standardanordnungen von Randnotizen,
+wenn vorher mit ^\reversemarginpar^ø\reversemarginparø auf die umgekehrte (innere)
+Anordnung geschaltet war.
+
+siehe: ^\marginpar^ø\marginparø
+       ^\marginparpush^ø\marginparpushø
+       ^\marginparsep^ø\marginparsepø
+       (Kap. 4.9.6)
+ 
+@@@\normalsize
+  \normalsize   [z]
+  ßßßßßßßßßßßßßßßßß
+Umschaltung auf die Standardschriftgr”áe \normalsize. Das ist die mit
+^ds^ø\documentstyleø gesetzte Schriftgr”áe, z. B. 11pt. Kleiner als
+^\large^ø\largeø, aber gr”áer als ^\small^ø\smallø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\not
+  \not   [m]
+  ßßßßßßßßßß
+Negiert das darauffolgende Vergleichssymbol durch Anbringen
+eines / durch das Symbol.
+
+siehe: ^mComp^øVergleichssymboleø
+       (Kap. 5.3.4)
+ 
+@@@\numberline
+  \numberline{gl_num}{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der Befehl ist als Eintrag bei ^\addcontentsline^ø\addcontentslineø zu verwenden.
+Hierin steht gl_num fr die Gliederungsnummer und text
+fr den Eintrag, wie sie im Inhaltsverzeichnis erscheinen sollen.
+
+siehe: ^\addtocontents^ø\addtocontentsø
+       ^\tableofcontents^ø\tableofcontentsø
+       ^\contentsline^ø\contentslineø
+       (Kap. 3.4.3)
+ 
+@@@\oddsidemargin
+  \oddsidemargin   [v]
+  ßßßßßßßßßßßßßßßßßßßß
+Linker Rand fr ungerade Seiten beim Dokumentstil ^ds^øbookø bzw. bei
+den anderen Hauptstilen, falls Dokumentoption ^ds^øtwosideø gesetzt ist.
+In allen anderen F„llen linker Rand fr alle Seiten.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer
+Maáangabe.
+
+siehe: ^\evensidemargin^ø\evensidemarginø
+       (Kap. 3.2.4)
+ 
+@@@\onecolumn
+  \onecolumn   [z]
+  ßßßßßßßßßßßßßßßß
+Beginnt eine neue Seite und schaltet von zweispaltiger
+Seitenformatierung auf einspaltige Formatierung um.
+
+siehe: ^\twocolumn^ø\twocolumnø
+       (Kap. 3.2.5)
+ 
+@@@\opening
+  \opening{anrede}
+  ßßßßßßßßßßßßßßßß
+In der ^letter^øletterø Umgebung Beginn des Brieftextes, dem die
+Anredeform anrede vorangestellt wird.
+
+siehe: (Kap. A.1)
+ 
+@@@\originalTeX
+  \originalTeX   [g]
+  ßßßßßßßßßßßßßßßßßß
+Umschaltbefehl zur Bearbeitung gem„á LaTeX-Original aus der
+Dokumentstiloption ^german^øgermanø heraus.
+
+siehe: ^\germanTeX^ø\germanTeXø
+       (Kap. D.1.7)
+ 
+@@@\oval
+  \oval(x_dimen,y_dimen)[teil]   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl zur Erzeugung eines Ovals der Breite x_dimen und
+H”he y_dimen innerhalb der ^picture^øpictureø Umgebung. Optional
+werden mit t, b, l oder r fr teil das obere, untere, linke bzw.
+rechte Halboval erzeugt. Schlieálich lassen sich mit Paarkombinationen
+Viertelovale zeichnen, z. B. das obere linke mit lt oder tl.
+
+siehe: ^\circle^ø\circleø
+       (Kap. 6.4.6)
+ 
+@@@\overbrace
+  \overbrace{formelteil}   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine horizontale geschweifte Klammer ber einem Formelteil.
+Anschlieáende Hochstellung erfolgt zentriert ber horizontaler
+Klammer.
+
+siehe: ^\overline^ø\overlineø
+       ^\underbrace^ø\underbraceø
+       ^\underline^ø\underlineø
+       (Kap. 5.4.4)
+ 
+@@@\overline
+  \overline{formelteil}   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine horizontale Linie ber einem Formelteil.
+
+siehe: ^\overbrace^ø\overbraceø
+       ^\underbrace^ø\underbraceø
+       ^\underline^ø\underlineø
+       (Kap. 5.4.4)
+
+@@@\pagebreak
+  \pagebreak   [n][z]
+  ßßßßßßßßßßßßßßßßßßß
+Eine Empfehlung, eine Seite an der Stelle des Befehls vorrangig
+zu brechen. Die Dringlichkeit der Empfehlung wird durch eine
+ganze Zahl zwischen 0 und 4 zum Ausdruck gebracht, wobei 4,
+ebenso wie der Befehl ohne die Option, gleichbedeutend mit zwingend ist.
+
+siehe: ^\cleardoublepage^ø\cleardoublepageø
+       ^\clearpage^ø\clearpageø
+       ^\newpage^ø\newpageø
+       ^\nopagebreak^ø\nopagebreakø
+       (Kap. 3.5.5.1)
+ 
+@@@\pagenumbering
+  \pagenumbering{stil}
+  ßßßßßßßßßßßßßßßßßßßß
+Bestimmt den Stil der Seitennumerierung. Fr stil stehen zur
+Verfgung:
+ ^\arabic^øarabicø ^\roman^øromanø ^\Roman^øRomanø ^\alph^øalphø ^\Alph^øAlphø
+Eine Umschaltung der Seitennumerierung innerhalb des Textes setzt den
+Seitenz„hler stets auf 1 zurck.
+
+siehe: (Kap. 3.2.2)
+
+@@@\pageref
+  \pageref{marke}   [z]
+  ßßßßßßßßßßßßßßßßßßßßß
+Erzeugt die Seitenummer derjenigen Seite, auf der mit
+^\label^ø\labelø{marke} die unsichtbare Markierung
+marke angebracht wurde.
+
+siehe: ^\ref^ø\refø
+       (Kap. 8.2.1)
+ 
+@@@\pagestyle
+  \pagestyle{stil}   [v]
+  ßßßßßßßßßßßßßßßßßßßßßß
+Bestimmt den Seitenstil in bezug auf Kopf- und Fuázeile. Fr stil
+k”nnen gew„hlt werden:
+ plain (Standard)    empty    headings    myheadings
+
+siehe: ^\markboth^ø\markbothø
+       ^\markright^ø\markrightø
+       (Kap. 3.2)
+ 
+@@@\par
+  \par
+  ßßßß
+Beendet den laufenden Absatz und beginnt einen neuen. In der Wirkung
+gleichwertig mit einer Leerzeile.
+
+siehe: ^\\^ø\\ø
+       ^\linebreak^ø\linebreakø
+       ^\newline^ø\newlineø
+       ^\nolinebreak^ø\nolinebreakø
+       ^\parindent^ø\parindentø
+       ^\parskip^ø\parskipø
+       (Kap. 3.5.3)
+
+@@@\paragraph
+  \paragraph[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Vorletzter Gliederungsbefehl nach ^\subsubsection^ø\subsubsectionø und vor
+^\subparagraph^ø\subparagraphø. Formatiert berschrift, evtl. mit einer
+vorangestellten 4- oder 5-gliedrigen laufenden Nummer.
+Mit kurzform kann ggf. statt des Textes von berschrift eine
+Kurzform ins Inhaltsverzeichnis eingetragen werden.
+
+Bei der \paragraph*{berschrift} Form unterbleiben Numerierung
+und Eintragung ins Inhaltsverzeichnis.
+
+siehe: ^\chapter^ø\chapterø
+       ^\part^ø\partø
+       ^\section^ø\sectionø
+       ^\subparagraph^ø\subparagraphø
+       ^\subsection^ø\subsectionø
+       ^\subsubsection^ø\subsubsectionø
+       (Kap. 3.3.3)
+ 
+@@@\parbox
+  \parbox[pos]{breite}{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine vertikale Box der Breite breite, in der text
+entsprechend der Boxbreite zeilenweise beidbndig gebrochen
+wird. Der optionale Parameter pos richtet mit t die oberste
+Zeile und mit b die unterste Zeile der vertikalen Box auf
+die laufende Zeile aus. Standard ist die vertikale Zentrierung.
+
+siehe: ^\dashbox^ø\dashboxø
+       ^\fbox^ø\fboxø
+       ^\frame^ø\frameø
+       ^\framebox^ø\frameboxø
+       ^\makebox^ø\makeboxø
+       ^\mbox^ø\mboxø
+       ^\raisebox^ø\raiseboxø
+       (Kap. 4.7.3)
+ 
+@@@\parindent
+  \parindent
+  ßßßßßßßßßß
+Einrcktiefe der ersten Zeile eines Absatzes. ^Wertzuweisung^øWertzuweisungø
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\indent^ø\indentø
+       ^\noindent^ø\noindentø
+       ^\par^ø\parø
+       ^\parskip^ø\parskipø
+       (Kap. 3.2.3)
+ 
+@@@\parsep
+  \parsep
+  ßßßßßßß
+In der ^list^ølistø Umgebung der vertikale Abstand zwischen Abs„tzen.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer evtl.
+elastischen Maázahl.
+
+siehe: ^\listparindent^ø\listparindentø
+       ^\partopsep^ø\partopsepø
+       ^\topsep^ø\topsepø
+       (Kap. 4.4.2)
+ 
+@@@\parskip
+  \parskip
+  ßßßßßßßß
+Der elastische Abstand zwischen zwei Abs„tzen. ^Wertzuweisung^øWertzuweisungø mit
+^\setlength^ø\setlengthø oder durch Anh„ngen einer elastischen Maáangabe.
+
+siehe: ^\par^ø\parø
+       ^\parindent^ø\parindentø
+       (Kap. 3.2.3)
+
+@@@\part
+  \part[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der oberste Gliederungsbefehl. Er beginnt einen neuen "Teil" mit einer
+laufenden Nummer und formatiert berschrift. Die laufende
+part Nummer beeinfluát nicht die nachfolgenden Gliederungen.
+Mit kurzform kann ggf. statt des Textes von berschrift eine
+Kurzform ins Inhaltsverzeichnis eingetragen werden.
+
+Bei der \part*{berschrift} Form unterbleiben Numerierung
+und  Eintragung ins Inhaltsverzeichnis.
+
+siehe: ^\chapter^ø\chapterø
+       ^\paragraph^ø\paragraphø
+       ^\section^ø\sectionø
+       ^\subparagraph^ø\subparagraphø
+       ^\subsection^ø\subsectionø
+       ^\subsubsection^ø\subsubsectionø
+       (Kap. 3.3.3)
+ 
+@@@\partopsep
+  \partopsep
+  ßßßßßßßßßß
+Zusatzzwischenraum am Beginn und/oder Ende einer Listenstruktur,
+wenn dieser eine Leerzeile vorangeht oder folgt. ^Wertzuweisung^øWertzuweisungø
+mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer elastischen Maáangabe.
+
+siehe: ^\itemindent^ø\itemindentø
+       ^\itemsep^ø\itemsepø
+       ^\labelwidth^ø\labelwidthø
+       ^\leftmargin^ø\leftmarginø
+       ^\listparindent^ø\listparindentø
+       ^\parsep^ø\parsepø
+       ^\rightmargin^ø\rightmarginø
+       ^\topsep^ø\topsepø
+       (Kap. 4.4.2)
+ 
+@@@\pmod
+  \pmod{arg}   [m]
+  ßßßßßßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "mod".
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\poptabs
+  \poptabs
+  ßßßßßßßß
+Innerhalb der ^tabbing^øtabbingø Umgebung wird hiermit der vorige Satz von
+Tabulatorstellungen wieder aktiviert; Rckschaltbefehl von ^\pushtabs^ø\pushtabsø.
+
+siehe: (Kap. 4.6.4)
+ 
+@@@\Pr
+  \Pr   [m]
+  ßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "Pr" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\printindex
+  \printindex
+  ßßßßßßßßßßß
+Zusatzbefehl aus ^Makešbersicht^ømakeidxø.sty, der an der Stelle dieses Befehls
+die ^theindex^øtheindexø-Umgebung bearbeitet und ausgibt.
+
+siehe: ^\index^ø\indexø
+       ^\indexentry^ø\indexentryø
+       ^\indexspace^ø\indexspaceø
+       ^\makeindex^ø\makeindexø
+       ^Makešbersicht^øMakešbersichtø
+       (Kap. 8.3)
+ 
+@@@\protect
+  \protect
+  ßßßßßßßß
+Erlaubt die Benutzung von zerbrechlichen Befehlen in wandernden
+Argumenten durch Voranstellen von \protect unmittelbar vor dem
+zerbrechlichen Befehl: z. B. \protect"
+
+siehe: (Kap. 2.6)
+ 
+@@@\ps
+  \ps {nachtrag}
+  ßßßßßßßßßßßßßß
+Befehl im Dokumentstil ^ds^øletterø zur Erzeugung eines Nachtrages.
+
+siehe: (Kap. A.1)
+ 
+@@@\pushtabs
+  \pushtabs
+  ßßßßßßßßß
+Innerhalb der ^tabbing^øtabbingø Umgebung wird hiermit der augenblickliche Satz
+von Tabulatorstellungen abgespeichert. Rckholbefehl: ^\poptabs^ø\poptabsø
+
+siehe: (Kap. 4.6.4)
+
+@@@\put
+  \put(x,y){bild_objekt}
+  ßßßßßßßßßßßßßßßßßßßßßß
+Positionierungsbefehl innerhalb der ^picture^øpictureø Umgebung.
+Das gew„hlte bild_objekt erscheint mit seinem Bezugspunkt
+bei (x,y).
+
+siehe: ^\multiput^ø\multiputø
+       ^\unitlength^ø\unitlengthø
+       (Kap. 6.3)
+ 
+@@@\quad
+  \quad
+  ßßßßß
+Horizontaler Zwischenraumbefehl aus lfonts.tex von der Gr”áe 1em.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 3.5.1.6)
+
+@@@\qquad
+  \qquad
+  ßßßßßß
+Horizontaler Zwischenraumbefehl aus lfonts.tex von der Gr”áe 2em.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 3.5.1.6)
+ 
+@@@\raggedbottom
+  \raggedbottom
+  ßßßßßßßßßßßßß
+Standardformatierung in ^ds^øarticleø, ^ds^øreportø und ^ds^øletterø,
+wenn diese nicht zweiseitig formatiert sind. Die unterste Zeile
+variiert von Seite zu Seite, da Absatzabst„nde nur mit ihren festen
+Maáanteilen eingesetzt werden.  Gegenteil: ^\flushbottom^ø\flushbottomø
+
+siehe: (Kap. 3.2.4)
+ 
+@@@\raggedleft
+  \raggedleft
+  ßßßßßßßßßßß
+Erkl„rung, daá der Text ab hier nur rechtsbndig formatiert wird.
+Die einzelnen Zeilen werden durch ^\\^ø\\ø getrennt.
+
+siehe: ^\raggedright^ø\raggedrightø
+       Die ^flushleft^øflushleftø Umgebung
+       Die ^flushright^øflushrightø Umgebung
+       (Kap. 4.2.2)
+
+@@@\raggedright
+  \raggedright
+  ßßßßßßßßßßßß
+Erkl„rung, daá der Text ab hier nur linksbndig formatiert wird.
+Die einzelnen Zeilen werden durch ^\\^ø\\ø getrennt.
+
+siehe: ^\raggedleft^ø\raggedleftø
+       Die ^flushleft^øflushleftø Umgebung
+       Die ^flushright^øflushrightø Umgebung
+       (Kap. 4.2.2)
+
+@@@\raisebox
+  \raisebox{lift}[oberl„nge][unterl„nge]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der Inhalt von text erscheint in einer LR-Box, die um lift
+nach oben oder mit einer negativen Maáangabe nach unten
+verschoben wird. Die optionalen Parameter bewirken, daá
+unabh„ngig vom eingetragenen Text angenommen wird, die Box
+wrde um oberl„nge ber und um unterl„nge unter die laufende
+Grundlinie hinausragen.
+
+siehe: ^\dashbox^ø\dashboxø
+       ^\fbox^ø\fboxø
+       ^\frame^ø\frameø
+       ^\framebox^ø\frameboxø
+       ^\makebox^ø\makeboxø
+       ^\mbox^ø\mboxø
+       (Kap. 4.7.2)
+ 
+@@@\ref
+  Kap. \ref{marke}   [z]
+  ßßßßßßßßßßßßßßßßß
+Erzeugt eine Gliederungs-, Gleichungs-, Bild- oder Tabellennummer in
+Abh„ngigkeit davon, wo mit ^\label^ø\labelø{marke} die Markierung marke
+angebracht wurde.
+
+siehe: ^\pageref^ø\pagerefø
+       (Kap. 8.2.1)
+ 
+@@@\refstepcounter
+  \refstepcounter{z„hler}
+  ßßßßßßßßßßßßßßßßßßßßßßß
+Inkrementierungsbefehl fr z„hler wie ^\stepcounter^ø\stepcounterø. Gleichzeitig
+wird mit ^\label^ø\labelø-^\ref^ø\refø Paaren auf den aktuellen Wert von
+z„hler Bezug genommen.
+
+siehe: ^\addtocounter^ø\addtocounterø
+       ^\newcounter^ø\newcounterø
+       (Kap. 7.1.3)
+ 
+@@@\renewcommand
+  renewcommand{\befehl}[narg]{def}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Neuerkl„rung eines existierenden Befehls \befehl, der mit
+def neu definiert wird. Der optionale Parameter narg <= 9
+bestimmt die Zahl der variablen Argumente des Befehls, die
+in der Definition mit den Ersetzungszeichen #1 bis #narg
+auftreten. Der umdefinierte Befehl ist zerbrechlich, wenn
+in der Definition zerbrechliche Befehle auftreten, sonst robust.
+
+siehe: ^\newcommand^ø\newcommandø
+       ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewenvironment^ø\renewenvironmentø
+       (Kap. 7.3)
+ 
+@@@\renewenvironment
+  \renewenvironment{umgebung}[narg]{begdef}{enddef}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Neuerkl„rung einer existierenden Umgebung mit dem Namen umgebung
+mit der ^\begin^ø\beginø-Definition begdef und der ^\end^ø\endø-Definition enddef.
+Der optionale Parameter narg <= 9 bestimmt die Zahl der variablen
+Argumente der Umgebung, die in begdef mit den Ersetzungszeichen #1
+bis #narg auftreten mssen.
+
+siehe: ^\newcommand^ø\newcommandø
+       ^\newcounter^ø\newcounterø
+       ^\newenvironment^ø\newenvironmentø
+       ^\newfont^ø\newfontø
+       ^\newlength^ø\newlengthø
+       ^\newsavebox^ø\newsaveboxø
+       ^\newtheorem^ø\newtheoremø
+       ^\renewcommand^ø\renewcommandø
+       (Kap. 7.4)
+ 
+@@@\reversemarginpar
+  \reversemarginpar
+  ßßßßßßßßßßßßßßßßß
+Umschaltbefehl zur Anordnung von Randnotizen am linken oder
+inneren Rand. Rckschaltbefehl: ^\normalmarginpar^ø\normalmarginparø.
+
+siehe: ^\marginpar^ø\marginparø
+       ^\marginparpush^ø\marginparpushø
+       ^\marginparsep^ø\marginparsepø
+       (Kap. 4.9.6)
+ 
+@@@\right
+  \rightkl_symbol   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Abschluábefehl fr an Teilformel angepaáte Klammersymbole.
+Beendet ^\left^ø\leftø ... \right Gruppe.
+
+siehe: (Kap. 5.4.1)
+ 
+@@@\rightmargin
+  \rightmargin
+  ßßßßßßßßßßßß
+Innerhalb der ^list^ølistø Umgebung der Abstand des rechten Randes zum
+rechten Rand des „uáeren Textes. ^Wertzuweisung^øWertzuweisungø durch ^\setlength^ø\setlengthø
+oder Anh„ngen einer Maázahl. Standard ist 0cm.
+
+siehe: ^\item^ø\itemø
+       ^\labelsep^ø\labelsepø
+       ^\labelwidth^ø\labelwidthø
+       ^\leftmargin^ø\leftmarginø
+       ^\listparindent^ø\listparindentø
+       ^\makelabel^ø\makelabelø
+       (Kap. 4.4.2)
+
+@@@\rm
+  \rm
+  ßßß
+Schriftumschaltung auf "Roman = Standardschrift".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+
+@@@\Roman
+  \Roman{z„hler}
+  ßßßßßßßßßßßßßß
+Druckt den augenblicklichen Wert von z„hler als groáe
+r”mische Zahl aus.
+
+siehe: ^\Alph^ø\Alphø
+       ^\alph^ø\alphø
+       ^\arabic^ø\arabicø
+       ^\pagenumbering^ø\pagenumberingø
+       ^\roman^ø\romanø
+       (Kap. 7.1.4)
+ 
+@@@\roman
+  \roman{z„hler}
+  ßßßßßßßßßßßßßß
+Druckt den augenblicklichen Wert von z„hler als kleine r”mische
+Zahl aus.
+
+siehe: ^\Alph^ø\Alphø
+       ^\alph^ø\alphø
+       ^\arabic^ø\arabicø
+       ^\pagenumbering^ø\pagenumberingø
+       ^\Roman^ø\Romanø
+       (Kap. 7.1.4)
+ 
+@@@\rule
+  \rule[lift]{breite}{h”he}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt ein schwarzes Rechteck mit den Maáangaben von breite und
+h”he, das um die optionale Maáangabe von lift ber der
+augenblicklichen Grundlinie liegt. Ein Wert von "0cm" fr breite
+bzw. h”he fhrt zu einer vertikalen bzw. horizontalen unsichtbaren
+Sttze, die fr Platzbeschaffung genutzt werden kann.
+
+siehe: ^\raisebox^ø\raiseboxø
+       (Kap. 4.7.4)
+ 
+@@@\samepage
+  \samepage   [z]
+  ßßßßßßßßßßßßßßß
+Nach diesem Befehl ist ein Seitenumbruch nur an eingeschr„nkten Stellen,
+wie z. B. zwischen Abs„tzen, m”glich, es sei denn, er wird explizit durch
+^\newpage^ø\newpageø oder ^\pagebreak^ø\pagebreakø erzwungen. Mit gleicher Wirkung kann
+ein Teiltext auch mit ^\begin^ø\beginø{samepage} ... ^\end^ø\endø{samepage}
+eingeschachtelt werden.
+
+siehe: (Kap. 3.5.5.5)
+ 
+@@@\savebox
+  \savebox{\boxname}[breite][pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+In den durch ^\newsavebox^ø\newsaveboxø eingerichteten Speicher \boxname
+wird text, wie beim ^\makebox^ø\makeboxø Befehl formatiert, abgespeichert.
+Dieser Text kann an beliebigen Stellen durch
+^\usebox^ø\useboxø{\boxname} ausgegeben werden.
+
+siehe: ^\sbox^ø\sboxø
+       (Kap. 4.7.1)
+ 
+  \savebox{\teilbild}(x_dim,y_dim)[pos]{Teilbild}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+In den durch ^\newsavebox^ø\newsaveboxø eingerichteten Speicher mit dem Namen
+\teilbild kann eine Bildkonstruktion Teilbild der Breite x_dim und
+H”he y_dim abgespeichert werden. Fr das Dimensionierungspaar
+x_dim,y_dim gilt die momentane L„ngeneinheit ^\unitlength^ø\unitlengthø. Das
+Teilbild kann an beliebigen Stellen innerhalb von ^picture^øpictureø
+Umgebungen mit ^\usebox^ø\useboxø{\teilbild} positioniert werden.
+
+siehe: ^\multiput^ø\multiputø
+       ^\put^ø\putø
+       ^\sbox^ø\sboxø
+       (Kap. 6.5.3)
+@@@\sbox
+  \sbox{\boxname}{text}
+  ßßßßßßßßßßßßßßßßßßßßß
+In den durch ^\newsavebox^ø\newsaveboxø eingerichteten Speicher \boxname
+wird text als LR-Box abgespeichert.
+Dieser Text kann durch ^\usebox^ø\useboxø{\boxname} dann
+an beliebigen Stellen ausgegeben werden.
+
+siehe: ^\mbox^ø\mboxø
+       ^\savebox^ø\saveboxø
+       (Kap. 4.7.1)
+
+@@@\sc
+  \sc
+  ßßß
+Schriftumschaltung auf "Small Caps = Groáe Kleinbuchstaben".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+
+@@@\scriptscriptstyle
+  \scriptscriptstyle   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Umschaltung auf Schriftgr”áe \scriptscriptstyle als
+aktive Schrift innerhalb einer Teilformel.
+
+siehe: (Kap. 5.5.2)
+ 
+@@@\scriptsize
+  \scriptsize   [z]
+  ßßßßßßßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \scriptsize. Kleiner als
+^\footnotesize^ø\footnotesizeø, aber gr”áer als ^\tiny^ø\tinyø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+
+@@@\scriptstyle
+  \scriptstyle   [m]
+  ßßßßßßßßßßßßßßßßßß
+Umschaltung auf Schriftgr”áe \scriptstyle als
+aktive Schrift innerhalb einer Formel.
+
+siehe: (Kap. 5.5.2)
+ 
+@@@\sec
+  \sec   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "sec" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\section
+  \section[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Beginnt einen neuen Abschnitt und formatiert berschrift mit
+einer vorangestellten eingliedrigen (^ds^øarticleø) oder
+zweigliedrigen (^ds^øbookø, ^ds^øreportø) laufenden Nummer.
+Mit kurzform kann ggf. statt des Textes von berschrift eine
+Kurzform ins Inhaltsverzeichnis eingetragen werden.
+
+Bei der \section*{berschrift} Form unterbleiben Numerierung
+und Eintragung ins Inhaltsverzeichnis.
+
+siehe: ^\chapter^ø\chapterø
+       ^\paragraph^ø\paragraphø
+       ^\part^ø\partø
+       ^\subparagraph^ø\subparagraphø
+       ^\subsection^ø\subsectionø
+       ^\subsubsection^ø\subsubsectionø
+       (Kap. 3.3.3)
+ 
+@@@\see
+  \see
+  ßßßß
+Zusatzbefehl aus ^Makešbersicht^ømakeidxø.sty, zur Erzeugung eines
+Querverweis mit ^Makešbersicht^øMakešbersichtø im šbersichtregister. Aufruf erfolgt in
+der Form ^\index^ø\indexø{eintrag|see{verweis}}.
+
+siehe: ^\indexentry^ø\indexentryø
+       ^\indexspace^ø\indexspaceø
+       ^\makeindex^ø\makeindexø
+       ^\printindex^ø\printindexø
+       (Kap. 8.3)
+ 
+@@@\setcounter
+  \setcounter{z„hler}{wert}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der Z„hler mit dem Namen z„hler erh„lt den Zahlenwert wert
+zugewiesen. Dies drfen nur ganze Zahlen sein.
+
+siehe: ^\addtocounter^ø\addtocounterø
+       ^\newcounter^ø\newcounterø
+       ^\refstepcounter^ø\refstepcounterø
+       ^\stepcounter^ø\stepcounterø
+       ^Wertzuweisung^øWertzuweisungø
+       (Kap. 7.1.3)
+
+@@@\selectlanguage
+  \selectlanguage{\sprache}   [g]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Umschaltbefehl zum Wechseln der Sprache, nach dem das Datum
+und diverse, automatisch erzeugte šberschriften in der
+gew„hlten Sprache ausgegeben werden. Standardm„áig stehen
+fr \sprache ^\austrian^ø\austrianø, ^\english^ø\englishø, ^\french^ø\frenchø, ^\german^ø\germanø und
+^\USenglish^ø\USenglishø bereit.
+
+siehe: (Kap. D.1.6)
+ 
+@@@\setlength
+  \setlength{\l„ngenbefehl}{maáangabe}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der L„ngenbefehl mit dem Namen \l„ngenbefehl erh„lt den
+Wert maáangabe zugewiesen. Das Ergebnis ist gleichwertig
+mit dem Anh„ngen einer festen oder elastischen Maáangabe
+an einen L„ngenbefehl.
+
+siehe: ^\addtolength^ø\addtolengthø
+       ^\newlength^ø\newlengthø
+       ^\settowidth^ø\settowidthø
+       ^Wertzuweisung^øWertzuweisungø
+       (Kap. 7.2)
+       (Kap. 2.4.1)
+       (Kap. 2.4.2)
+
+@@@\settowidth
+  \settowidth{\l„ngenbefehl}{text}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Der L„ngenbefehl mit dem Namen \l„ngenbefehl erh„lt die
+L„nge zugewiesen wie sie von text eingenommen wird.
+
+siehe: ^\addtolength^ø\addtolengthø
+       ^\newlength^ø\newlengthø
+       ^\setlength^ø\setlengthø
+       ^Wertzuweisung^øWertzuweisungø
+       (Kap. 7.2)
+
+@@@\sf
+  \sf
+  ßßß
+Schriftumschaltung auf "Sans Serif = Serifenlose Schrift".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+ 
+@@@\shortstack
+  \shortstack[pos]{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Einspaltige Textformatierung, bei der die Zeilen durch ^\\^ø\\ø
+getrennt werden und so eng wie m”glich bereinander gesetzt
+sind. Optional kann mit l oder r fr pos eine links- oder
+rechtsbndige Positionierung erreicht werden.
+
+siehe: (Kap. 6.4.7)
+ 
+@@@\showhyphens
+  \showhyphens{wort_liste}
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Befehl zur Ausgabe der m”glichen Trennungen der W”rter
+aus wort_liste auf dem Bildschirm.
+
+siehe: ^\discretionary^ø\discretionaryø
+       ^\hyphenation^ø\hyphenationø
+       (Kap. 3.6.5)
+ 
+@@@\signature
+  \signature{Unterschrift}
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+Im ^ds^øletterø Stil Name des Briefautors fr die
+Unterschrift, wenn diese von der Namensangabe aus
+^\name^ø\nameø{autor} abweichen soll.
+
+siehe: (Kap. A.1)
+ 
+@@@\sin
+  \sin   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "sin" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+
+@@@\sinh
+  \sinh   [m]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "sinh" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\sl
+  \sl
+  ßßß
+Schriftumschaltung auf "Slanted = Geneigte Roman-Schrift".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+ 
+@@@\sloppy
+  \sloppy
+  ßßßßßßß
+Nach dem Auftreten dieses Befehls sind fr die nachfolgenden
+Abs„tze fr die Formatierung groázgigere Wortabst„nde erlaubt.
+Rckschaltbefehl ^\fussy^ø\fussyø.
+
+siehe: Die ^fussypar^øfussyparø Umgebung
+       Die ^sloppypar^øsloppyparø Umgebung
+       (Kap. 3.6.3)
+
+@@@\small
+  \small   [z]
+  ßßßßßßßßßßßß
+Umschaltung auf die Schriftgr”áe \small. Kleiner als
+^\normalsize^ø\normalsizeø, aber gr”áer als ^\footnotesize^ø\footnotesizeø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\smallskip
+  \smallskip   [z]
+  ßßßßßßßßßßßßßßßß
+Kleiner vertikaler Zwischenraum vom Betrag ^\smallskipamount^ø\smallskipamountø
+zwischen Abs„tzen.
+
+siehe: ^\bigskip^ø\bigskipø
+       ^\bigskipamount^ø\bigskipamountø
+       ^\medskip^ø\medskipø
+       ^\medskipamount^ø\medskipamountø
+       (Kap. 3.5.3)
+ 
+@@@\smallskipamount
+  \smallskipamount
+  ßßßßßßßßßßßßßßßß
+Standardwert fr den durch ^\smallskip^ø\smallskipø erzeugten
+Zwischenraum. ^Wertzuweisung^øWertzuweisungø durch Anh„ngen einer
+elastischen Maázahl oder mit ^\setlength^ø\setlengthø.
+
+siehe: ^\bigskip^ø\bigskipø
+       ^\bigskipamount^ø\bigskipamountø
+       ^\medskip^ø\medskipø
+       ^\medskipamount^ø\medskipamountø
+
+@@@\sqrt
+  \sqrt[n]{arg}   [m][z]
+  ßßßßßßßßßßßßßßßßßßßßßß
+Mathematischer Grundbefehl zur Erzeugung einer Wurzel. H”he
+und L„nge des Wurzelzeichens ist dem Inhalt von arg angepaát.
+Der optionale Parameter n setzt den Wurzelgrad.
+
+siehe: (Kap. 5.2.4)
+ 
+@@@\ss
+  \ss
+  ßßß
+Originalbefehl zur Erzeugung des á. Bei deutscher Anpassung
+vereinfacht durch \3 oder besser "s.
+
+siehe: ^german^øgermanø.sty
+       (Kap. 2.5.1)
+
+@@@\stackrel
+  \stackrel{oben}{unten}   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Setzt zwei mathematische Symbole bereinander. Das obere Symbol
+erscheint in kleinerer Schrift.
+
+siehe: (Kap. 5.4.5)
+ 
+@@@\stepcounter
+  \stepcounter{z„hler}
+  ßßßßßßßßßßßßßßßßßßßß
+Inkrementierungsbefehl fr z„hler. Der Wert des Z„hlers wird
+um 1 erh”ht.
+
+siehe: ^\addtocounter^ø\addtocounterø
+       ^\newcounter^ø\newcounterø
+       ^\refstepcounter^ø\refstepcounterø
+       (Kap. 7.1.3)
+       (Kap. 7.1.3)
+ 
+@@@\stretch
+  \stretch{dezimal_zahl}
+  ßßßßßßßßßßßßßßßßßßßßßß
+Eine L„nge mit dem natrlichen Wert 0cm, deren Elastizit„t das
+durch dezimal_zahl bestimmte Vielfache von ^\fill^ø\fillø erreichen kann.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 7.2)
+
+@@@\subitem
+  \subitem{unter_eintrag}
+  ßßßßßßßßßßßßßßßßßßßßßßß
+Befehl innerhalb der ^theindex^øtheindexø Umgebung zur Erzeugung eines
+Untereintrages zum Haupteintrag des vorangegangenen ^\item^ø\itemø Befehls.
+
+siehe: ^\index^ø\indexø
+       ^\indexentry^ø\indexentryø
+       ^\indexspace^ø\indexspaceø
+       ^\makeindex^ø\makeindexø
+       ^\printindex^ø\printindexø
+       ^\subsubitem^ø\subsubitemø
+       (Kap. 8.2.3)
+
+@@@\subject
+  \subject{betreff} [p]
+  ßßßßßßßßßßßßßßßßßßßßß
+In der ^letter^øletterø Umgebung die Betreffangabe betreff.
+
+siehe: (Kap. A.2)
+
+@@@\subparagraph
+  \subparagraph[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Unterster Gliederungsbefehl. Formatiert berschrift, evtl. mit einer
+vorangestellten 5- oder 6-gliedrigen laufenden Nummer.
+Mit kurzform kann ggf. statt des Textes von berschrift eine
+Kurzform ins Inhaltsverzeichnis eingetragen werden.
+
+Bei der \subparagraph*{berschrift} Form unterbleiben Numerierung
+und Eintragung ins Inhaltsverzeichnis.
+
+siehe: ^\chapter^ø\chapterø
+       ^\paragraph^ø\paragraphø
+       ^\part^ø\partø
+       ^\section^ø\sectionø
+       ^\subsection^ø\subsectionø
+       ^\subsubsection^ø\subsubsectionø
+       (Kap. 3.3.3)
+ 
+@@@\subsection
+  \subsection[kurzform]{berschrift}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Gliederungsbefehl nach ^\section^ø\sectionø und vor
+^\subsubsection^ø\subsubsectionø. Formatiert berschrift mit einer
+vorangestellten 2- oder 3-gliedrigen laufenden Nummer.
+Mit kurzform kann ggf. statt des Textes von berschrift eine
+Kurzform ins Inhaltsverzeichnis eingetragen werden.
+
+Bei der \subsection*{berschrift} Form unterbleiben Numerierung
+und Eintragung ins Inhaltsverzeichnis.
+
+siehe: ^\chapter^ø\chapterø
+       ^\paragraph^ø\paragraphø
+       ^\part^ø\partø
+       ^\section^ø\sectionø
+       ^\subparagraph^ø\subparagraphø
+       ^\subsubsection^ø\subsubsectionø
+       (Kap. 3.3.3)
+ 
+@@@\subsubitem
+  \subsubitem{unter_unter_eintrag}
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Befehl innerhalb der ^theindex^øtheindexø Umgebung zur Erzeugung eines
+Untereintrages zweiter Stufe zum verangegangenen Untereintrag
+mit ^\subitem^ø\subitemø.
+
+siehe: ^\item^ø\itemø
+       ^\index^ø\indexø
+       ^\indexentry^ø\indexentryø
+       ^\indexspace^ø\indexspaceø
+       ^\makeindex^ø\makeindexø
+       ^\printindex^ø\printindexø
+       (Kap. 8.2.3)
+
+@@@\subsubsection
+  \subsubsection[kurzform]{berschrift}     [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Gliederungsbefehl nach ^\subsection^ø\subsectionø und vor
+^\paragraph^ø\paragraphø. Formatiert berschrift, evtl. mit einer
+vorangestellten 3- oder 4-gliedrigen laufenden Nummer.
+Mit kurzform kann ggf. statt des Textes von berschrift eine
+Kurzform ins Inhaltsverzeichnis eingetragen werden.
+
+Bei der \subsubsection*{berschrift} Form unterbleiben Numerierung
+und Eintragung ins Inhaltsverzeichnis.
+
+siehe: ^\chapter^ø\chapterø
+       ^\paragraph^ø\paragraphø
+       ^\part^ø\partø
+       ^\section^ø\sectionø
+       ^\subparagraph^ø\subparagraphø
+       ^\subsection^ø\subsectionø
+       (Kap. 3.3.3)
+ 
+@@@\sup
+  \sup   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "sup" in Formeln.
+Kombinierbar mit unterer Grenzangabe durch Tiefstellung.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\symbol
+  \symbol{n}
+  ßßßßßßßßßß
+Erzeugt im gerade aktiven Zeichensatz das Zeichen, dessen
+interne Kodierung n = 0...127 ist.
+
+siehe: (Kap. 4.1.5)
+       (Kap. C.6)
+
+@@@\t
+  \t{xy}
+  ßßßßßß
+Erzeugt einen "Verbindungs-Akzent" ber zwei Buchstaben.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+
+@@@\tabbingsep
+  \tabbingsep
+  ßßßßßßßßßßß
+Bestimmt den Abstand zwischen einem Tabulatorstop und dem mit
+ltext^\'^ø\'ø vor dem momentanen Tabstop angeordneten ltext.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: Die ^tabbing^øtabbingø Umgebung
+       (Kap. 4.6.4)
+
+@@@\tabcolsep
+  \tabcolsep
+  ßßßßßßßßßß
+Der halbe Spaltenabstand in der ^tabular^øtabularø Umgebung. ^Wertzuweisung^øWertzuweisungø
+mit dem LaTeX-Befehl ^\setlength^ø\setlengthø oder durch unmittelbares Anh„ngen
+einer Maáangabe.
+
+siehe: ^\extracolsep^ø\extracolsepø
+       (Kap. 4.8.2)
+ 
+@@@\tableofcontents
+  \tableofcontents
+  ßßßßßßßßßßßßßßßß
+Befehl zur Erzeugung eines Inhaltsverzeichnisses mit den Angaben
+aus den Gliederungsbefehlen und evtl. Zusatzeintragungen.
+
+siehe: ^\addcontentsline^ø\addcontentslineø
+       ^\addtocontents^ø\addtocontentsø
+       ^\contentsline^ø\contentslineø
+       (Kap. 3.4.2)
+
+@@@\tan
+  \tan   [m]
+  ßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "tan" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\tanh
+  \tanh   [m]
+  ßßßßßßßßßßß
+Befehl zur Erzeugung des Funktionsnamens "tanh" in Formeln.
+
+siehe: ^mFunc^øFunktionsnamenø
+       (Kap. 5.3.8)
+ 
+@@@\telephone
+  \telephone{nummer}
+  ßßßßßßßßßßßßßßßßßß
+Im ^ds^øletterø Stil Angabe der Telefonnummer des Briefschreibers.
+
+siehe: (Kap. A.2)
+ 
+@@@\TeX
+  \TeX
+  ßßßß
+erzeugt das TeX Logo.
+
+siehe: ^\LaTeX^ø\LaTeXø
+       (Kap. 2.1)
+
+@@@\textfraction
+  \textfraction
+  ßßßßßßßßßßßßß
+Der Bruchteil einer Seite mit Text und Gleitobjekten, der fr den Text
+mindestens zur Verfgung steht. ^Wertzuweisung^øWertzuweisungø mit
+ ^\renewcommand^ø\renewcommandø{\textfraction}{dezimal_bruch}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+ 
+@@@\textfloatsep
+  \textfloatsep
+  ßßßßßßßßßßßßß
+Der vertikale Abstand zwischen Gleitobjekten oben auf der Seite und
+dem nachfolgenden Text sowie diesem und evtl. nachfolgenden Gleitobjekten
+unten auf der Seite. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen
+einer elastischen Maáangabe.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+@@@\textheight
+  \textheight   [v]
+  ßßßßßßßßßßßßßßßßß
+Gesamth”he fr den Seitentext. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø
+oder durch Anh„ngen einer Maáangabe, die bevorzugt als ganzzahliges
+Vielfaches von ^\baselineskip^ø\baselineskipø gew„hlt wird:
+ \setlength{\textheight}{45\baselineskip}    bzw.
+ \textheight45\baselineskip
+
+siehe: ^\textwidth^ø\textwidthø
+       ^\topmargin^ø\topmarginø
+       (Kap. 3.2.4)
+ 
+@@@\textstyle
+  \textstyle   [m]
+  ßßßßßßßßßßßßßßßß
+Umschaltung auf Schriftgr”áe \textstyle als
+aktive Schrift innerhalb einer Formel.
+
+siehe: (Kap. 5.5.2)
+ 
+@@@\textwidth
+  \textwidth   [v]
+  ßßßßßßßßßßßßßßßß
+Textbreite fr den Seitentext. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder
+durch Anh„ngen einer Maázahl.
+
+siehe: ^\textheight^ø\textheightø
+       (Kap. 3.2.4)
+ 
+@@@\thanks
+  \thanks{Fuánotentext}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine Fuánote auf einer mit ^\maketitle^ø\maketitleø erzeugten Titelseite.
+
+siehe: ^\and^ø\andø
+       ^\author^ø\authorø
+       ^\date^ø\dateø
+       ^\title^ø\titleø
+       Die ^titlepage^øtitlepageø Umgebung
+       (Kap. 3.3.1)
+ 
+@@@\the
+  \thez„hler
+  ßßßßßßßßßß
+Interner Standardbefehl, mit dem der Wert eines Z„hlers, evtl.
+mit Zusatzangaben, ausgedruckt wird, z. B. \theenumii.
+^Wertzuweisung^øWertzuweisungø ist durch
+ ^\renewcommand^ø\renewcommandø{\thez„hler}{def}
+jederzeit m”glich.
+
+siehe: ^\value^ø\valueø
+       (Kap. 7.1.4)
+ 
+@@@\thicklines
+  \thicklines
+  ßßßßßßßßßßß
+Nach diesem Befehl innerhalb der ^picture^øpictureø Umgebung erscheinen
+geneigte Linien und Pfeile, Kreise und Ovale in dicker Strichst„rke.
+
+siehe: ^\circle^ø\circleø
+       ^\line^ø\lineø
+       ^\linethickness^ø\linethicknessø
+       ^\oval^ø\ovalø
+       ^\thinlines^ø\thinlinesø
+       ^\vector^ø\vectorø
+       (Kap. 6.5.1)
+ 
+@@@\thinlines
+  \thinlines
+  ßßßßßßßßßß
+Umkehrbefehl zu ^\thicklines^ø\thicklinesø und Standardstrichst„rke in der
+^picture^øpictureø Umgebung fr geneigte Linien, Pfeile, Kreise und Ovale.
+
+siehe: ^\circle^ø\circleø
+       ^\line^ø\lineø
+       ^\linethickness^ø\linethicknessø
+       ^\oval^ø\ovalø
+       ^\vector^ø\vectorø
+       (Kap. 6.5.1)
+ 
+@@@\thispagestyle
+  \thispagestyle{stil}
+  ßßßßßßßßßßßßßßßßßßßß
+Bestimmt den Stil der laufenden Seite in bezug auf Kopf- und
+Fuázeile. Fr stil k”nnen gew„hlt werden:
+ ^\pagestyle^øplainø ^\pagestyle^øemptyø ^\pagestyle^øheadingsø ^\pagestyle^ømyheadingsø
+
+siehe: ^\markboth^ø\markbothø
+       ^\markright^ø\markrightø
+       ^\pagestyle^ø\pagestyleø
+       (Kap. 3.2)
+ 
+@@@\tilde
+  \tilde{x}   [m]
+  ßßßßßßßßßßßßßßß
+Tilde ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+
+@@@\tiny
+  \tiny   [z]
+  ßßßßßßßßßßß
+Umschaltung auf die kleinste Schriftgr”áe \tiny. Noch kleiner als
+^\scriptsize^ø\scriptsizeø.
+
+siehe: ^Gr”áen^øSchriftgr”áenø
+       (Kap. 4.1.3)
+ 
+@@@\title
+  \title{text}
+  ßßßßßßßßßßßß
+Der Titeltext text fr eine durch ^\maketitle^ø\maketitleø
+erzeugte Titelseite.
+
+siehe: ^\and^ø\andø
+       ^\author^ø\authorø
+       ^\date^ø\dateø
+       ^\thanks^ø\thanksø
+       Die ^titlepage^øtitlepageø Umgebung
+       (Kap. 3.3.1)
+ 
+@@@\today
+  \today
+  ßßßßßß
+Erzeugt das aktuelle Datum beim Original in amerikanischer
+Schreibweise. Nach Anpassung an ^german^øgermanø.sty erscheint das
+Datum in der mit ^\selectlanguage^ø\selectlanguageø gew„hlten Sprache.
+
+siehe: (Kap. 2.5.9)
+       (Kap. D.1.6)
+ 
+@@@\topfraction
+  \topfraction
+  ßßßßßßßßßßßß
+Bruchteil einer Seite, bis zu dem Gleitobjekte am oberen Seitenende
+angebracht werden k”nnen. ^Wertzuweisung^øWertzuweisungø durch:
+ ^\renewcommand^ø\renewcommandø{\topfraction}{dezimal_bruch}
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topnumber^ø\topnumberø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+ 
+@@@\topmargin
+  \topmargin   [v]
+  ßßßßßßßßßßßßßßßß
+Oberer Seitenrand bis zur Oberkante der Kopfzeile.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer Maázahl.
+
+siehe: ^\headheight^ø\headheightø
+       ^\headsep^ø\headsepø
+       ^\textheight^ø\textheightø
+       (Kap. 3.2.4)
+
+@@@\topnumber
+  \topnumber
+  ßßßßßßßßßß
+Maximale Anzahl von Gleitobjekten, die am oberen Seitenende
+angebracht werden k”nnen. ^Wertzuweisung^øWertzuweisungø durch
+ ^\setcounter^ø\setcounterø{topnumber}{num}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\totalnumber^ø\totalnumberø
+       (Kap. 6.6.2)
+
+@@@\topsep
+  \topsep
+  ßßßßßßß
+Vertikaler Standardzwischenraum zus„tzlich zu ^\parsep^ø\parsepø vor
+und nach einer listenartigen Umgebung sowie bei abgesetzten
+mathematischen Formeln, wenn Dokumentoption ^ds^øfleqnø gesetzt.
+^Wertzuweisung^øWertzuweisungø durch Anh„ngen einer elastischen Maáangabe
+oder mit ^\setlength^ø\setlengthø.
+
+siehe: ^\listparindent^ø\listparindentø
+       ^\partopsep^ø\partopsepø
+       (Kap. 4.4.2)
+       (Kap. 5.5.4)
+ 
+@@@\topskip
+  \topskip   [v]
+  ßßßßßßßßßßßßßß
+Abstand von der Oberkante des Seitenrumpfes bis zur Grundlinie der
+ersten Textzeile. ^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch
+Anh„ngen einer Maázahl.
+
+siehe: (Kap. 3.2.4)
+ 
+@@@\totalnumber
+  \totalnumber
+  ßßßßßßßßßßßßßßßßß
+Maximale Anzahl von Gleitobjekten, die unabh„ngig von ihrer
+Positionierung insgesamt auf einer Seite angebracht werden k”nnen.
+^Wertzuweisung^øWertzuweisungø durch ^\setcounter^ø\setcounterø{totalnumber}{num}.
+
+siehe: ^\bottomfraction^ø\bottomfractionø
+       ^\bottomnumber^ø\bottomnumberø
+       ^\dblfloatpagefraction^ø\dblfloatpagefractionø
+       ^\dblfloatsep^ø\dblfloatsepø
+       ^\dbltextfloatsep^ø\dbltextfloatsepø
+       ^\dbltopfraction^ø\dbltopfractionø
+       ^\dbltopnumber^ø\dbltopnumberø
+       ^\floatpagefraction^ø\floatpagefractionø
+       ^\floatsep^ø\floatsepø
+       ^\intextsep^ø\intextsepø
+       ^\textfraction^ø\textfractionø
+       ^\textfloatsep^ø\textfloatsepø
+       ^\topfraction^ø\topfractionø
+       ^\topnumber^ø\topnumberø
+       (Kap. 6.6.2)
+ 
+@@@\tt
+  \tt
+  ßßß
+Schriftumschaltung auf "Typewriter = Schreibmaschinenschrift".
+
+siehe: ^Stil^øSchriftstileø
+       (Kap. 4.1.2)
+ 
+@@@\twocolumn
+  \twocolumn[text]   [z]
+  ßßßßßßßßßßßßßßßßßßßßßß
+Beginnt eine neue Seite mit zweispaltiger Formatierung. Der
+optionale Inhalt von text erscheint zu Beginn der Seite und
+reicht ber beide Spalten.
+
+siehe: ^\onecolumn^ø\onecolumnø
+       (Kap. 3.2.5)
+
+@@@\typein
+  \typein[\befehl]{nachricht}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt auf dem Bildschirm den Inhalt von nachricht, wenn bei der
+Bearbeitung der \typein Befehl erreicht wird.
+Der optionale Parameter ist ein Befehlsname, der unten auf dem
+Bildschirm erscheint, wonach LaTeX auf eine Anwendereingabe wartet.
+Der danach eingegebene Text bis zur Returntaste wird als Definition
+fr den Befehlsnamen interpretiert. Ohne die Option erscheint unten
+auf dem Bildschirm @typein=, und der darauf eingegebene Text bis zur
+Returntaste wird an der Stelle des \typein Befehls in den laufenden
+Text einbezogen. 
+
+siehe: ^\typeout^ø\typeoutø
+       (Kap. 8.1.3)
+ 
+@@@\typeout
+  \typeout{nachricht}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt auf dem Bildschirm den Inhalt von nachricht, wenn bei der
+Bearbeitung der \typeout Befehl erreicht wird. Der Inhalt von
+nachricht wird zus„tzlich in  den .log File geschrieben.
+
+siehe: ^\typein^ø\typeinø
+       (Kap. 8.1.3)
+ 
+@@@\u
+  \u{zeichen}
+  ßßßßßßßßßßß
+Erzeugt einen "Breve Akzent" ber Zeichen.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+
+@@@\umlauthigh
+  \umlauthigh   [g]
+  ßßßßßßßßßßßßßßßßß
+Interner Befehl aus ^german^øgermanø.sty, mit dem Umlautpnktchen h”her
+als bei deutschen Standardumlauten angebracht werden.
+
+siehe: ^\umlautlow^ø\umlautlowø
+       (Kap. D.1.1)
+
+@@@\umlautlow
+  \umlautlow   [g]
+  ßßßßßßßßßßßßßßßß
+Interner Befehl aus ^german^øgermanø.sty, mit dem der deutsche Standardabstand
+der Umlautpnktchen zum darunterstehenden Umlautvokal eingestellt wird.
+Nach einem vorangegangenen ^\umlauthigh^ø\umlauthighø kann mit \umlautlow
+auf das Standardverhalten zurckgeschaltet werden.
+
+siehe: (Kap. D.1.1)
+ 
+@@@\unboldmath
+  \unboldmath   [z]
+  ßßßßßßßßßßßßßßßßß
+Rckschaltbefehl zu ^\boldmath^ø\boldmathø. Der Befehl muá auáerhalb des
+mathematischen Modes gesetzt werden. Danach werden Formeln wieder
+standardm„áig  in "Math. Italic" geschrieben.
+
+siehe: (Kap. 5.4.9)
+ 
+@@@\underbrace
+  \underbrace{formelteil}   [m]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine horizontale geschweifte Klammer unter einem Formelteil.
+Anschlieáende Tiefstellung erfolgt zentriert unter horizontaler
+Klammer.
+
+siehe: ^\overbrace^ø\overbraceø
+       ^\overline^ø\overlineø
+       ^\underline^ø\underlineø
+       (Kap. 5.4.4)
+ 
+@@@\underline
+  \underline{text}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßß
+Erzeugt eine horizontale Linie unter text sowohl im math.
+Mode fr Teilformeln als auch fr normalen Text.
+
+siehe: ^\overbrace^ø\overbraceø
+       ^\overline^ø\overlineø
+       ^\underbrace^ø\underbraceø
+       (Kap. 5.4.4)
+
+@@@\unitlength
+  \unitlength
+  ßßßßßßßßßßß
+Definiert die L„ngeneinheiten fr die nachfolgenden ^picture^øpictureø
+Umgebungen:
+ \unitlength1.2cm oder ^\setlength^ø\setlengthø{\unitlength}{1.2cm}
+bestimmt als L„ngeneinheit 1.2cm.
+
+siehe: (Kap. 6.1)
+
+@@@\usebox
+  \usebox{\boxname}
+  ßßßßßßßßßßßßßßßßß
+Erzeugt den Inhalt von \boxname, der mit
+^\newsavebox^ø\newsaveboxø{\boxname} eingerichtet und mit ^\sbox^ø\sboxø
+oder ^\savebox^ø\saveboxø Befehlen gefllt und abgespeichert worden war.
+
+siehe: (Kap. 4.7.1)
+ 
+@@@\usecounter
+  \usecounter{z„hler}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßß
+Befehl in der Listenerkl„rung einer ^list^ølistø Umgebung, der
+bewirkt, daá der in der Standardmarke benutzte z„hler mit
+jedem ^\item^ø\itemø Befehl um eins erh”ht wird.
+
+siehe: (Kap. 4.4.1)
+ 
+@@@\USenglish
+  \USenglish   [g]
+  ßßßßßßßßßßßßßßßß
+Umschaltungsname auf USenglische Sprachstrukturen mit ^\selectlanguage^ø\selectlanguageø.
+
+siehe: ^\austrian^ø\austrianø
+       ^\english^ø\englishø
+       ^\french^ø\frenchø
+       ^\german^ø\germanø
+       ^\USenglish^ø\USenglishø
+       ^german^øgermanø.sty
+       (Kap. D.1.6)
+
+@@@\v
+  \v{zeichen}
+  ßßßßßßßßßßß
+Erzeugt einen "H cek Akzent" ber Zeichen.
+
+siehe: ^Akz^øAkzenteø
+       (Kap. 2.5.7)
+ 
+@@@\value
+  \value{z„hler}   [z]
+  ßßßßßßßßßßßßßßßßßßßß
+Stellt den augenblicklichen Wert von z„hler zur Verfgung, z. B.
+wird mit ^\setcounter^ø\setcounterø{z„hler1}{\value{z„hler2}}
+der Wert von z„hler2 an z„hler1 bergeben.
+
+siehe: ^\the^ø\theøz„hler
+       (Kap. 7.1.3)
+ 
+@@@\vec
+  \vec{x}   [m]
+  ßßßßßßßßßßßßß
+Vektor-Symbol ber math. Variable x.
+
+siehe: ^mAkz^ømathematische Akzenteø
+       (Kap. 5.3.9)
+ 
+@@@\vector
+  \vector(Delta_x,Delta_y){l„nge}   [z]
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Bildobjektbefehl innerhalb der ^picture^øpictureø Umgebung zur Erzeugung
+beliebiger horizontaler und vertikaler Pfeile sowie einer
+begrenzten Zahl geneigter Pfeile. Bei hor. und vert. Pfeilen
+stellt l„nge die L„nge in den mit ^\unitlength^ø\unitlengthø gesetzten
+L„ngeneinheiten dar. Bei geneigten Pfeilen bedeutet l„nge die
+Projektion der Pfeill„nge auf die x-Achse.
+Die Neigung wird durch das Neigungspaar (Delta_x,Delta_y) bestimmt,
+das nur ganzzahlige Werte -4 <= Delta_x <= 4 und -4 <= Delta_y <= 4
+annehmen darf.
+
+siehe: ^\line^ø\lineø
+       ^\linethickness^ø\linethicknessø
+       (Kap. 6.4.4)
+ 
+@@@\verb
+  \verb/text_original/
+  ßßßßßßßßßßßßßßßßßßßß
+Der durch / / eingeschachtelte Text wird in Schreibmaschinenschrift
+so ausgegeben, wie er im Original eingegeben ist. Fr / darf jedes
+Zeichen mit Ausnahme von *, das nicht im Originaltext auftritt, benutzt
+werden. Es bernimmt die Funktion der Einschachtelung von text_original.
+
+Die \verb*/text_original/ Form hebt zur Verdeutlichung Leerzeichen hervor.
+
+siehe: (Kap. 4.10)
+ 
+@@@\vfill
+  \vfill
+  ßßßßßß
+Vertikaler Zwischenraum beliebiger Dehnbarkeit zwischen Textzeilen
+oder Abs„tzen bzw. Leerraumauffllung am unteren Seitenrand.
+Der Befehl steht als Abkrzung fr ^\vspace^ø\vspaceø{^\fill^ø\fillø}.
+
+siehe: (Kap. 3.5.3)
+
+@@@\vline
+  \vline
+  ßßßßßß
+Vertikaler Zwischenstrich innerhalb eines Spalteneintrages bei
+einer Tabelle.
+
+siehe: (Kap. 4.8.1)
+ 
+@@@\voffset
+  \voffset   [v]
+  ßßßßßßßßßßßßßß
+Oberer Bezugsrand bei der Seitenformatierung. Standartwert ist 0pt,
+der Bezugsrand damit gleich dem physikalischen Druckerrand.
+^Wertzuweisung^øWertzuweisungø mit ^\setlength^ø\setlengthø oder durch Anh„ngen einer evtl.
+auch negativen Maázahl.
+ 
+siehe: ^\hoffset^ø\hoffsetø
+
+@@@\vspace
+  \vspace{abstand}
+  ßßßßßßßßßßßßßßßß
+Erzeugt vertikalen Zwischenraum der L„nge abstand. Zwischenraum am
+Anfang oder Ende einer Seite wird unterdrckt.
+
+Die \vspace*{abstand} Form erzeugt vertikalen Zwischenraum der
+L„nge abstand, auch wenn der Befehl am Anfang oder Ende einer
+Seite steht. Mit \vspace*{^\fill^ø\fillø} kann beliebig dehnbarer
+Zwischenraum auch am Seitenanfang eingerichtet werden.
+
+siehe: ^Abst„nde^øAbst„ndeø
+       (Kap. 3.5.3)
+ 
+@@@\widehat
+  \widehat{arg}   [m]
+  ßßßßßßßßßßßßßßßßßßß
+Erzeugt ein breites ^\hat^ø\hatø Symbol ber mehrere Zeichen.
+
+siehe: ^\widetilde^ø\widetildeø
+       (Kap. 5.3.9)
+
+@@@\widetilde
+  \widetilde{arg}   [m]
+  ßßßßßßßßßßßßßßßßßßßßß
+Erzeugt ein breites ^\tilde^ø\tildeø Symbol ber mehrere Zeichen.
+
+siehe: ^\widehat^ø\widehatø
+       (Kap. 5.3.9)
+
+@@@Stil
+  Stil-Befehle
+  ßßßßßßßßßßßß
+Die folgenden Befehle beeinflussen den Schriftstil:
+  \rm   setzt den normalen Stil (roman)
+  \tt   schaltet um auf Schreibmaschinenschrift
+  \sf   schaltet um auf Sanf Serif
+  \sl   schaltet auf geneigte Schrift um
+  \cal  schaltet auf calligraphische Schrift
+  \bf   schaltet auf Fettschrift
+  \em   hebt hervor durch Umschaltung von normal auf kursiv
+        bzw. umgekehrt
+  \it   schaltet auf kursiv um
+  \sc   schaltet auf kleine Groábuchstaben (Small Caps)
+  \mit  schaltet auf math italics
+
+siehe: ^šbersicht^øšbersichtø
+       ^Gr”áen^øSchriftgr”áeø
+
+@@@Gr”áen
+  Fontgr”áen-Befehle
+  ßßßßßßßßßßßßßßßßßß
+  \tiny          winzig        \large   groá
+  \scriptsize    sehr klein    \Large   gr”áer
+  \footnotesize  Fuánote       \LARGE   noch gr”áer
+  \small         klein         \huge    riesig
+  \normalsize    normal        \Huge    gigantisch
+
+siehe: ^šbersicht^øšbersichtø
+       ^Stil^øStil-Befehleø
+
+@@@Einh
+  TeX-Maáeinheiten
+  ßßßßßßßßßßßßßßßß
+ mm  Millimeter           pt Punkt (1in = 72.27pt)
+ cm  Zentimeter           pc Pica (1pc = 12pt)
+ in  Inch (1in = 2.54cm)  bp big point (1in = 72bp)
+ dd  (1157dd = 1238pt)    cc Cicero (1cc = 12dd)
+ sp  (1pt = 63536sp)
+ em  Die Breite des Gedankenstrichs im aktiven Zeichensatz
+ ex  Die H”he eines "x" im aktiven Zeichensatz
+
+siehe: ^šbersicht^øšbersichtø
+
+@@@Akz
+  Akzent-Befehle
+  ßßßßßßßßßßßßßß
+  \`    "Gravis Akzent" \`a = …
+        in der Umgebung ^tabbing^øtabbingø: Nachfolgender Text
+        wird rechtsbndig ans Ende der Zeile gesetzt.
+  \'    "Akut Akzent" \'a =  
+        in der Umgebung ^tabbing^øtabbingø Sprungbefehl
+        ans Ende der vorangehenden Spalte
+  \^^    "Circumflex Akzent" \^^a = ƒ
+  \~~    Tilde als Akzent \~~n = ¤
+  \=    "Makron Akzent" = Dach ber dem Argument
+        in der Umgebung ^tabbing^øtabbingø Setzen eines Tabstops
+        an der momentanen Stelle in der Zeile
+  \.    "Punkt Akzent" = Punkt ber dem Argument
+  \u    "Breve Akzent"
+  \v    "H cek Akzent" = umgekehrter Circumflex Akzent
+  \H    Ungarischer Doppelakut Akzent
+  \t    "Verbindungsakzent"
+  \c    Cedille \c{C} = €
+  \d    Punkt unter dem Argument
+  \b    Unterstrich unter dem Argument
+
+siehe: ^šbersicht^øšbersichtø
+@@@Sonder
+  Sonderzeichen
+  ßßßßßßßßßßßßß
+Sonderbuchstaben:
+ {\oe}    {\OE}    {\ae} ‘  {\AE} ’
+ {\aa} †  {\AA}   {\o}     {\O}
+ {\l}     {\L}       ?`  ¨    !`  ­
+
+Sonderzeichen:
+ \dag     \S      \copyright
+ \ddag    \P      \pounds œ
+
+Befehlszeichen:
+ \$ $     \% %     { \{     _ \_
+ \& &     \# #     } \}
+
+siehe: ^Greek^øgriechische Buchstabenø
+       ^BinOp^øbin„re Operationssymboleø
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+~>>>~ Page down
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@Greek
+ griechische Buchstaben
+ ßßßßßßßßßßßßßßßßßßßßßß
+Kleinbuchstaben:
+ \alpha  à     \kappa        \phi    í
+ \beta   á     \lamda        \varphi
+ \gamma        \mu     æ     \chi
+ \delta  ë     \nu           \psi
+ \epsilon      \xi           \omega
+ \varepsilon   \pi     ã     \tau    ç
+ \zeta         \varpi        \upsilon
+ \eta          \rho
+ \theta        \varrho
+ \vartheta     \sigma  å
+ \iota         \varsigma
+
+Groábuchstaben:
+ \Gamma  â     \Xi           \Phi    è
+ \Delta        \Pi           \Psi
+ \Theta  é     \Sigma  ä     \Omega  ê
+ \Lamda        \Upsilon
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^BinOp^øbin„re Operationssymboleø
+~>>>~ Page down
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@BinOp
+  bin„re Operationssymbole
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+ \pm    ñ      \circ         \bigcirc
+ \mp           \bullet       \Box
+ \times        \diamond      \Diamond
+ \div   ö      \setminus     \vee
+ \cdot  ù      \wr           \wedge
+ \ast   *      \cap          \lhd
+ \star         \cup          \rhd
+ \dagger       \sqcap        \unlhd
+ \ddagger      \sqcup        \unrhd
+ \amalg        \uplus        \bigtriangleup
+ \oplus        \oslash       \bigtriangledown
+ \ominus       \odot         \triangleleft
+ \otimes                     \triangleright
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+~>>>~ Page down
+       ^mAkz^ømathematische Akzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@mComp
+  mathematische Vergleichssymbole
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ \le \leq  ó   \ge \geq  ò   \neq
+ \ll           \gg           \doteq
+ \sim          \simeq        \asymp
+ \subset       \supset       \approx
+ \subseteq     \supseteq     \cong
+ \sqsubset     \sqsupset     \equiv  ğ
+ \sqsubseteq   \sqsupseteq   \propto
+ \in    î      \ni           \notin
+ \vdash        \dashv        \prec
+ \models       \perp         \preceq
+ \smile        \mid |        \parallel \|
+ \frown        \bowtie       \succ
+                             \succeq
+
+ Negierung durch Voranstellen von \not
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+       ^BinOp^øbin„re Operationssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+~>>>~ Page down
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@mArrow
+  Pfeil- und Zeigersymbole
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+ \leftarrow \gets            \longleftarrow
+ \Leftarrow                  \Longleftarrow
+ \rightarrow                 \longrightarrow
+ \Rightarrow                 \Longrightarrow
+ \leftrightarrow             \longleftrightarrow
+ \Leftrightarrow             \Longleftrightarrow
+ \uparrow                    \Uparrow
+ \downarrow                  \Downarrow
+ \updownarrow                \Updownarrow
+ \nearrow                    \searrow
+ \swarrow                    \nwarrow
+ \mapsto                     \longmapsto
+ \hookleftarrow              \hookrightarrow
+ \leftharpoonup              \rightharpoonup
+ \leftharpoondown            \rightharpoondown
+ \leftrightharpoons          \leadsto
+
+ \iff=\Longleftrightarrow mit seitlichem Abstand
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+~>>>~ Page down
+       ^BinOp^øbin„re Operationssymboleø
+       ^mComp^øVergleichssymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@mSymb
+  sonstige mathematische Symbole
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ \aleph        \surd         \|
+ \hbar         \partial      \angle
+ \imath        \top          \backslash
+ \jmath        \bot          \Box
+ \ell          \vdash        \Diamond
+ \wp           \dashv        \triangle
+ \Re           \forall       \clubsuit
+ \Im           \exists       \diamondsuit
+ \mho          \neg          \heartsuit
+ \prime        \flat         \spadesuit
+ \emptyset     \natural      \Join
+ \nabla        \sharp        \infty
+
+  Mathematische Symbole in zwei Gr”áen
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ \sum          \bigcap       \bigodot
+ \int          \bigcup       \bigotimes
+ \oint         \bigsqcup     \bigoplus
+ \prod         \bigvee       \biguplus
+ \coprod       \bigwedge
+
+~>>>~ Page down
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+       ^BinOp^øbin„re Operationssymboleø
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@mFunc
+  mathematische Funktionsnamen
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ \arccos   \csc      \ker      \min
+ \arcsin   \deg      \lg       \Pr
+ \arctan   \det      \lim      \sec
+ \arg      \dim      \liminf   \sin
+ \cos      \exp      \limsup   \sinh
+ \cosh     \gcd      \ln       \sup
+ \cot      \hom      \log      \tan
+ \coth     \inf      \max      \tanh
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+       ^BinOp^øbin„re Operationssymboleø
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@mAkz
+  mathematische Akzente
+  ßßßßßßßßßßßßßßßßßßßßß
+ \acute    \check    \grave
+ \bar      \ddot     \hat
+ \breve    \dot      \tilde
+                     \vec
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+       ^BinOp^øbin„re Operationssymboleø
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mKlammer^øKlammersymboleø
+       ^šbersicht^øšbersichtø
+
+@@@mKlammer
+  Klammersymbole
+  ßßßßßßßßßßßßßß
+ (         )         \lfloor   \rfloor
+ [         ]         \lceil    \rceil
+ \{        \}        \langle   \rangle
+ |         \|        /         \backslash
+
+siehe: ^Sonder^øSonder- und Befehlszeichenø
+       ^Greek^øgriechische Buchstabenø
+       ^BinOp^øbin„re Operationssymboleø
+       ^mComp^øVergleichssymboleø
+       ^mArrow^øPfeil- und Zeigersymboleø
+       ^mSymb^øsonstige mathematische Symboleø
+       ^mFunc^øFunktionsnamenø
+       ^Akz^øAkzenteø
+       ^mAkz^ømathematische Akzenteø
+       ^šbersicht^øšbersichtø
+
+@@@Abst„nde
+  horizontale Abst„nde
+  ßßßßßßßßßßßßßßßßßßßß
+Feste Abst„nde:
+ \quad   1em, Befehl aus lfonts.tex
+ \qquad  2em, Befehl aus lfonts.tex
+ ~~       normaler Wortzwischenraum, nach dem kein
+         Zeilenumbruch erfolgen darf
+ \       (\backslash mit Leerzeichen) normaler
+         Zwischenraum nach einem Befehl ohne Parameter
+         oder einem Punkt, der kein Satzende sein soll
+ \!      negativer Zwischenraum von -1/6 quad in Formeln
+ \,      kleiner Zwischenraum von 1/6 quad in Text und
+         Formeln
+ \:      mittlerer Zwischenraum von 2/9 quad in Formeln
+ \;      groáer Zwischenraum von 5/18 quad in Formeln
+ \@      Zusatzzwischenraum am Satzende nach dem Punkt,
+         wenn der Satz mit einem Groábuchstaben endet
+
+Dehnbare Abst„nde:
+ \fill   elastisches Maá der natrlichen L„nge "Null
+         Einheiten", das auf jede beliebige L„nge gedehnt
+         werden kann
+ \hfill  definiert als \hspace{\fill}
+~>>>~ Page down
+ \hspace{Weite}
+         erzeugt horizontalen Zwischenraum der L„nge Weite.
+         Zwischenraum am Anfang oder Ende einer Zeile wird
+         unterdrckt.
+ \hspace*{Weite}
+         erzeugt horizontalen Zwischenraum der L„nge Weite,
+         auch wenn der Befehl am Anfang oder Ende einer Zeile
+         steht. Mit \hspace{\fill} kann beliebig elastischer
+         Leerraum auch am Zeilenanfang eingerichtet werden.
+ \stretch{Dezimal_zahl}
+         erzeugt eine L„nge mit dem natrlichen Wert 0cm,
+         deren Elastizit„t das durch Dezimal_zahl bestimmte
+         Vielfache von \fill erreichen kann.
+
+siehe: ^šbersicht^øšbersichtø
+
+@@@BibTeX
+  BibTeX
+  ßßßßßß
+ist ein Untersttzungsprogramm zu LaTeX, das gestattet, in
+einem LaTeX-Dokument auf eine oder mehrere Literaturdatenbanken
+zur automatischen Erzeugung eines Literaturverzeichnisses
+zurckzugreifen. Hierzu ist in dem LaTeX-Dokument der Befehl
+ ^\bibliography^ø\bibliographyø{Lit_bank1,Lit_bank2,..}
+anzubringen. Lit_bank1, Lit_bank2,.. sind die Grundnamen der
+Datenbankfiles, also die namen ohne den Anhang .bib.
+Innerhalb des LaTeX-Dokuments kann an beliebigen Stellen mit
+ ^\cite^ø\citeø{Schlsselwort}
+Befehlen auf die Datenbankinformation Bezug genommen werden.
+Nach der LaTeX-Bearbeitung (^TeCo^øTeX³Composeø) muá dann das
+BibTeX-Programm ablaufen (^TeBi^øTeX³BibTeXø), das eine Datei mit
+der Extension .bbl erzeugt. Diese Datei enth„lt die aus den
+Datenbanken extrahierte Information ber alle Literaturstellen,
+auf die im laufenden Text mit \cite Befehlen verwiesen wurde.
+
+Gelegentlich soll das Literaturverzeichnis auch Angaben enthalten,
+auf die im laufenden Text nicht mit \cite Befehlen verwiesen wurde.
+Hierzu ist der Befehl
+ ^\nocite^ø\nociteø{Schlsselwort}
+gedacht. Die \nocite Befehle k”nnen an beliebigen Stellen nach
+~>>>~ Page down
+^ds^ø\documentstyleø angeordnet werden, also sowohl im Vorspann als
+auch im laufenden Text. Sie erzeugen keinerlei Bezugstext, sondern
+dienen nur dazu, daá bei der anschlieáenden BibTeX-Bearbeitung
+die den Schlsselw”rtern zugewiesenen Informationen in
+die .bbl-Datei aufgenommen werden.
+
+Nach zwei erneuten LaTeX-Bearbeitungen (^TeCo^øTeX³Composeø) erzeugt
+der ^\bibliography^ø\bibliographyø Befehl dann aus der .bbl-Datei das eigentliche
+Literaturverzeichnis, und zwar an der Stelle, an der dieser Befehl
+steht. Dies wird meistens am Ende des Dokuments sein. Der Stil fr
+das Literaturverzeichnis kann mit dem Befehl
+ ^\bibliographystyle^ø\bibliographystyleø{stil}
+beeinfluát werden. Dieser Befehl kann an beliebiger Stelle nach
+^\begin^ø\beginø{^document^ødocumentø} stehen. An Stilparametern stehen
+ ^\bibliographystyle^øplainø, ^\bibliographystyle^øunsrtø, ^\bibliographystyle^øalphaø und ^\bibliographystyle^øabbrvø
+zur Verfgung.
+
+siehe: ^Makešbersicht^øMakešbersichtø
+       ^šbersicht^øšbersichtø
+
+@@@Makešbersicht
+  Makešbersicht -- ein Stichwortprozessor
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+Die mhsame manuelle Erstellung der ^theindex^øtheindexø Umgebung zur
+Erzeugung eine šbersichtregisters entf„llt, wenn das Programm
+Makešbersicht zur Verfgung steht. Es stammt von Pehong Chen mit
+Untersttzung durch Leslie Lamport. Seine Anwendung wird hier
+in Kurzform vorgestellt. Das Buch 'LaTeX-Erweiterungsm”glichkeiten
+-- mit einer Einfhrung in METAFONT' von Helmut Kopka enth„lt
+eine ausfhrlichere Beschreibung.
+
+Das Programm Makešbersicht verarbeitet die .idx-Datei und erzeugt
+eine Datei mit dem Grundnamen des Dokuments und dem Anhang .ind.
+Dieser enth„lt die vollst„ndige theindex Umgebung. Das Programm
+wird mit ^TeIn^øTeX³Makešbersichtø gestartet, eine anschlieáende
+LaTeX-Bearbeitung mit ^TeCo^øTeX³Composeø erzeugt das šbersichtregister
+an der Stelle des Befehls ^\printindex^ø\printindexø. Dieser Befehl wird,
+zusammen mit dem Befehl ^\see^ø\seeø, mit der kurzen Datei makeidx.sty
+bereitgestellt. Die Erzeugung des šbersichtregisters setzt damit die
+Optionsangabe makeidx in ^ds^ø\documentstyleø voraus.
+
+Das Programm Makešbersicht erwartet die Eintr„ge bei den ^\index^ø\indexø
+Befehlen in einer der drei Formen
+  \index{Haupteintrag}
+~>>>~ Page down
+  \index{Haupteintrag!Sub_eintrag}
+  \index{Haupteintrag!Sub_eintrag!Sub_sub_eintrag}
+Die einzelnen Haupt- und Untereintr„ge drfen beliebige
+Zeichen mit Ausnahme von ^!^ø!ø, ^@^ø@ø und ^|^ø|ø enthalten. Das
+Ausrufezeichen wird als Trennzeichen zwischen den Eintragfeldern
+interpretiert.
+.endpara
+Enth„lt der \index Befehl nur einen Haupteintrag,
+so wird dieser Text fr den ^\item^ø\itemø Befehl verwendet. Die \item
+Befehle werden in der erzeugten theindex Umgebung in alphabetischer
+Ordnung entsprechend dem Eintragtext angeordnet.
+.endpara
+Erfolgte der šbersichteintrag in der zweiten Form, so wird der Text
+von Sub_eintrag fr den ^\subitem^ø\subitemø Befehl benutzt und dieser in
+alphabetischer Reihenfolge fr den Text von Sub_eintrag dem zugeh”rigen
+Haupteintrag zugeordnet. Ein šbersichteintrag der dritten Form benutzt
+den Text von Sub_sub_eintrag fr den ^\subsubitem^ø\subsubitemø Befehl und
+ordnet diesen alphabetisch geordnet dem \subitem Eintrag zu.
+
+Die Haupt- und Untereintr„ge  drfen auch in der Form
+  Lex_eintrag@Druck_eintrag
+erfolgen. Dies hat zur Folge, daá als Text fr die \item, \subitem
+bzw. \subsubitem Befehle der Inhalt von Druck_eintrag erscheint. Die
+~>>>~ Page down
+Anordnung dieser Befehle, also ihre Reihenfolge, ist durch den
+lexikalischen Wert von Lex_eintrag bestimmt.
+
+Haupt- und Untereintr„ge drfen mit den Zeichensequenzen |( und |)
+abschlieáen. Dies bewirkt bei den Seitenangaben fr das zugeordnete
+šbersichtwort eine von-bis Angabe. Mit
+  \index{Bilder!abspeichern|(} auf Seite 136 und
+  \index{Bilder!abspeichern|)} auf Seite 138
+erscheint der Untereintrag 'abspeichern' zum Haupteintrag 'Bilder'
+mit der Seitenangabe 136--138. Ein šbersichteintrag kann auch mit
+|see(verweis) abgeschlossen werden:
+  \index{Sollwert|see{elastische Maáe}}
+erzeugt im šbersichtregister den Eintrag 'Sollwert, siehe elastische
+Maáe'.
+
+Die drei Zeichen !, @ und | haben fr Makešbersicht die beschriebene
+Sonderfunktion. Sollen sie ausnahmsweise als Textzeichen im
+šbersichtregister erscheinen, so sind sie zu maskieren. Als
+Maskierungszeichen verwendet Makešbersicht die Anfhrungsstriche.
+Mit der Angabe ^"^ø"ø! verliert das Ausrufezeichen seine Bedeutung
+als Trennzeichen und erscheint als '!' im šbersichtregister.
+Die Sonderbedeutung der Anfhrungszeichen wird durch deren
+Maskierung, also durch "", aufgehoben. Damit die Anfhrungszeichen
+~>>>~ Page down
+in šbersichteintr„gen ihre Befehlsfunktion bei der Verwendung von
+^german^øgermanø.sty zurckerhalten, sind sie dort stets doppelt zu
+schreiben.
+
+Soll ein LaTeX-Befehl im šbersichteintrag seine Befehlswirkung
+entfalten, so muá dort statt des Befehlszeichens \ der Querstrich |
+verwendet werden. Um zum Beispiel eine Seitenangabe unterstrichen
+zu setzen, kann man im Vorspann
+  \newcommand{\uu}[1]{\underline{#1}}
+definieren und dann
+  \index{Eintrag|uu}
+schreiben; die durch diesen \index Befehl erzeugte Seitenangabe
+wird dann unterstrichen. In gleicher Weise k”nnte mit der Definition
+  \newcommand{\ii}[1]{{\it#1}}   oder
+  \newcommand{\bb}[1]{{\bf#1}}
+und dem Abschluá des šbersichteintrags mit |ii oder |bb die Seitenangabe
+mit kursiven bzw. fetten Zahlen erreicht werden.
+
+siehe: ^BibTeX^øBibTeXø
+       ^šbersicht^øšbersichtø
+
+@@@german
+  german.sty
+  ßßßßßßßßßß
+Beim 6. Treffen der deutschen TeX-Interessenten in Mnster
+(Oktober 1987) wurde Einigung ber ein `Minimal Subset von
+einheitlichen deutschen TeX-Befehlen' erzielt, das seitdem
+an allen Installationen von TeX und LaTeX zur Verfgung stehen
+und fr deutschsprachige Texte verwendet werden soll.
+Damit wird erreicht, daá alle TeX- und LaTeX-Dokumente,
+die diese Befehle enthalten, problemlos von einem Rechner zum
+anderen bertragen werden k”nnen.
+
+Der in Mnster festgelegte Befehlssatz umfaát die folgenden Befehle:
+  ^"^ø"øa   als Abkrzung fr \"a (Umlaute wie „)
+       -- auch fr alle anderen Vokale
+  ^"s^ø"sø   als Abkrzung fr \ss (scharfes s: á),
+  ^"ck^ø"ckø  fr `ck', das als `k-k' abgeteilt wird,
+  ^"tt^ø"ttø  fr `tt', das als `tt-t' abgeteilt wird
+       -- auch fr die anderen relevanten Konsonanten,
+  ^"`^ø"`ø   oder ^\glqq^ø\glqqø fr untere und
+  ^"'^ø"'ø   oder ^\grqq^ø\grqqø fr obere deutsche Anfhrungszeichen
+       (G„nsefáchen),
+  ^\glq^ø\glqø fr untere und
+  ^\grq^ø\grqø fr obere einfache Anfhrungszeichen,
+~>>>~ Page down
+  ^"<^ø"<ø   oder ^\flqq^ø\flqqø fr linke und
+  ^">^ø">ø   oder ^\frqq^ø\frqqø fr rechte ®franz”sische Anfhrungszeichen¯
+       (guillemets),
+  ^\flq^ø\flqø fr linke und
+  ^\frq^ø\frqø fr rechte einfache franz”sische Anfhrungszeichen,
+
+  ^"|^ø"|ø   fr die Trennung von Ligaturen,
+  ^"-^ø"-ø   fr eine Silbentrennstelle „hnlich wie
+       bei ^\-^ø\-ø, bei der aber die automatische
+       Silbentrennung im Rest des Wortes erhalten
+       bleibt,
+  ^""^ø""ø   fr eine analoge Trennstelle, bei der aber
+       im Fall der Trennung kein Trennstrich hinzugefgt
+       wird,
+  ^\dq^ø\dqø  fr das Ausdrucken des Quote-Zeichens,
+
+  ^\selectlanguage^ø\selectlanguageø{}
+       fr das Umschalten zwischen
+         ^\german^ø\germanø         deutschen,
+         ^\austrian^ø\austrianø       ”sterreichischen,
+         ^\english^ø\englishø        englischen,
+         ^\USenglish^ø\USenglishø      amerikanischen und
+~>>>~ Page down
+         ^\french^ø\frenchø         franz”sischen
+       Datumsangaben und šberschriften.
+
+  ^\originalTeX^ø\originalTeXø
+       fr das Zurckschalten auf Original-TeX bzw. -LaTeX.
+  ^\germanTeX^ø\germanTeXø
+       fr das Wiedereinschalten der deutschen TeX-Befehle.
+
+Die Befehle fr Umlaute und scharfes s und/oder die
+Hyphenation Patterns sind so definiert, daá auch in
+Silben nach einem Umlaut oder scharfen s die automatische
+Silbentrennung funktioniert.
+
+Diese Definitionen werden mit dem TeX-Befehl
+  ^\input^ø\inputø german.sty
+bzw. bei LaTeX mit einem ^ds^ø\documentstyleø-Befehl wie
+  \documentstyle[11pt,german]{article}
+in die Eingabedatei eingefgt.
+
+Eine ausfhrliche Beschreibung aller Befehle findet man
+in der Datei GERMDOC.TEX.
+
+siehe: ^šbersicht^øšbersichtø
+@@@Wertzuweisung
+  Wertzuweisung
+  ßßßßßßßßßßßßß
+Die Zuweisung eines Wertes an einen L„ngenbefehl geschieht
+durch ^\setlength^ø\setlengthø oder durch unmittelbares Anh„ngen einer
+(ev. elastischen) Maáangabe.
+Beispiel:
+ \setlength{\abovedisplayskip}{10pt plus2pt minus5pt}
+ \abovedisplayskip10pt plus2pt minus5pt
+Beides ist gleichwertig.
+
+Die nderung von Faktoren geschieht durch ^\renewcommand^ø\renewcommandø:
+ \renewcommand{\baselinestretch}{1.5}
+
+Die nderung von Z„hler geschieht durch ^\setcounter^ø\setcounterø:
+ \setcounter{dbltopnumber}{num}
+
+siehe: ^šbersicht^øšbersichtø
+

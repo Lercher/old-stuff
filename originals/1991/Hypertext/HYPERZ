@@ -1,0 +1,615 @@
+Hypertexthife fr Fr. Zirngibl.
+Sie haben eine ~noch nicht eingegebene~ Seite gew„hlt. Tut mir leid.
+Drcken Sie bitte øESCø.
+
+@@@Der Einstieg
+Fahren Sie die gewnschten roten Punkte mit ~-->~ bzw ~<--~ an und drcken
+Sie ~RETURN~. So gelangen Sie zur entsprechenden Seite.
+Mit der ~ESC~-Taste gehen Sie zu alten Seiten zurck. Ende mit ~q~.
+Mit der Taste ~F1~ erhalten Sie eine šbersicht ber alle vorhandenen Seiten.
+
+Zur den Beispielen:
+Die Farbe øblauø beschreibt Sachen, die Sie w”rtlich eintippen mssen.
+Die Farbe ~grn~ dient nur der Hervorhebung von Begriffen.
+
+Hilfe zu:
+  ^MSDOS^ Das Betriebssystem ~MSDOS~.
+  ^edwin^ Der Editor ~Edwin~.
+  ^DosTeX^ Die TeX-Benutzung von MSDOS aus (øtvø, øedø, ...).
+  ^LaTeX^ Textformatierung mit ~LaTeX~
+
+@@@edwin
+Drcken Sie øqø um dieses Programm zu verlassen und danach øF1ø um Hilfe
+zu ~edwin~ zu erhalten.
+
+@@@MSDOS
+        ~MSDOS-Hilfe~
+^Dateien^ Dateien
+^Verzeichnisse^ Verzeichnisse
+^Dateinamen^ Dateinamen
+^Dateitypen^ Dateitypen
+
+^Hilfsprogramme^ Hilfsprogramme (øcopyø, øddø, ...)
+
+@@@Verzeichnisse
+Verzeichnisse sind spezielle ^Dateien^Dateien, die als ^Dateien^Inhalt ^Dateien^Namen
+von anderen Dateien und Verzeichnissen enthalten.
+Dies fhrt zu einen baumartigen Verzweigung von Verzeichnissen:
+
+                        øaufgø   øopitzø
+                          \     /
+                           -----
+                             |
+  øutilsø   ødos4ø   øneukirchø  øj„nichø  ...
+     \     |        |        |     /
+      -----------------------------
+                  |
+                  ø\ø
+
+Man wechselt Verzeichnisse mit dem ^Hilfsprogramme^øcdø Kommando.
+
+@@@Dateien
+Eine Datei besteht aus einem ^Dateinamen^Dateinamen und dem
+eigentlichen ~Inhalt~ der Datei (einer Folge von Buchstaben).
+Auch ein ^Verzeichnisse^Verzeichnis ist nur eine (spezielle) Datei.
+
+Beispiel: Diese Datei heiát øaufg8.texø und hat den Inhalt
+  ø\documentstyle[ø ...
+  ø\begin{document}ø
+  øDas ist das 8. Aufgabenblattø
+  øHier ist die erste Aufgabe:ø ...
+  ...
+  ø\end{document}ø
+
+@@@Hilfsprogramme
+^Dateinamen^Quelle und ^Dateinamen^Ziel sind Dateinamen.
+  øcopyø Quelle Ziel
+     Kopiere Quelle nach Ziel.
+  ødelø Quelle
+     L”sche Quelle. (^Dateien^Inhalt und ^Dateien^Name werden entfernt)
+  øtypeø Quelle
+     gibt den ^Dateien^Inhalt von Quelle auf den Bildschirm aus.
+  øddø, ødirø
+     gibt eine Liste der ^Dateien^Namen der Dateien des aktuellen ^Verzeichnisse^Verzeichnisses aus.
+  øcdø Verzeichnis
+     wechsle zu ^Verzeichnis^Verzeichnis (dies ist auch nur ein ^Dateiname^Dateiname.)
+  ørenø Quelle Ziel
+     Bennene die Datei Quelle in Ziel um (Inhalt bleibt).
+@@@Dateinamen
+Ein Dateiname besteht aus ~Name~ und ~Extension~. Diese werden durch einen
+Punkt ø.ø voneinander getrennt.
+Beispiele:
+  øaufg8.texø   Name øaufg8ø, Extension øtexø.
+  ødatenø       Name ødatenø, keine Extension.
+
+Einen Dateinamen kann man ~absolut~ (mit ø\ø vorne) oder ~relativ~ eingeben.
+Beispiele:
+  øaufg8.texø           relativ
+  ø..\aufg8.dviø        relativ
+  øxyz\haha\x.logø      relativ
+  ø\j„nich\buch.styø    absolut
+  ø\umlaut.styø         absolut
+
+@@@Dateitypen
+Man trifft fr ^Dateinamen^Extensionen folgende Konventionen:
+  ø.texø eine TeX Datei.
+  ø.styø eine ^Styles^LaTeX-Style Datei mit Formatierungsanweisungen.
+  ø.logø das Protokoll eines TeX Laufs.
+  ø.auxø, ø.tocø, ø.lofø, ø.lotø LaTeX-Hilfsdateien.
+  ø.dviø die Datei mit den graphischne Informationen, wie das Dokument
+       auszusehen hat.
+  ø.exeø, ø.comø, ø.batø Ausfhrbare Programme.
+  ø.docø, ø.dokø, ø.txtø Einfache Texte, die man sich z.B. mit ^edwin^edwin
+       ansehen kann.
+
+@@@.
+@@@DosTeX
+Von øC:\øXXXø\øYYYø>ø aus k”nen Sie eingeben:
+  øtvø n                Um die TeX Version festzulegen. n = ø1ø, ø2ø, ..., ø6ø.
+  øtfø TeXDatei         Um die zu bearbeitende ^.TeXDatei^TeXDatei festzulegen.
+  øedø                  Um die TeXDatei in den Editor zu laden.
+  øtø                   Um die TeXDatei mit TeX zu bersetzen.
+  øvø                   Um die bersetzte Datei anzuschauen.
+@@@.TeXDatei
+Das ist ein ^Dateitypen^Dateiname ohne Erweiterung. z.B.
+  øaufg8ø, ølisteø, øtestø, ø\j„nich\aufg\aufg8ø
+und bezieht sich auf die ganze Famile von Dateien mit den ^Dateitypen^TeX-Extensionen.
+
+@@@.
+@@@LaTeX
+        ~LaTeX - Hilfe~
+^minimal^ Ein minimales LaTeX Dokument.
+^\documentstyle^ Das Layout eines ganzen Dokuments.
+^Styles^ Unsere ø.styø-Dateien.
+^\pagestyle^ Kopfzeilen und Fuázeilen.
+^Schriften^ Schriften.
+^Umgebungen^ Umgebungen (ø\begin{ø...ø}ø ... ø\end{ø...ø}ø)
+^\[^ mathematische Formeln.
+^Abschnitte^ Gliederung in Abschnitte.
+^besondereSeiten^ Besondere Seiten. (Inhalt, ...)
+^\twocolumn^ zweispaltiger Satz.
+^\ref^ Referenzmechanismus.
+^\cite^ Literaturreferenzen.
+^Index^ Index
+^\include^ Mehrere Dateien fr ein Dokument.
+
+@@@\cite
+Mit LaTeX kann man statt mit Zahlen mit symbolischen Namen auf seine
+~Literatur verweisen~. LaTeX ersetzt diese dann automatisch gegen die
+richtigen Nummern (oder Symbole, wenn man will).
+Das geht so. Im Text schreibt man
+  ø\cite{øsymbolischer-Nameø}ø    --->  [12] (z.B.)
+um zu zitieren. Am Schluá erzeugt man das Literaturverzeichnis mit
+  ø\begin{thebiliography}ø
+  ø\bibitem{øsymbolischer-Nameø}ø Autor, Titel, Verlag, ...
+oder
+  ø\bibitem[{ø[Text]ø}]{øsymbolischer-Nameø}ø Autor, Titel, Verlag, ...
+  ...
+  ø\end{thebibliography}ø
+Der ^optPar^optionale Parameter ~[Text]~ gibt an, wie das Buch mit
+ø\citeø zitiert werden soll. Ohne diesen Zusatz werden fortlaufende
+Nummern vergeben.
+
+@@@\ref
+In LaTeX kann man auf automatisch vergebene Nummern ~Bezug~ nehmen.
+LaTeX besitzt dafr einen Referenzmechanismus fr
+  ~Abschnittsnummern~, ~Tabellen~ und ~Formeln~.
+Generell schreibt man an die Stelle, auf die man Bezug nehmen will:
+  ø\label{øsymbolischer-Nameø}ø
+und nimmt dann mittels
+  ø\ref{øsymbolischer-Nameø}ø           (Abschnittsnummer, Gleichungsnummer)
+oder
+  ø\pageref{øsymbolischer-Nameø}ø       (Seitennummer)
+an der gewnschten Stelle darauf Bezug.
+Fr ~symbolischer-Name~ kann man beliebige druckbare Zeichen schreiben.
+(also auch ø-ø, ø:ø, ø/ø, ...)
+
+Beachte: LaTeX warnt Sie, falls es glaubt, diese Refenzen h„tten sich
+seit dem letzten LaTeX-Lauf ver„ndert. Starten Sie dann einfach LaTeX
+noch einmal.
+
+@@@\twocolumn
+Mit
+  ø\twocolumnø bzw. ø\onecolumnø
+stellt man die Ausgabe auf ~zweispaltig~ bzw. ~einspaltig~ um. Beachte,
+daá dabei stets eine neue Seite angefangen wird.
+Beim ^\documentstyle^Layout øtwocolumnø ist zweispaltiger Text
+voreingestellt.
+
+@@@\[
+Mathematische Formeln sollte man nicht wie bei plainTeX mit ø$ø oder
+ø$$ø einschlieáen, sondern mit
+  ø\(ø...ø\)ø statt ø$ø...ø$ø
+und
+  ø\[ø...ø\]ø statt ø$$ø...ø$$ø.
+
+Fr l„ngere Formalen sollte man sogar
+  ø\begin{math}ø...ø\end{math}ø statt ø$ø...ø$ø
+und
+  ø\begin{displaymath}ø...ø\end{displaymath}ø statt ø$$ø...ø$$ø
+schreiben. Fr ~numerierte~ Formeln ist
+  ø\begin{equation}ø...ø\end{equation}ø
+gedacht. Falls man die Nummer der Formel benutzen will macht man vom
+^\ref^Referenzmechanismus gebrauch.
+
+@@@\pagestyle
+Durch die ^Macros^Macros
+  ø\pagestyleø und ø\thispagestyleø
+wird das ~Layout~ von Kopf- und Fuázeilen festgelegt. In der zweiten Form
+wird nur das Aussehen der aktuellen Seite ver„ndert und dann zum
+alten Layout zurckgekehrt. Diese Macros haben einen ^oblPar^obligatorischen
+Parameter:
+
+  øplainø       Nur die Seitennummer.
+  øemptyø       Weder Kopf- noch Fuázeile.
+  øheadingsø    Kapitel und Abschnittsberschrtiften.
+  ømyheadingsø  Fr eine eigene Gestaltung mit ^\head^\head.
+
+Beispiele:
+  ø\pagestyle{headings}ø
+  ... Text ...
+  ø\newpageø
+  ø\thispagestyle{empty}ø
+  øDiese Seite ist ganz leer (auáer diesem).ø
+  ø\newpageø
+
+Siehe auch: ^\pagenumbering^\pagenumbering
+
+@@@\head
+Mittels
+  ø\headø
+kann man die Kopfzeile im ^\pagelayout^Seitenlayout ømyheadingsø
+bestimmen. Das ^Macros^Macro hat einen ^oblPar^obligatorischen
+Parameter, n„mlich den Text der Kopfzeile und ølø bzw. ørø als
+^optPar^optionalen Parameter, mit dem man bestimmt, ob der Text auf eine
+linke oder rechte Seite soll.
+
+Beispiel:
+  ^\pagelayout^ø\pagestyle{myheadings}ø
+  ø\head{øDer Textø}ø           "Der Text" kommt auf beide Seiten.
+  ...
+  ø\head[l]{ølinker Textø}ø     "linker Text" kommt auf jede linke Seite.
+  ø\head[r]{ørechter Textø}ø    "rechter Text" kommt auf jede rechte Seite.
+
+@@@\pagenumbering
+Mit
+  ø\pagenumberingø
+legt man die ~Art der Seitennummern~ fest. Wie, siehe ^numbering^.
+Es stellt auáerdem die aktuelle Seitennummer ~auf 1 zurck~.
+
+Beispiele:
+  ø\pagenumbering{arabic}ø      normale Zahlen.
+  ø\pagenumbering{roman}ø       kleine r”mische Ziffern.
+
+@@@numbering
+Fr das ~Aussehen von Zahlen~ wie ^\pagenumbering^Seitennummern,
+^\newnumbering^Abschnittsnummern oder ^\newnumbering^Theoremnummern gibt es
+folgende Ausdrcke:
+
+  øarabicø      normale Zahlen. (1, 2, 3, ...)
+  øromanø       kleine r”mische Ziffern. (i, ii, iii, iv, ...)
+  øRomanø       groáe r”mische Ziffern. (I, II, III, IV...)
+  øalphø        kleine Buchstaben. (a, b, c, ...)
+  øAlphø        groáe Buchstaben. (A, B, C, ...)
+
+Siehe auch: ^counters^Benutzen von ~Z„hlern~.
+
+@@@counters
+Das Benutzen von ~Z„hlern~. Ein Z„hler ist eine Speicherstelle fr
+Zahlen, wie ^\pagenumbering^Seitennummern oder Kapitelnummern.
+Im ^\documentstyle^Layout øreportø werden folgende Z„hler benutzt:
+  ^Abschnitte^øchapterø,       ^figure^øfigureø,     øfootnoteø,
+   øsectionø,       ^table^øtableø,     ^enumerate^øenumerateø,
+   øsubsectionø,     øequationø,  ^list^ølistø,
+   øsubsubsectionø und øpageø.
+
+Folgende ^Macros^Macros benutzen Z„hler:
+  ^\setcounter^ø\setcounterø
+  ^\addtocounter^ø\addtocounterø
+  ^\newnumbering^ø\newnumberingø
+  ^Zahlausgabe^Macros zur Ausgabe von Z„hlern.
+
+@@@\setcounter
+Mit
+  ø\setcounter{øZ„hlerø}{øZahlø}ø
+~setzt~ man den ^counters^Z„hler Z„hler auf Zahl.
+
+Beispiel:
+  ø\setcounter{page}{ø10ø}ø  setze die aktuelle Seitennummer auf 10.
+
+@@@\addtocounter
+Mit
+  ø\addtocounter{øZ„hlerø}{øZahlø}ø
+~addiert~ man Zahl zu dem ^counters^Z„hler Z„hler.
+
+Beispiel:
+  ø\addtocounter{page}{ø10ø}ø  erh”he die aktuelle Seitennummer um 10.
+  ø\addtocounter{section}{ø-4ø}ø  verringere die aktuelle Abschnittsnummer um 4.
+
+@@@\newnumbering
+Mit
+  ø\newnumbering{øZ„hlerø}{øwieø}ø
+„ndert man die Art der Ausgabe des ^counters^Z„hlers Z„hler. Fr ~wie~
+kommt dabei beliebiger Text in Frage, insbesondere aber die
+^Macros^Macros ^Zahlausgabe^
+
+Beispiel:
+  ø\newnumbering{section}{\Roman{chapter}-\arabic{section}}ø
+stellt die Numerierung von Abschnitten um auf:
+  R”mischeKapitelnummerø-ønormaleAbschnittsnummer
+
+@@@Zahlausgabe
+Macros zur ~Ausgabe von ^counters^Z„hlern~.
+  ø\arabic{øZ„hlerø}ø   normale Zahlen.
+  ø\roman{øZ„hlerø}ø    kleine r”mische Zahlen.
+  ø\Roman{øZ„hlerø}ø    gr”áe r”mische Zahlen.
+  ø\alph{øZ„hlerø}ø     kleine Buchstaben.
+  ø\Alph{øZ„hlerø}ø     groáe Buchstaben.
+
+@@@\documentstyle
+Durch das ^Macros^Macro
+  ø\documentstyleø
+wird das ~Layout~ eines ganzen Documents festgelegt. Es hat einen
+^oblPar^obligatorischen Parameter und einen ^optPar^optionalen Parameter.
+Fr den ~obl. Param.~ kommt in Frage:
+  øarticleø     fr Artikel, Antr„ge, Gutachten, Einladungen, ...
+  øbookø                fr Bcher (mit ^Abschnitte^Kapiteln)
+  øreportø      fr lange Artikel (mit ^Abschnitte^Kapiteln)
+  øletterø      fr Briefkorrespondenz. (nicht so toll, siehe ^brief.sty^brief.sty)
+Fr den ~opt. Param.~ kommen in Frage (mehrere durch Komma ø,ø getrennt):
+ ^german^øgermanø, ^.xx^ø11ptø, ø12ptø,
+  øleqnoø fr linksbndige, statt zentrierte Mathem. Formeln,
+  øtitlepageø fr eine Titelseite,
+  øtwocolumnø fr ^\twocolumn^zweispaltigen Text und
+  øtwosideø fr doppelseitigen Ausdruck.
+Siehe auch:
+  ^Styles^ Unsere ø.styø-Dateien.
+  ^\pagelayout^ Seitenlayout.
+Beispiele:
+  ø\documentstyle[german]{article}ø     deutscher Text.
+  ø\documentstyle{book}ø                        ein englisches Buch.
+
+@@@besondereSeiten
+Die ^Macros^Macros zu diesen ~besonderen~ Seiten beginnen grunds„tzlich keine
+neue Seite. Ferner ist zu beachten, daá fr aktuelle Eintr„ge die TeX-Datei
+mindestens ~zwei~mal mit LaTeX zu bersetzen ist.
+
+^Inhaltsverzeichnis^ Inhaltsverzeichnis.
+^Abbildungsverzeichnis^ Abbildungsverzeichnis.
+^Tabellenverzeichnis^ Tabellenverzeichnis.
+
+
+@@@Inhaltsverzeichnis
+Das ~Inhaltsverzeichnis~ wird durch
+  ø\tableofcontentsø
+an der Stelle erzeugt an der dieses ^Macros^Macro im Text steht.
+
+Siehe auch: ^besondereSeiten^besondere Seiten.
+
+@@@Abbildungsverzeichnis
+Das ~Abbildungsverzeichnis~ wird durch
+  ø\listoffigguresø
+an der Stelle erzeugt an der dieses ^Macros^Macro im Text steht.
+
+Siehe auch: ^besondereSeiten^besondere Seiten.
+
+@@@Tabellenverzeichnis
+Das ~Tabellenverzeichnis~ wird durch
+  ø\listoftablesø
+an der Stelle erzeugt an der dieses ^Macros^Macro im Text steht.
+
+Siehe auch: ^besondereSeiten^besondere Seiten.
+
+@@@Abschnitte
+LaTeX kennt i.a. 4 Ebenen fr Abschnitte.
+  ~Kapitel~, ~Abschnitt~, ~Unterabschnitt~ und ~Unterunterabschnitt~.
+  Ferner auch ~Anhang~.
+Diesen sind folgende ^Macros^Macros zugeordnet:
+
+  ø\chapter{øTitelø}ø           nur bei ^Styles^ø\documentstyle{book}ø
+  ø\section{øTitelø}ø
+  ø\subsection{øTitelø}ø
+  ø\subsubsection{øTitelø}ø
+  ø\appendix{øTitelø}ø
+
+In ihrer ^Sternform^Sternform werden die Titel nicht numeriert und kommen
+auch nicht ins ^Inhaltsverzeichnis^Inhaltsverzeichnis.
+
+Sie haben auch einen ^optPar^ optionalen Parameter. Er gibt
+den Eintrag ins Inhaltsverzeichnis an.
+
+@@@oblPar
+Ein ~obligatorischer Parameter~ eines ^Macros^Macros wird in geschneckelten
+Klammern ø{ø und ø}ø hinter das Macro, hinter seiner ^Sternform^Sternform
+und hinter seinen ^optPar^optionalen Parametern gesetzt.
+
+Beispiel:
+  ^Abschnitte^ø\section[øHalloø]{øNeuer Abschnitt.ø}ø
+
+@@@optPar
+Ein ~optionaler Parameter~ eines ^Macros^Macros wird in eckigen Klammern ø[ø und ø]ø
+hinter das Macro, bzw. seiner ^Sternform^Sternform, aber vor einen
+^oblPar^obligatorischnen Parameter gesetzt.
+
+Beispiel:
+  ^Abschnitte^ø\section[øHalloø]{øNeuer Abschnitt.ø}ø
+
+@@@Sternform
+Die ~Sternform~ eines ^Macros^Macros ist durch einen Stern ø*ø am Ende des
+Macros gekennzeichnet.
+
+Beispiel:
+  ^Abschnitte^ø\sectionø        normal
+   ø\section*ø  Sternform
+
+@@@Macros
+~Macros~ sind Buchstabenfolgen, die von einem ø\ø eingeleitet werden.
+Sie ersetzen manchmal nur Text, fhren aber meiátens komplizierte
+Satzanweisungen durch.
+Sie k”nnen auch ^Parameter^Parameter haben.
+
+Siehe auch: ^Macrodefinition^Macrodefinition.
+
+@@@Schriften
+^Schrifttyp^ Schrifttypen. (Fett, Kursiv, ...)
+^Schriftgrad^ Schriftgrad. (Die Gr”áe.)
+
+
+@@@Schriftgrad
+Nach steigender Gr”áe geordnet:
+  ø\tinyø
+  ø\scriptsizeø
+  ø\footnotesizeø               so groá wie eine Fuánote.
+  ø\smallø
+  ø\normalsizeø         voreingestellte Gr”áe.
+  ø\largeø
+  ø\Largeø
+  ø\LARGEø
+  ø\hugeø                       sehr, sehr groá.
+
+Siehe auch: ^minimal^ø\documentstyleø.
+
+@@@Schrifttyp
+ø\rmø Normale Roman Schrift.
+ø\itø Kursiv. Siehe auch ^\/^Italiccorrection ø\/ø.
+ø\bfø Fett.
+ø\slø Verkantet.
+ø\sfø Serifenlose Schrift.
+ø\scø Kapit„lchen.
+ø\ttø Schreibmaschine. Siehe auch ^verbatim^øverbatimø, ^\verb^ø\verbø
+
+Wichtig: Klammern ø{ø und ø}ø um ø\øXX und den Text setzen.
+
+Beispiel:
+  Das ist normaler Text ø{\itø und hier ist's schr„gø\/}ø aber hier
+  wieder normal.
+
+@@@\/
+Das Zeichen ø\/ø geh”rt ans Ende eines kursiven Texts, auf den kein Punkt
+oder Komma folgt. Es sorgt fr den n”tigen zus„tzlichen Abstand.
+
+@@@minimal
+Das ist ein minimales LaTeX-Dokument:
+  ø\documentstyle[ø^.xx^XXøpt,ø ^.german^øgerman]{article}ø
+  ø\begin{document}ø
+  Hier kommt der Text ...
+  ø\end{document}ø
+
+@@@.xx
+Fr xx muá ø11ø oder ø12ø stehen. Z.B.
+  ø\documentstyle[12pt,ø ^.german^øgerman]{article}ø
+Die Zehnpunktschrift ist voreingestellt, das heiát dann so:
+  ø\documentstyle[^.german^øgerman]{article}ø
+
+@@@.german
+øgermanø stellt LaTeX auf die deutschen Umlaute um.
+
+Man kann diese aber auch so eingeben:
+  ø"aø fr „,  ø"oø fr ”,  ø"uø fr ,
+  ø"Aø fr ,  ø"Oø fr ™,  ø"Uø fr š und
+  ø"sø fr á.
+
+@@@Styles
+Style-Dateien gibt man im LaTeX-Dokument als Option des Befehls
+  ø\documentstyleø
+an. Also z.B.
+  ø\documentstyle[^.xx^12pt, ^.german^german, aufgaben]{article}ø
+oder
+  ø\documentstyle[^.xx^11pt, ^.german^german, brief]{article}ø.
+
+Wir haben diese Style-Dateien erzeugt:
+  ^brief.sty^ øBrief.styø fr Briefe.
+  ^aufgaben.sty^ øAufgaben.styø fr J„nich'sche šbungsaufgaben.
+
+@@@brief.sty
+
+@@@aufgaben.sty
+In der ^Dateien^Datei øaufgaben.styø ist definiert:
+  ø\noiø Kein Einzug.
+  ø\bsø  Groáer vertikaler Abstand.
+  ø\blatt{øBlattnr.ø}\Termin{øDatumø}ø und
+  ø\letztes{øBlattnr.ø}\blatt\Termin{øDatumø}ø
+       Fr die Kopfzeilen.
+  ø\aufg{øAufgabennr.ø}ø ...Aufgabentext...
+       um eine Neue Aufgabe zu beginnen.
+
+Beispiel; die Datei øaufg8.texø sieht so aus:
+  ø\documentstyle[^.xx^12pt, ^.german^german, aufgaben]{article}ø
+  ø\begin{document}ø
+  ø\blatt{8}\Termin{11.11.1991}ø
+  ø\aufg{34} Beweisen Sieø ...
+  ø\aufg{35} Sei $G$ eine Liegruppe,ø ...
+  ø\end{document}ø
+
+@@@.
+@@@Umgebungen
+Umgebungen (engl. environments) haben alle die Form
+  ø\begin{øXXXø}ø
+  Hier kommt Text
+  ø\end{øXXXø}ø.
+Sie k”nnen (fast) beliebig ineinandergeschachtelt werden.
+
+Es gibt:
+  ^document^ ødocumentø fr Schriftstcke (obligatorisch)
+  ^Textumgebungen^ Umgebungen, die normale Paragraphen enthalten.
+  ^Matheumgebungen^ Umgebungen fr Mathematik.
+  ^FloatingText^ Umgebungen fr verschiebbaren Text (z.B. Abbildungen)
+
+
+@@@FloatingText
+  øfigureø
+  øø
+
+@@@Matheumgebungen
+
+
+@@@Textumgebungen
+  ^tabular^ øtabularø fr Tabellen.
+  ^enumerate^ øenumerateø fr numerierte Aufz„hlungen.
+  ^itemize^ øitemizeø fr normale Aufz„hlungen.
+  ^description^ ødescriptionø fr Beschreibungen.
+  ^array^ øarrayø fr Listen in allgemeinster Form.
+  ^quote^ øquoteø fr Zitate.
+  ^quotation^ øquotationø fr Zitate.
+  ^verse^ fr Gedichte.
+  ^center^ øcenterø fr zentrierten Text.
+  .
+  .
+  .
+  .
+  .
+  .
+  .
+@@@document
+Obligatorisch fr jedes LaTeX-Document. Alle Macro-Definitionen máen vorher
+erfolgen. Der gesammte Text kommt in die ødocumentø Umgebung.
+
+@@@tabular
+øtabularø hat ein Argument, n„mlich die Ausrichtung der Spalten:
+
+  ølø linksbndiger Text.
+  øcø zentrierter Text.
+  ørø rechtsbndiger Text.
+  ø|ø eine Vertikale Linie.
+  øp{øMaáø}ø Eine Box mit Text der Breite ^Maáe^Maá
+
+Innerhalb der øtabularø Umgebung trennt man Spalten mit ø&ø und Zeilen mit ø\\ø,
+eine horizontale Linie erh„lt man mit ø\hlineø (nur nach ø\\ø).
+
+Beispiel:
+  ø\begin{tabular}{ll|rr}ø
+  ichø&øwirø&øduø&øihrø\\ø
+  ø\hlineø
+  1ø&ø2ø&ø3ø&ø4ø\\ø
+  10ø&ø15ø&ø$-3$ø&ø7
+  ø\end{tabular}ø
+
+@@@enumerate
+@@@itemize
+@@@description
+@@@array
+@@@quote
+@@@quotation
+@@@verse
+@@@center
+
+@@@Maáe
+Ein ~Maá~ ist eine L„ngenangabe. Bekannt sind diese Maáe:
+  Xøcmø, Xømmø, Xøinø, Xøptø, Xøexø, Xøemø, ...
+durch Voranstellen von øtrueø erh„lt man eine L„nge, die nicht von der
+gew„hlten ^\magnification^Vergr”áerung abh„ngt.
+
+Es ist auch m”glich, L„ngen als Vielfache von L„ngenregistern anzugeben:
+  Xø\parindentø, Xø\baselineskipø, ...
+
+Dabei bezeichnet ~X~ eine beliebige Kommazahl, wie ø0ø, ø10ø, ø0,5ø, ...
+
+Beispiele:
+  ø10cmø, ø12 true ptø, ø5.5\baselineskipø, ø1,44trueptø.
+
+Siehe auch:
+  ^Gummiabst„nde^ Gummiabst„nde
+
+@@@Gummiabst„nde
+Ein ~Gummiabstand~ ist eine ^Maáe^Maázahl gefolgt von den W”rtern
+  øplusø Maázahl øminusø Maázahl (in dieser Reihenfolge).
+
+Beispiel:
+  \vskip 3cm øplusø 4cm øminusø 10 true pt
+  Falls keine Schwierigkeiten auftreten, sind das 3cm vertikaler Abstand.
+  LaTeX kann diese L„nge aber bei Bedarf um bis zu 4cm verl„ngern oder
+  aber um bis zu 10truept verkrzen.
+
+Spezielle unendlich dehnbare Gumiabst„nde sind:
+  ø\hfilø, ø\hfillø, ø\hssø
+  ø\vfilø, ø\vfillø, ø\vssø
+
+@@@\magnification
+In der ersten Zeile einer LaTeX-Datei kann man eine globale Vergr”áerung
+um Faktor angeben:
+  ø\magnificationøFaktor*1000
+  ø\magnification\magstepø1, 2, ..., 5
+  ø\magnification\magstephalfø
+
+@@@.
+
