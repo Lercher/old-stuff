@@ -1,0 +1,17 @@
+Jeder Spieler hat 4 downs, um 10 yards an Boden zu gewinnen. Ein Spiel
+dauert 15 Minuten. Der Ballfuehrer darf nur vorwaerts laufen oder den
+Ball an einen anderen Spieler abgeben. Er darf ferner versuchen ein
+fieldgoal zu schiessen. Dafuer erhaelt die Mannschaft 2 Punkte, 5 fuer 
+ein touchdown in der gegnerischen Zone.
+
+   Tasten      Funktion
+   ------      --------
+   Cursor,
+   oder
+     8
+   4   6       Bewegung in die entsprechende Richtung
+     5
+   
+   k, 7        Kick, fieldgoal oder Pass versuchen.
+   p, 9        Pass einleiten.
+   q           Spiel abbrechen.
